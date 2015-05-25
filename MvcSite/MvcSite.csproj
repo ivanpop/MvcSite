@@ -177,6 +177,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Resources\background.jpg" />
     <Content Include="Resources\bg.jpg" />
     <Content Include="Resources\convertor.exe" />
     <Content Include="Resources\convertor1.jpg" />
@@ -188,14 +189,8 @@
     <Content Include="Resources\CT5.gif" />
     <Content Include="Resources\CT6.png" />
     <Content Include="Resources\favicon.ico" />
-    <Content Include="Resources\header_footer.jpg" />
-    <Content Include="Resources\icons.gif" />
     <Content Include="Resources\icon_top.png" />
     <Content Include="Resources\ivanpopov.jpg" />
-    <Content Include="Resources\jquery-2.1.1.js" />
-    <Content Include="Resources\light.gif" />
-    <Content Include="Resources\menu-leaf.png" />
-    <Content Include="Resources\mime-16.png" />
     <Content Include="Resources\ryu1.png" />
     <Content Include="Resources\ryu10.png" />
     <Content Include="Resources\ryu11.jpg" />
@@ -208,8 +203,6 @@
     <Content Include="Resources\ryu7.png" />
     <Content Include="Resources\ryu8.png" />
     <Content Include="Resources\ryu9.png" />
-    <Content Include="Resources\textfield.gif" />
-    <Content Include="Resources\widgetsep.png" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <None Include="Properties\PublishProfiles\MvcSite9989.pubxml" />

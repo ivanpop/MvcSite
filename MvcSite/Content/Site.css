@@ -1,7 +1,8 @@
 ﻿body {
     padding-top: 50px;
     padding-bottom: 20px;
-    background: #BEC3C6 url('../Resources/bg.jpg') repeat-x;
+    background: #BEC3C6 url('../Resources/background.jpg') no-repeat;
+    background-size: 100% 200%;
 }
 
 .body-content {
@@ -39,7 +40,7 @@ img {
     height: 40px;
     position: fixed;
     bottom: 50px;
-    right: 100px;
+    right: 30px;
     display: none;
     text-indent: -9999px;
     background: url('../Resources/icon_top.png') no-repeat;
@@ -47,11 +48,13 @@ img {
 }
 
 .footer {
-    text-align: center;        
-    border-top: 1px solid #CCC;
-    background: rgb(238,238,238);
+    text-align: center;
+    background: rgb(34,34,34);
+    color: rgb(236, 236, 236);
     margin-left: auto;
     margin-right: auto;
     padding-top: 5px;
     padding-bottom: 5px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
 }

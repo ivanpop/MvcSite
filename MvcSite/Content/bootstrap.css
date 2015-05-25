@@ -925,7 +925,7 @@ pre code {
 }
 
 @media (min-width: 768px) {
-  .container, .footer {
+  .container, .footer, .navbar-inverse {
     max-width: 750px;
   }
   .col-sm-1,
@@ -1079,7 +1079,7 @@ pre code {
 }
 
 @media (min-width: 992px) {
-  .container, .footer {
+  .container, .footer, .navbar-inverse {
     max-width: 970px;
   }
   .col-md-1,
@@ -1242,7 +1242,7 @@ pre code {
 }
 
 @media (min-width: 1200px) {
-  .container, .footer  {
+  .container, .footer, .navbar-inverse {
     max-width: 1170px;
   }
   .col-lg-1,
@@ -4504,16 +4504,19 @@ textarea.input-group-sm > .input-group-btn > .btn {
   background-color: #222222;
   border-color: #080808;
   min-width:148px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .navbar-inverse .navbar-brand {
-  color: #999999;
+  color: #EDEDED;
 }
 
 .navbar-inverse .navbar-brand:hover,
 .navbar-inverse .navbar-brand:focus {
   color: #ffffff;
   background-color: transparent;
+  text-decoration: underline;
 }
 
 .navbar-inverse .navbar-text {
@@ -4521,13 +4524,14 @@ textarea.input-group-sm > .input-group-btn > .btn {
 }
 
 .navbar-inverse .navbar-nav > li > a {
-  color: #999999;
+  color: #EDEDED;
 }
 
 .navbar-inverse .navbar-nav > li > a:hover,
 .navbar-inverse .navbar-nav > li > a:focus {
   color: #ffffff;
   background-color: transparent;
+  text-decoration: underline;
 }
 
 .navbar-inverse .navbar-nav > .active > a,
