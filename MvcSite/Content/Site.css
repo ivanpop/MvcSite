@@ -1,11 +1,14 @@
 ﻿body {
     padding-top: 50px;
     padding-bottom: 20px;
+    background: #BEC3C6 url('../Resources/bg.jpg') repeat-x;
 }
 
 .body-content {
     padding-left: 15px;
     padding-right: 15px;
+    padding-bottom: 30px;
+    background: white;
 }
 
 .dl-horizontal dt {
@@ -43,6 +46,12 @@ img {
     background-color: #000;
 }
 
-#footer {
-    text-align: center;
+.footer {
+    text-align: center;        
+    border-top: 1px solid #CCC;
+    background: rgb(238,238,238);
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 5px;
+    padding-bottom: 5px;
 }

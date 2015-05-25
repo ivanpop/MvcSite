@@ -5,7 +5,6 @@ namespace MvcMovie.Controllers
 { 
     public class HomeController : Controller 
     { 
-        // 
         // GET: /Home/ 
  
         public ActionResult Index() 
@@ -13,10 +12,16 @@ namespace MvcMovie.Controllers
             return View(); 
         } 
  
-        // 
-        // GET: /Home/Welcome/ 
+        // GET: /Home/Bio/ 
 
         public ActionResult Bio()
+        {
+            return View();
+        }
+
+        // GET: /Home/Welcome/ 
+
+        public ActionResult Projects()
         {
             return View();
         }

@@ -925,7 +925,7 @@ pre code {
 }
 
 @media (min-width: 768px) {
-  .container {
+  .container, .footer {
     max-width: 750px;
   }
   .col-sm-1,
@@ -1079,7 +1079,7 @@ pre code {
 }
 
 @media (min-width: 992px) {
-  .container {
+  .container, .footer {
     max-width: 970px;
   }
   .col-md-1,
@@ -1242,7 +1242,7 @@ pre code {
 }
 
 @media (min-width: 1200px) {
-  .container {
+  .container, .footer  {
     max-width: 1170px;
   }
   .col-lg-1,
@@ -4503,6 +4503,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
 .navbar-inverse {
   background-color: #222222;
   border-color: #080808;
+  min-width:148px;
 }
 
 .navbar-inverse .navbar-brand {

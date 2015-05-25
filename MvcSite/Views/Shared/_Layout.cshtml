@@ -21,22 +21,19 @@
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li>@Html.ActionLink("Автобиография", "Bio", "Home")</li>
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                    <li>@Html.ActionLink("Проекти", "Projects", "Home")</li>
+                    <li>@Html.ActionLink("About", "About", "Home")</li>                    
                 </ul>
                 @Html.Partial("_LoginPartial")
             </div>
         </div>
     </div>
-    <div class="container body-content">
-        <div id="fader">
-            @RenderBody()
-            <hr />
-        </div>
-        <footer>
-            <p id="footer">&copy; @DateTime.Now.Year - Иван Попов</p>
+    <div class="container body-content">        
+            @RenderBody()        
+    </div>
+    <div class="footer">
+            <p>&copy; @DateTime.Now.Year - Иван Попов</p>
             <a href="#" class="scrollup">Scroll</a>
-        </footer>
     </div>
 
     @Scripts.Render("~/bundles/jquery")
