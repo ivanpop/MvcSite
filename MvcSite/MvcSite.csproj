@@ -177,8 +177,6 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
-    <Content Include="Resources\background.jpg" />
-    <Content Include="Resources\bg.jpg" />
     <Content Include="Resources\convertor.exe" />
     <Content Include="Resources\convertor1.jpg" />
     <Content Include="Resources\countdown timer.exe" />
