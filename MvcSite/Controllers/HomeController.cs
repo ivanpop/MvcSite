@@ -18,12 +18,5 @@ namespace MvcMovie.Controllers
         {
             return View();
         }
-
-        // GET: /Home/Welcome/ 
-
-        public ActionResult Projects()
-        {
-            return View();
-        }
     } 
 }
