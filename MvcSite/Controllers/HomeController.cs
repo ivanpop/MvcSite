@@ -23,19 +23,24 @@ namespace MvcMovie.Controllers
 
         public ActionResult Contact()
         {
+            return View();
+        }
+
+        public void SendMail(string email, string descr, string text)
+        {
             using (MailMessage message = new MailMessage())
             {
-                message.From = new MailAddress("ivanpop@abv.bg");
+                message.From = new MailAddress(email);
                 message.To.Add(new MailAddress("unfragablegaming@gmail.com"));
-                message.Subject = "Message from My Site";
-                message.Body = "Body";
+                message.Subject = "Message from My Site: " + descr;
+                message.Body = text;
                 SmtpClient smtp = new SmtpClient();
                 smtp.Host = "smtpcorp.com";
                 smtp.Port = 2525;
                 smtp.EnableSsl = true;
                 smtp.DeliveryMethod = SmtpDeliveryMethod.Network;
                 smtp.UseDefaultCredentials = false;
-                smtp.Credentials = new NetworkCredential("email", "pass");
+                smtp.Credentials = new NetworkCredential("ivanpop@abv.bg", "ipb123");
                 try
                 {
                     smtp.Send(message);
@@ -45,8 +50,6 @@ namespace MvcMovie.Controllers
 
                 }
             }
-
-            return View();
         }
     } 
 }
