@@ -22,12 +22,25 @@
     </script>
 </div>
 
-<p>Също така можете да ми изпратите съобщение като използвате формата за контакти.</p>
+<p>Също така можете да ми изпратите съобщение като използвате формата за контакти.</p><br />
 
-@using (Html.BeginForm("Sendmail", "Home"))
-{
-    @Html.TextBox("email")
-    @Html.TextBox("descr")
-    @Html.TextArea("text")
-    <input type="submit" value="Изпрати" />
-}
+<table>
+    <tbody>
+        <tr>
+            <td rowspan="4" width="40"></td>
+            <td width="250">
+                @using (Html.BeginForm("Sendmail", "Home"))
+                {
+                    <p>Вашият Email:</p>
+                    @Html.TextBox("email")
+                    <br /><br /><p>Тема:</p>
+                    @Html.TextBox("descr")
+                    <br /><br />
+                    
+                    <br /><br /><input type="submit" value="Изпрати" />
+                }
+            </td>            
+            <td width="280"><p>Съобщение:</p>@Html.TextArea("text", "", 9, 280, "")</td>
+        </tr>
+    </tbody>
+</table>
