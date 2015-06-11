@@ -13,5 +13,17 @@ namespace MvcSite.Controllers
         {
             return View();
         }
+
+        // GET: Ryu
+        public ActionResult Ryu()
+        {
+            return View();
+        }
+
+        // GET: CountdownTimer
+        public ActionResult CountdownTimer()
+        {
+            return View();
+        }
     }
 }

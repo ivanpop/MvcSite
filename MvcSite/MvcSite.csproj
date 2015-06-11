@@ -254,6 +254,8 @@
     <Content Include="Views\Home\Bio.cshtml" />
     <Content Include="Views\Projects\Index.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Projects\Ryu.cshtml" />
+    <Content Include="Views\Projects\CountdownTimer.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -1,8 +1,5 @@
 ﻿@{
     Layout = "~/Views/Shared/_Layout.cshtml";
-}
-
-@{
     ViewBag.Title = "Проекти";
 }
 
@@ -21,7 +18,7 @@
     </tr>
     <tr>
         <td height="50">
-            &#9642; <a href="url">Ryu: The Big Adventure!</a>
+            &#9642; @Html.ActionLink("Ryu: The Big Adventure!", "Ryu", "Projects")
         </td>
         <td width="350">
             <i>2D Екшън игра написана на Java.</i>
