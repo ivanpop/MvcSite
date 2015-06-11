@@ -79,3 +79,31 @@ i {
     float: left;
     margin-top: 25px;
 }
+
+.pages a{
+    color: #777;
+    padding: 5px 15px;
+    border: 1px solid #ddd;
+    text-decoration: none;
+}
+
+.pages a:hover{
+    color: #fff;
+    background: #c0392b;
+    border-color: #c0392b;
+}
+
+.selected-page{
+    display: inline;
+}
+
+.selected-page > a{
+    background-color: #e74c3c;
+    border-color: #e74c3c;
+    color: #fff;
+}
+
+.float-my-children > *{
+    float: left;
+    margin-right: 5px;
+}

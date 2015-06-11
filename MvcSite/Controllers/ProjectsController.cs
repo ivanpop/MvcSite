@@ -21,9 +21,15 @@ namespace MvcSite.Controllers
         }
 
         // GET: CountdownTimer
-        public ActionResult CountdownTimer()
+        public ActionResult CountdownTimer(byte page = 1)
         {
-            return View();
+            switch (page)
+            {
+                case 2: return View("CountdownTimer2");
+                case 3: return View("CountdownTimer3");
+                case 4: return View("CountdownTimer4");
+                default: return View("CountdownTimer");
+            }   
         }
 
         // GET: C# for Dummies
@@ -35,7 +41,7 @@ namespace MvcSite.Controllers
         // GET: Converter
         public ActionResult Converter()
         {
-            return View();
+            return View();   
         }
     }
 }
