@@ -25,5 +25,17 @@ namespace MvcSite.Controllers
         {
             return View();
         }
+
+        // GET: C# for Dummies
+        public ActionResult CSharpForDummies()
+        {
+            return View();
+        }
+
+        // GET: Converter
+        public ActionResult Converter()
+        {
+            return View();
+        }
     }
 }

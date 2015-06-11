@@ -178,8 +178,8 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
-    <Content Include="Resources\convertor.exe" />
-    <Content Include="Resources\convertor1.jpg" />
+    <Content Include="Resources\converter.exe" />
+    <Content Include="Resources\converter1.jpg" />
     <Content Include="Resources\countdown timer.exe" />
     <Content Include="Resources\CT1.jpg" />
     <Content Include="Resources\CT2.jpg" />
@@ -256,6 +256,8 @@
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Projects\Ryu.cshtml" />
     <Content Include="Views\Projects\CountdownTimer.cshtml" />
+    <Content Include="Views\Projects\CSharpForDummies.cshtml" />
+    <Content Include="Views\Projects\Converter.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
