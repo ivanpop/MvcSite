@@ -258,7 +258,9 @@
     <Content Include="Views\Projects\CountdownTimer.cshtml" />
     <Content Include="Views\Projects\CSharpForDummies.cshtml" />
     <Content Include="Views\Projects\Converter.cshtml" />
-    <Content Include="Views\Projects\CountdownTimer2.cshtml" />
+    <Content Include="Views\Projects\CountdownTimer2.cshtml">
+      <BrowseToURL>~/Projects/CountdownTimer2</BrowseToURL>
+    </Content>
     <Content Include="Views\Projects\CountdownTimer3.cshtml" />
     <Content Include="Views\Projects\CountdownTimer4.cshtml" />
   </ItemGroup>
