@@ -15,9 +15,14 @@ namespace MvcSite.Controllers
         }
 
         // GET: Ryu
-        public ActionResult Ryu()
+        public ActionResult Ryu(byte page = 1)
         {
-            return View();
+            switch (page)
+            {
+                case 3: return View("Ryu3");
+                case 2: return View("Ryu2");
+                default: return View("Ryu");
+            }   
         }
 
         // GET: CountdownTimer

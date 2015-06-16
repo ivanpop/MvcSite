@@ -261,6 +261,8 @@
     <Content Include="Views\Projects\CountdownTimer2.cshtml">
       <BrowseToURL>~/Projects/CountdownTimer2</BrowseToURL>
     </Content>
+    <Content Include="Views\Projects\Ryu2.cshtml" />
+    <Content Include="Views\Projects\Ryu3.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
