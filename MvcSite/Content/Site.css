@@ -30,6 +30,10 @@ textarea {
     padding: 0 15px;
 }
 
+.tab2{
+    padding: 0 30px;
+}
+
 hr{
     border:1px solid;
 }
@@ -109,21 +113,17 @@ i {
 
 h1 { 
     display: block;
-    font-size: 2em;
-    margin-top: 0.67em;
-    margin-bottom: 0.67em;
-    margin-left: 0;
-    margin-right: 0;
+    font-size: 2.1em;
+    margin-top: 1em;
+    margin-bottom: 1em;
     font-weight: bold;
 }
 
 h2 {
     display: block;
     font-size: 1.5em;
-    margin-top: 0.83em;
-    margin-bottom: 0.83em;
-    margin-left: 0;
-    margin-right: 0;
+    margin-top: 1em;
+    margin-bottom: 1em;
     font-weight: bold;
 }
 
@@ -132,38 +132,30 @@ h3 {
     font-size: 1.17em;
     margin-top: 1em;
     margin-bottom: 1em;
-    margin-left: 0;
-    margin-right: 0;
     font-weight: bold;
 }
 
 h4 { 
     display: block;
-    margin-top: 1.33em;
+    margin-top: 1em;
     font-size: 1em;
-    margin-bottom: 1.33em;
-    margin-left: 0;
-    margin-right: 0;
+    margin-bottom: 1em;
     font-weight: bold;
 }
 
 h5 { 
     display: block;
     font-size: .83em;
-    margin-top: 1.67em;
-    margin-bottom: 1.67em;
-    margin-left: 0;
-    margin-right: 0;
+    margin-top: 1em;
+    margin-bottom: 1em;
     font-weight: bold;
 }
 
 h6 { 
     display: block;
     font-size: .67em;
-    margin-top: 2.33em;
-    margin-bottom: 2.33em;
-    margin-left: 0;
-    margin-right: 0;
+    margin-top: 1em;
+    margin-bottom: 1em;
     font-weight: bold;
 }
 
