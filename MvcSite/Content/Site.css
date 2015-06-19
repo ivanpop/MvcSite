@@ -111,52 +111,34 @@ i {
     margin-right: 5px;
 }
 
-h1 { 
+h1, h2, h3, h4, h5{
     display: block;
-    font-size: 2.1em;
-    margin-top: 1em;
-    margin-bottom: 1em;
     font-weight: bold;
+    margin: 1em 0;
+}
+
+h1 {     
+    font-size: 2.2em;
 }
 
 h2 {
-    display: block;
-    font-size: 1.5em;
-    margin-top: 1em;
-    margin-bottom: 1em;
-    font-weight: bold;
+    font-size: 1.8em;
+    margin-left: 0.5em;
 }
 
 h3 { 
-    display: block;
-    font-size: 1.17em;
-    margin-top: 1em;
-    margin-bottom: 1em;
-    font-weight: bold;
+    font-size: 1.6em;
+    margin-left: 1em;
 }
 
 h4 { 
-    display: block;
-    margin-top: 1em;
-    font-size: 1em;
-    margin-bottom: 1em;
-    font-weight: bold;
+    font-size: 1.3em;
+    margin-left: 1.5em;
 }
 
 h5 { 
-    display: block;
-    font-size: .83em;
-    margin-top: 1em;
-    margin-bottom: 1em;
-    font-weight: bold;
-}
-
-h6 { 
-    display: block;
-    font-size: .67em;
-    margin-top: 1em;
-    margin-bottom: 1em;
-    font-weight: bold;
+    font-size: 1em;
+    margin-left: 3em;
 }
 
 .center {
