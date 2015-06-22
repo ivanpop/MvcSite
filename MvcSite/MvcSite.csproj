@@ -343,6 +343,7 @@
     <Content Include="Views\Projects\Ryu2.cshtml" />
     <Content Include="Views\Projects\Ryu3.cshtml" />
     <Content Include="Views\Projects\CSharpForDummies1.cshtml" />
+    <Content Include="Views\Projects\CSharpForDummies2.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
