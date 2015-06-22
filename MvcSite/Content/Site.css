@@ -66,10 +66,6 @@ img {
     border-bottom-right-radius: 10px;
 }
 
-a, a:hover {
-    color: rgb(231,76,60);
-}
-
 #listing {
     margin: 1em 0;
 }

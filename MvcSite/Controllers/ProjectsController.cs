@@ -34,13 +34,19 @@ namespace MvcSite.Controllers
                 case 3: return View("CountdownTimer3");
                 case 4: return View("CountdownTimer4");
                 default: return View("CountdownTimer");
-            }   
+            }
         }
 
         // GET: C# for Dummies
-        public ActionResult CSharpForDummies()
+        public ActionResult CSharpForDummies(byte page = 0)
         {
-            return View();
+            switch (page)
+            {
+                case 1: return View("CSharpForDummies1");
+                case 2: return View("CSharpForDummies2");
+                case 3: return View("CSharpForDummies3");
+                default: return View("CSharpForDummies");
+            }
         }
 
         // GET: Converter
