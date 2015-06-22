@@ -335,15 +335,16 @@
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Projects\Ryu.cshtml" />
     <Content Include="Views\Projects\CountdownTimer.cshtml" />
-    <Content Include="Views\Projects\CSharpForDummies.cshtml" />
+    <Content Include="Views\Projects\CSharpForDummies\CSharpForDummies.cshtml" />
     <Content Include="Views\Projects\Converter.cshtml" />
     <Content Include="Views\Projects\CountdownTimer2.cshtml">
       <BrowseToURL>~/Projects/CountdownTimer2</BrowseToURL>
     </Content>
     <Content Include="Views\Projects\Ryu2.cshtml" />
     <Content Include="Views\Projects\Ryu3.cshtml" />
-    <Content Include="Views\Projects\CSharpForDummies1.cshtml" />
-    <Content Include="Views\Projects\CSharpForDummies2.cshtml" />
+    <Content Include="Views\Projects\CSharpForDummies\CSharpForDummies1.cshtml" />
+    <Content Include="Views\Projects\CSharpForDummies\CSharpForDummies2.cshtml" />
+    <Content Include="Views\Projects\CSharpForDummies\CSharpForDummies3.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

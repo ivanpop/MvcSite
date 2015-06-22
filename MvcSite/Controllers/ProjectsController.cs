@@ -42,10 +42,10 @@ namespace MvcSite.Controllers
         {
             switch (page)
             {
-                case 1: return View("CSharpForDummies1");
-                case 2: return View("CSharpForDummies2");
-                case 3: return View("CSharpForDummies3");
-                default: return View("CSharpForDummies");
+                case 1: return View("CSharpForDummies/CSharpForDummies1");
+                case 2: return View("CSharpForDummies/CSharpForDummies2");
+                case 3: return View("CSharpForDummies/CSharpForDummies3");
+                default: return View("CSharpForDummies/CSharpForDummies");
             }
         }
 
