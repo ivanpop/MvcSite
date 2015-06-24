@@ -197,30 +197,6 @@
     <Content Include="Resources\CSResources\ch11-6-2.gif" />
     <Content Include="Resources\CSResources\ch11-6-3.gif" />
     <Content Include="Resources\CSResources\ch11-6-4.gif" />
-    <Content Include="Resources\CSResources\ch2-1.jpg" />
-    <Content Include="Resources\CSResources\ch2-10.jpg" />
-    <Content Include="Resources\CSResources\ch2-11.jpg" />
-    <Content Include="Resources\CSResources\ch2-12.jpg" />
-    <Content Include="Resources\CSResources\ch2-13.jpg" />
-    <Content Include="Resources\CSResources\ch2-2.jpg" />
-    <Content Include="Resources\CSResources\ch2-3.jpg" />
-    <Content Include="Resources\CSResources\ch2-4.jpg" />
-    <Content Include="Resources\CSResources\ch2-5.jpg" />
-    <Content Include="Resources\CSResources\ch2-6.jpg" />
-    <Content Include="Resources\CSResources\ch2-7.jpg" />
-    <Content Include="Resources\CSResources\ch2-8.jpg" />
-    <Content Include="Resources\CSResources\ch2-9.jpg" />
-    <Content Include="Resources\CSResources\ch3-1.jpg" />
-    <Content Include="Resources\CSResources\ch3-12.jpg" />
-    <Content Include="Resources\CSResources\ch3-13.jpg" />
-    <Content Include="Resources\CSResources\ch3-14.jpg" />
-    <Content Include="Resources\CSResources\ch3-2.jpg" />
-    <Content Include="Resources\CSResources\ch3-3.jpg" />
-    <Content Include="Resources\CSResources\ch3-4.jpg" />
-    <Content Include="Resources\CSResources\ch3-5.jpg" />
-    <Content Include="Resources\CSResources\ch3-6.jpg" />
-    <Content Include="Resources\CSResources\ch3-7.jpg" />
-    <Content Include="Resources\CSResources\ch3-8.jpg" />
     <Content Include="Resources\CSResources\ch4-1.jpg" />
     <Content Include="Resources\CSResources\ch4-10.jpg" />
     <Content Include="Resources\CSResources\ch4-11.jpg" />
@@ -345,6 +321,7 @@
     <Content Include="Views\Projects\CSharpForDummies\CSharpForDummies1.cshtml" />
     <Content Include="Views\Projects\CSharpForDummies\CSharpForDummies2.cshtml" />
     <Content Include="Views\Projects\CSharpForDummies\CSharpForDummies3.cshtml" />
+    <Content Include="Views\Projects\CSharpForDummies\CSharpForDummies4.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
