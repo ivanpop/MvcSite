@@ -7,34 +7,104 @@
 <h2> Глава 3. Оператори и изрази</h2>
 <span class="tab"></span>1. Напишете израз, който да проверява дали дадено цяло число е четно или нечетно.<br /><br />
 <span class="tab"></span>Упътване: Вземете остатъкът от деленето на числото на 2 и проверете дали е 0 или 1 (съответно числото е четно или нечетно). Използвайте оператора % за пресмятане на остатък от целочислено деление.<br /><br /><span class="tab"></span>Решение: <br />
-<span class="tab"></span><img src="/Resources/CSResources/ch3-1.jpg"><hr>
+<div class="code">
+    <span class="Modifier">static</span>&nbsp;<span class="ValueType">void</span>&nbsp;Main(<span class="ReferenceType">string</span>[]&nbsp;args)<br />
+    {<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;<span class="ValueType">int</span>&nbsp;number&nbsp;=&nbsp;23;<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;<span class="ValueType">bool</span>&nbsp;even&nbsp;=&nbsp;number&nbsp;%&nbsp;2&nbsp;==&nbsp;0&nbsp;?&nbsp;<span class="Keyword">true</span>&nbsp;:&nbsp;<span class="Keyword">false</span>;<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;Console.WriteLine(<span class="String">"{0}&nbsp;is&nbsp;even?&nbsp;{1}"</span>,&nbsp;number,&nbsp;even);<br />
+    }
+</div>
+<hr>
 <span class="tab"></span>2. Напишете булев израз, който да проверява дали дадено цяло число се дели на 5 и на 7 без остатък.<br /><br />
 <span class="tab"></span>Упътване: Ползвайте логическо "И" (оператора &&) и операцията % за остатък при деление. Можете да решите задачата и чрез само една проверка – за деление на 35 (помислете защо).<br /><br />
 <span class="tab"></span>Решение: <br />
-<span class="tab"></span><img src="/Resources/CSResources/ch3-2.jpg"><hr>
+<div class="code">
+    <span class="Modifier">static</span>&nbsp;<span class="ValueType">void</span>&nbsp;Main(<span class="ReferenceType">string</span>[]&nbsp;args)<br />
+    {<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;<span class="ValueType">int</span>&nbsp;number&nbsp;=&nbsp;36;<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;<span class="ValueType">bool</span>&nbsp;divisible&nbsp;=&nbsp;number&nbsp;%&nbsp;35&nbsp;==&nbsp;0&nbsp;?&nbsp;<span class="Keyword">true</span>&nbsp;:&nbsp;<span class="Keyword">false</span>;<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;Console.WriteLine(<span class="String">"{0}&nbsp;is&nbsp;divisible&nbsp;by&nbsp;both&nbsp;5&nbsp;and&nbsp;7?&nbsp;{1}"</span>,&nbsp;number,&nbsp;even);<br />
+    }
+</div>
+<hr>
 <span class="tab"></span>3. Напишете израз, който да проверява дали третата цифра (отдясно на ляво) на дадено цяло число е 7.<br /><br />
 <span class="tab"></span>Упътване: Разделете числото на 100 и го запишете в нова променлива. Нея разделете на 10 и вземете остатъкът. Остатъкът от делението на 10 е третата цифра от първоначалното число. Проверете равна ли е на 7.<br /><br />
-<span class="tab"></span>Решение: <br /><span class="tab"></span><img src="/Resources/CSResources/ch3-3.jpg"><hr>
+<span class="tab"></span>Решение: <br />
+<div class="code">
+    <span class="Modifier">static</span>&nbsp;<span class="ValueType">void</span>&nbsp;Main(<span class="ReferenceType">string</span>[]&nbsp;args)<br />
+    {<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;<span class="ValueType">int</span>&nbsp;number&nbsp;=&nbsp;45764;<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;<span class="ValueType">bool</span>&nbsp;isSeven&nbsp;=&nbsp;(number&nbsp;/&nbsp;100)&nbsp;%&nbsp;10&nbsp;==&nbsp;7&nbsp;?&nbsp;<span class="Keyword">true</span>&nbsp;:&nbsp;<span class="Keyword">false</span>;<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;Console.WriteLine(<span class="String">"Third&nbsp;digit&nbsp;of&nbsp;{0}&nbsp;is&nbsp;7"</span>,&nbsp;number,&nbsp;even);<br />
+    }
+</div>
+<hr>
 <span class="tab"></span>4. Напишете израз, който да проверява дали третия бит на дадено число е 1 или 0.<br /><br />
 <span class="tab"></span>Упътване: Използвайте побитово "И" върху числото и число, което има 1 само в третия си бит (т.е. числото 8, ако броенето на битовете започне от 0). Ако върнатият резултат е различен от 0, то третия бит е 1.<br /><br />
 <span class="tab"></span>Решение: <br />
-<span class="tab"></span><img src="/Resources/CSResources/ch3-4.jpg"><hr>
+<div class="code">
+    <span class="Modifier">static</span>&nbsp;<span class="ValueType">void</span>&nbsp;Main(<span class="ReferenceType">string</span>[]&nbsp;args)<br />
+    {<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;<span class="ValueType">int</span>&nbsp;number&nbsp;=&nbsp;452;&nbsp;&nbsp;&nbsp;&nbsp;<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;Console.WriteLine(<span class="String">"The&nbsp;third&nbsp;bit&nbsp;of&nbsp;{0}&nbsp;is&nbsp;1?&nbsp;{1}"</span>,&nbsp;number,&nbsp;((number&nbsp;&gt;&gt;&nbsp;3)&nbsp;&amp;&nbsp;1)&nbsp;==&nbsp;1);<br />
+    }
+</div>
+<hr>
 <span class="tab"></span>5. Напишете израз, който изчислява площта на трапец по дадени a, b и h.<br /><br />
 <span class="tab"></span>Упътване: Формула за лице на трапец: S = (a + b) / 2 * h.<br /><br />
 <span class="tab"></span>Решение: <br />
-<span class="tab"></span><img src="/Resources/CSResources/ch3-5.jpg"><hr>
+<div class="code">
+    <span class="Modifier">static</span>&nbsp;<span class="ValueType">void</span>&nbsp;Main(<span class="ReferenceType">string</span>[]&nbsp;args)<br />
+    {<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;<span class="ValueType">float</span>&nbsp;a&nbsp;=&nbsp;2;<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;<span class="ValueType">float</span>&nbsp;b&nbsp;=&nbsp;3;<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;<span class="ValueType">float</span>&nbsp;h&nbsp;=&nbsp;1;<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;Console.WriteLine(<span class="String">"S={0}"</span>,&nbsp;(a&nbsp;+&nbsp;b)&nbsp;/&nbsp;(2&nbsp;*&nbsp;h));<br />
+    }
+</div>
+<hr>
 <span class="tab"></span>6. Напишете програма, която за подадени от потребителя дължина и височина на право­ъгълник, пресмята и отпечатва на конзолата неговия периметър и лице.<br /><br />
 <span class="tab"></span>Упътване: Потърсете в Интернет как се въвеждат цели числа от конзолата и използвайте формулата за лице на правоъгълник.<br /><br />
 <span class="tab"></span>Решение: <br />
-<span class="tab"></span><img src="/Resources/CSResources/ch3-6.jpg"><hr>
+<div class="code">
+    <span class="Modifier">static</span>&nbsp;<span class="ValueType">void</span>&nbsp;Main(<span class="ReferenceType">string</span>[]&nbsp;args)<br />
+    {<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;Console.Write(<span class="String">"Enter&nbsp;a:&nbsp;"</span>);<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;<span class="ValueType">int</span>&nbsp;a&nbsp;=&nbsp;Convert.ToInt32(Console.ReadLine());<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;Console.Write(<span class="String">"Enter&nbsp;b:&nbsp;"</span>);<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;<span class="ValueType">int</span>&nbsp;b&nbsp;=&nbsp;Convert.ToInt32(Console.ReadLine());<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;Console.WriteLine(<span class="String">"S={0},&nbsp;P={1}"</span>,&nbsp;a&nbsp;*&nbsp;b,&nbsp;(a&nbsp;+&nbsp;b)&nbsp;*&nbsp;2);<br />
+    }
+</div>
+<hr>
 <span class="tab"></span>7. Силата на гравитационното поле на Луната е приблизително 17% от това на Земята. Напишете програма, която да изчислява тежестта на човек на Луната, по дадената тежест на Земята.<br /><br />
 <span class="tab"></span>Упътване: Прочетете число от конзолата, след което го умножете по 0.17 и го отпечатайте.<br /><br />
 <span class="tab"></span>Решение: <br />
-<span class="tab"></span><img src="/Resources/CSResources/ch3-7.jpg"><hr>
+<div class="code">
+    <span class="Modifier">static</span>&nbsp;<span class="ValueType">void</span>&nbsp;Main(<span class="ReferenceType">string</span>[]&nbsp;args)<br />
+    {<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;Console.WriteLine(<span class="String">"Enter&nbsp;weight&nbsp;of&nbsp;a&nbsp;man:&nbsp;"</span>);<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;<span class="ValueType">int</span>&nbsp;weight&nbsp;=&nbsp;Convert.ToInt32(Console.ReadLine());<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;Console.WriteLine(<span class="String">"This&nbsp;person&nbsp;will&nbsp;weight&nbsp;{0}kg&nbsp;on&nbsp;the&nbsp;Moon."</span>,&nbsp;weight&nbsp;*&nbsp;0.17);<br />
+    }
+</div>
+<hr>
 <span class="tab"></span>8. Напишете програма, която проверява дали дадена точка О (x, y) е вътре в окръжността К ((0,0), 5). Пояснение: точката (0,0) е център на окръжността, а радиусът й е 5.<br /><br />
 <span class="tab"></span>Упътване: Използвайте питагоровата теорема a2 + b2 = c2. За да е точката вътре в кръга, то x*x + y*y следва да е по-малко или равно на 5.<br /><br />
 <span class="tab"></span>Решение: <br />
-<span class="tab"></span><img src="/Resources/CSResources/ch3-8.jpg"><hr>
+<div class="code">
+    <span class="Modifier">static</span>&nbsp;<span class="ValueType">void</span>&nbsp;Main(<span class="ReferenceType">string</span>[]&nbsp;args)<br />
+    {<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;Console.Write(<span class="String">"Enter&nbsp;x:&nbsp;"</span>);<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;<span class="ValueType">int</span>&nbsp;x&nbsp;=&nbsp;Convert.ToInt32(Console.ReadLine());<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;Console.Write(<span class="String">"Enter&nbsp;y:&nbsp;"</span>);<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;<span class="ValueType">int</span>&nbsp;y&nbsp;=&nbsp;Convert.ToInt32(Console.ReadLine());<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;<span class="ValueType">bool</span>&nbsp;isInside&nbsp;=&nbsp;(x&nbsp;*&nbsp;*&nbsp;+&nbsp;y&nbsp;*&nbsp;y&nbsp;&lt;=&nbsp;5)&nbsp;?&nbsp;<span class="Keyword">true</span>&nbsp;:&nbsp;<span class="Keyword">false</span>;<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;Console.WriteLine(<span class="String">"The&nbsp;point&nbsp;O({0},{1})&nbsp;is&nbsp;inside&nbsp;K((0,0),5)?:&nbsp;{2}"</span>,&nbsp;x,&nbsp;y,&nbsp;isInside);<br />
+    }
+</div>
+<hr>
 <span class="tab"></span>9. Напишете програма, която проверява дали дадена точка О (x, y) е вътре в окръжността К ((0,0), 5) и едновременно с това извън право­ъгълника ((-1, 1), (5, 5). Пояснение: правоъгълникът е зададен чрез координатите на горния си ляв и долния си десен ъгъл.<br /><br />
 <span class="tab"></span>Упътване: Използвайте кода от предходната задача и добавете проверка за правоъгълника. Една точка е вътре в даден правоъгълник със стени успоредни на координатните оси, когато е вдясно от лявата му стена, вляво от дясната му стена, надолу от горната му стена и нагоре от долната му стена.<br /><br />
 <span class="tab"></span>Решение: <a href="https://github.com/ivanpop/CS-for-Dummies/blob/master/Chapter%203%20Solution%209/Program.cs" target="_blank"><b><u>Link</u></b></a><hr>
@@ -51,15 +121,48 @@
 <span class="tab"></span>12. Напишете булев израз, който проверява дали битът на позиция p на цялото число v има стойност 1. Пример v=5, p=1 -> false.<br /><br />
 <span class="tab"></span>Упътване: Задачата е аналогична на предната.<br /><br />
 <span class="tab"></span>Решение: <br />
-<span class="tab"></span><img src="/Resources/CSResources/ch3-12.jpg"><hr>
+<div class="code">
+    <span class="Modifier">static</span>&nbsp;<span class="ValueType">void</span>&nbsp;Main(<span class="ReferenceType">string</span>[]&nbsp;args)<br />
+    {<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;<span class="ValueType">int</span>&nbsp;v&nbsp;=&nbsp;350;<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;<span class="ValueType">int</span>&nbsp;p&nbsp;=&nbsp;350;<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;<span class="ValueType">int</span>&nbsp;mask&nbsp;=&nbsp;1&nbsp;&lt;&lt;&nbsp;p;<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;<span class="ValueType">bool</span>&nbsp;isOne&nbsp;=&nbsp;(v&nbsp;&amp;&nbsp;mask)&nbsp;!=&nbsp;0&nbsp;?&nbsp;<span class="Keyword">true</span>&nbsp;:&nbsp;<span class="Keyword">false</span>;<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;Console.WriteLine(<span class="String">"The&nbsp;bit&nbsp;at&nbsp;position&nbsp;{0}of&nbsp;number&nbsp;{1}&nbsp;is&nbsp;1?&nbsp;{2}"</span>,&nbsp;p,&nbsp;v,&nbsp;isOne);<br />
+    }
+</div>
+<hr>
 <span class="tab"></span>13. Дадено е число n, стойност v (v = 0 или 1) и позиция p. Напишете поредица от операции, които да променят стойността на n, така че битът на позиция p да има стойност v. Пример n=35, p=5, v=0 -> n=3. Още един пример: n=35, p=2, v=1 -> n=39.<br /><br />
 <span class="tab"></span>Упътване: Ползвайте побитови операции, по аналогия със задача 11.<br /><br />
 <span class="tab"></span>Решение: <br />
-<span class="tab"></span><img src="/Resources/CSResources/ch3-13.jpg"><hr>
+<div class="code">
+    <span class="Modifier">static</span>&nbsp;<span class="ValueType">void</span>&nbsp;Main(<span class="ReferenceType">string</span>[]&nbsp;args)<br />
+    {<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;<span class="ValueType">int</span>&nbsp;n&nbsp;=&nbsp;350;<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;<span class="ValueType">int</span>&nbsp;v&nbsp;=&nbsp;0;<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;<span class="ValueType">int</span>&nbsp;p&nbsp;=&nbsp;3;<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;n&nbsp;=&nbsp;(v&nbsp;==&nbsp;0)&nbsp;?&nbsp;n&nbsp;=&nbsp;n&nbsp;&amp;&nbsp;(~(1&nbsp;&lt;&lt;&nbsp;p))&nbsp;:&nbsp;n&nbsp;=&nbsp;n&nbsp;|&nbsp;(1&nbsp;&lt;&lt;&nbsp;p);<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;Console.WriteLine(n);<br />
+    }
+</div>
+<hr>
 <span class="tab"></span>14. Напишете програма, която проверява дали дадено число n (1 < n < 100) е просто (т.е. се дели без остатък само на себе си и на единица).<br /><br />
 <span class="tab"></span> Упътване: Прочетете за цикли в Интернет. Използвайте цикъл и проверете числото за делимост на всички числа от 1 до корен квадратен от числото. В конкретната задача, тъй като ограничението е само до 100, можете предварително да намерите простите числа от 1 до 100 и да направите проверки дали даденото число n e равно на някое от тях.<br /><br />
 <span class="tab"></span>Решение: <br />
-<span class="tab"></span><img src="/Resources/CSResources/ch3-14.jpg"><hr>
+<div class="code">
+    <span class="Modifier">static</span>&nbsp;<span class="ValueType">void</span>&nbsp;Main(<span class="ReferenceType">string</span>[]&nbsp;args)<br />
+    {<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;<span class="ValueType">int</span>&nbsp;number&nbsp;=&nbsp;72;<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;<span class="ValueType">bool</span>&nbsp;isPrime&nbsp;=&nbsp;<span class="Keyword">true</span>;<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;<span class="Statement">if</span>&nbsp;(number&nbsp;&gt;&nbsp;2)<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="Statement">for</span>&nbsp;(<span class="ValueType">int</span>&nbsp;i&nbsp;=&nbsp;2;&nbsp;i&nbsp;&lt;=&nbsp;Math.Ceiling(Math.Sqrt(numbber));&nbsp;++i)<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="Statement">if</span>&nbsp;(number&nbsp;%&nbsp;i&nbsp;==&nbsp;0)&nbsp;isPrime&nbsp;=&nbsp;<span class="Keyword">false</span>;<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;Console.WriteLine(<span class="String">"{0}&nbsp;is&nbsp;prime?:&nbsp;{1}"</span>,&nbsp;number,&nbsp;isPrime);<br />
+    }
+</div>
+<hr>
 <span class="tab"></span>15. Напишете програма, която разменя стойностите на битовете на позиции 3, 4 и 5 с битовете на позиции 24, 25 и 26 на дадено цяло положително число.<br /><br />
 <span class="tab"></span>Упътване: За решението на тази задача използвайте комбинация от задачите за взимане и установяване на бит на определена позиция.<br /><br />
 <span class="tab"></span>Решение: <br />
