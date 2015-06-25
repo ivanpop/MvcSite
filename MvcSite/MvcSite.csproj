@@ -311,6 +311,7 @@
     <Content Include="Views\Projects\CSharpForDummies\CSharpForDummies3.cshtml" />
     <Content Include="Views\Projects\CSharpForDummies\CSharpForDummies4.cshtml" />
     <Content Include="Views\Projects\CSharpForDummies\CSharpForDummies5.cshtml" />
+    <Content Include="Views\Projects\CSharpForDummies\CSharpForDummies6.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
