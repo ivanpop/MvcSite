@@ -188,11 +188,7 @@
     <Content Include="Resources\CSResources\ch10-5-1.jpg" />
     <Content Include="Resources\CSResources\ch10-5-2.jpg" />
     <Content Include="Resources\CSResources\ch10-7.jpg" />
-    <Content Include="Resources\CSResources\ch11-1.jpg" />
-    <Content Include="Resources\CSResources\ch11-2.jpg" />
-    <Content Include="Resources\CSResources\ch11-3.jpg" />
     <Content Include="Resources\CSResources\ch11-4.jpg" />
-    <Content Include="Resources\CSResources\ch11-5.jpg" />
     <Content Include="Resources\CSResources\ch11-6-1.gif" />
     <Content Include="Resources\CSResources\ch11-6-2.gif" />
     <Content Include="Resources\CSResources\ch11-6-3.gif" />
@@ -295,6 +291,7 @@
     <Content Include="Views\Projects\CSharpForDummies\CSharpForDummies8.cshtml" />
     <Content Include="Views\Projects\CSharpForDummies\CSharpForDummies9.cshtml" />
     <Content Include="Views\Projects\CSharpForDummies\CSharpForDummies10.cshtml" />
+    <Content Include="Views\Projects\CSharpForDummies\CSharpForDummies11.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

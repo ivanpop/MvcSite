@@ -52,6 +52,7 @@ namespace MvcSite.Controllers
                 case 8: return View("CSharpForDummies/CSharpForDummies8");
                 case 9: return View("CSharpForDummies/CSharpForDummies9");
                 case 10: return View("CSharpForDummies/CSharpForDummies10");
+                case 11: return View("CSharpForDummies/CSharpForDummies11");
                 default: return View("CSharpForDummies/CSharpForDummies");
             }
         }
