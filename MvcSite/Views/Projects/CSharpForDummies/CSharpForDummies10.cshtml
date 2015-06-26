@@ -1,0 +1,90 @@
+﻿@{
+    ViewBag.Title = "C# For Dummies";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>C# For Dummies</h1>
+<h2> Глава 10. Рекурсия</h2>
+<span class="tab"></span>1. Напишете програма, която симулира изпълнението на n вложени цикъла от 1 до n<br /><br />
+<span class="tab"></span>Упътване: Направете метод, в който има цикъл и за всяко завъртане на цикъла да се вика същия метод.<br /><br />
+<span class="tab"></span>Решение: <br />
+<span class="tab"></span><a href="https://github.com/ivanpop/CS-for-Dummies/blob/master/Chapter%2010%20Solution%201/Program.cs" target="_blank"><b><u>Link</u></b></a><hr>
+<span class="tab"></span>2. Напишете рекурсивна програма, която генерира и отпечатва всички комбинации с повторение на k елемента над n-елементно множество.<br />
+<span class="tab"></span>Примерен вход: <br />
+<span class="tab"></span><code>n = 3, k = 2</code><br />
+<span class="tab"></span>Примерен изход: <br />
+<span class="tab"></span><img src="/Resources/CSResources/ch10-2.jpg"><br />
+<span class="tab"></span>Измислете и реализирайте итеративен алгоритъм за същата задача.<br /><br />
+<span class="tab"></span>Упътване: И за рекурсивния и за итеративния вариант на задачата използвайте модификация на алгоритмите за генериране на N вложени цикли.<br /><br />
+<span class="tab"></span>Решение:  <br />
+<span class="tab"></span><a href="https://github.com/ivanpop/CS-for-Dummies/blob/master/Chapter%2010%20Solution%202/Program.cs" target="_blank"><b><u>Link</u></b></a><hr>
+<span class="tab"></span>3. Напишете рекурсивна програма, която генерира всички вариации с повторение на n елемента от k-ти клас. <br />
+<span class="tab"></span>Примерен вход: <br />
+<span class="tab"></span><code>n = 3, k = 2</code><br />
+<span class="tab"></span>Примерен изход: <br />
+<span class="tab"></span><img src="/Resources/CSResources/ch10-3.jpg"><br />
+<span class="tab"></span>Измислете и реализирайте итеративен алгоритъм за същата задача.<br /><br />
+<span class="tab"></span>Упътване: И за рекурсивния и за итеративния вариант на задачата използвайте модификация на алгоритмите за генериране на N вложени цикли.<br /><br />
+<span class="tab"></span>Решение: <br />
+<span class="tab"></span><a href="https://github.com/ivanpop/CS-for-Dummies/blob/master/Chapter%2010%20Solution%203/Program.cs" target="_blank"><b><u>Link</u></b></a><hr>
+<span class="tab"></span>4. Нека е дадено множество от символни низове. Да се напише рекур­сивна програма, която генерира всички подмножества съставени от точно k на брой символни низа, избрани измежду елементите на това множество. <br />
+<span class="tab"></span>Примерен вход: <br />
+<span class="tab"></span><img src="/Resources/CSResources/ch10-4-1.jpg"><br />
+<span class="tab"></span>Примерен изход: <br />
+<span class="tab"></span><img src="/Resources/CSResources/ch10-4-2.jpg"><br /><br />
+<span class="tab"></span>Упътване: Нека низовете са N на брой. Използвайте имитация на k вложени цикли (рекурсивна или итеративна). Трябва да генерирате всички множества от k елемента в диапазона <code>[0...N-1] </code>. За всяко такова множество разглеждате числата от него като индекси в масива със символните низове и отпечатвате за всяко число съответния низ. За горния пример множеството {0, 2} означава нулевата и втората дума, т.е. <code> (test, fun)</code>.<br /><br />
+<span class="tab"></span>Решение: <br />
+<span class="tab"></span><a href="https://github.com/ivanpop/CS-for-Dummies/blob/master/Chapter%2010%20Solution%204/Program.cs" target="_blank"><b><u>Link</u></b></a><hr>
+<span class="tab"></span>5. Напишете рекурсивна програма, която отпечатва всички подмножества на дадено множество от думи. <br />
+<span class="tab"></span>Примерен вход: <br />
+<span class="tab"></span><img src="/Resources/CSResources/ch10-5-1.jpg"><br />
+<span class="tab"></span><br /><span class="tab"></span>Примерен изход: <br />
+<span class="tab"></span><img src="/Resources/CSResources/ch10-5-2.jpg"><br />
+<span class="tab"></span>Измислете и реализирайте итеративен алгоритъм за същата задача.<br /><br />
+<span class="tab"></span>Упътване: Можете да използвате предходната задача и да я извикатe <code>N</code> пъти, за да генерирате последователно празното множество <code> (k=0) </code>, следвано от всички подмножества с 1 елемент <code> (k=1) </code>, всички подмножества с 2 елемента <code> (k=2) </code>, всички подмножества с 3 елемента <code> (k=3) </code> и т.н.<br /><br />
+<span class="tab"></span>Решение: <br />
+<span class="tab"></span><a href="https://github.com/ivanpop/CS-for-Dummies/blob/master/Chapter%2010%20Solution%205/Program.cs" target="_blank"><b><u>Link</u></b></a><hr>
+<span class="tab"></span>6. Реализирайте алгоритъма \"сортиране чрез сливане\" (merge-sort). При него началният масив се разделя на две равни по големина части, които се сортират (рекурсивно чрез merge-sort) и след това двете сортирани части се сливат, за да се получи целият масив в сортиран вид.<br /><br />
+<span class="tab"></span>Упътване:  Ако се затрудните, потърсете \"merge sort\" в Интернет. Ще намерите стотици имплементации, включително на C#. Предизвикателството е да не се заделя при всяко рекурсивно извикване нов масив за резултата, защото това е неефективно, а да се ползват само 3 масива в цялата програма: двата масива, които се сливат и трети за резултата от сливането. Ще трябва да реализирате сливане две области от масив в област от друг масив.<br /><br />
+<span class="tab"></span>Решение: <br />
+<span class="tab"></span><a href="https://github.com/ivanpop/CS-for-Dummies/blob/master/Chapter%2010%20Solution%206/Program.cs" target="_blank"><b><u>Link</u></b></a><hr>
+<span class="tab"></span>7. Напишете рекурсивна програма, която генерира и отпечатва пермута­циите на числата 1, 2, …, n, за дадено цяло число n. <br />
+<span class="tab"></span>Примерен вход: <code>n = 3</code><br />
+<span class="tab"></span>Примерен изход: <br />
+<span class="tab"></span><img src="/Resources/CSResources/ch10-7.jpg"><br /><br />
+<span class="tab"></span>Упътване: Да предположим, че методът <code>Perm(k) </code> пермутира по всички възможни начини елементите от масив <code>p[]</code>, стоящи на позиции от 0 до <code>k</code> включително. В масива p първоначално записваме числата от 1 до <code>N</code>.<br /><span class="tab"></span>Можем да реализираме рекурсивно <code>Perm(k)</code> по следния начин: <br />
+<span class="tab"></span>При k=0 отпечатваме поредната пермутация и излизаме (дъно на рекурсията).<br />
+<span class="tab"></span>За всяка позиция i от 0 до k-1 извършваме следното:<br />
+<span class="tab2"></span>a.  Разменяме <code>p[i]</code> с <code>p[k]</code>.<br />
+<span class="tab2"></span>b. Извикваме рекурсия: <code>Perm(k-1)</code>.<br />
+<span class="tab2"></span>c.   Разменяме обратно <code>p[i]</code> с <code>p[k]</code>.<br />
+<span class="tab"></span>Извикваме <code>Perm(k-1)</code>.<br />
+<span class="tab2"></span>В началото започваме с извикване на <code>Perm(N-1)</code>.<br /><br />
+<span class="tab"></span>Решение: <br />
+<span class="tab"></span><a href="https://github.com/ivanpop/CS-for-Dummies/blob/master/Chapter%2010%20Solution%207/Program.cs" target="_blank"><b><u>Link</u></b></a><hr>
+<span class="tab"></span>8. Даден е масив с цели числа и число N. Напишете рекурсивна прог­рама, която намира всички подмножества от числа от масива, които имат сума N. Например ако имаме масива <code>{2, 3, 1, -1}</code> и <code>N=4</code>, можем да получим <code>N=4</code> като сума по следните два начина: <code>4=2+3-1; 4=3+1</code>.<br /><br />
+<span class="tab"></span>Упътване: Задачата не се различава съществено от задачата за намиране на всички подмножества измежду даден списък със символни низове. Помислете ще работи ли бързо програмата при 500 числа? Обърнете внимание, че трябва да отпечатаме всички подмножества със сума N, които могат да бъдат ужасно много при голямо N и подходящи числа в масива. По тази причина задачата няма ефективно решение.<br /><br />
+<span class="tab"></span>Решение: <br />
+<span class="tab"></span><a href="https://github.com/ivanpop/CS-for-Dummies/blob/master/Chapter%2010%20Solution%208/Program.cs" target="_blank"><b><u>Link</u></b></a><hr>
+<span class="tab"></span>9. Даден е масив с цели <b>положителни</b> числа. Напишете програма, която проверява дали в масива съществуват едно или повече числа, чиято сума е N. Можете ли да решите задачата без рекурсия?<br /><br />
+<span class="tab"></span>Упътване: Ако подходите към проблема по метода на изчерпването на всички възможности, решението няма да работи при повече от 20-30 еле¬мента. Затова може да подходите по съвсем различен начин в случай, че числата в масива са само положителни или са ограничени в някакъв диапазон (примерно <code>[-50…50] </code>). Тогава може да се използва следният оптимиза¬ционен алгоритъм с динамично оптимиране: <br />
+<span class="tab"></span>Нека имаме масива с числа <code>p[]</code>. Нека означим с <code>possible(k, sum) </code> дали можем да получим сума <code>sum</code> като използваме само числата <code>p[0], p[1], ..., p[k] </code>. Тогава са в сила следните рекурентни зависимости: <br />
+<span class="tab"></span>- <code>possible(0, sum) = true</code>, точно когато <code>p[0] == sum</code><br />
+<span class="tab"></span>- <code>possible(k, sum) = true</code>, точно когато <code>possible[k-1, sum] == true</code> или <code>possible[k-1, sum-p[k]] == true</code><br />
+<span class="tab"></span>Горната формула показва, че можем да получим сума <code>sum</code> от елемен¬тите на масива на позиции от 0 до <code>k</code>, ако едно от двете е в сила: <br />
+<span class="tab"></span>- Елементът <code>p[k]</code> не участва в сумата <code>sum</code> и тя се получава по някакъв начин от останалите елементи (от 0 до <code>k-1</code>); <br />
+<span class="tab"></span>- Елементът <code>p[k] </code> участва в сумата <code>sum</code>, а остатъкът <code>sum-p[k]</code> се получава по някакъв начин от останалите елементи (от 0 до <code>k-1</code>).<br />
+<span class="tab"></span>Реализацията не е сложна, но трябва да внимавате и да не позволя¬вате вече сметната стойност от двумерния масив <code>possible[,]</code> да се пресмята повторно. За целта трябва да пазите за всяко възможно <code>k</code> и <code>sum</code> стойността <code>possible[k, sum] </code>. Иначе алгоритъмът няма да работи при повече 20-30 елемента. <br />
+<span class="tab"></span>Възстановяването на самите числа, които съставят намерената сума, може да се извърши като се тръгне отзад напред от сумата n, получена от първите <code>k</code> числа, като на всяка стъпка се търси как тази сума може да се получи чрез първите <code>k-1</code> числа (чрез взимане на <code>k</code>-тото число или пропускането му). <br />
+<span class="tab"></span>Имайте предвид, че в общия случай всички възможни суми на числа от входния масив може да са ужасно много. Примерно всички възможни суми от 50 <code>int</code> числа в интервала <code> [Int32.MinValue… Int32.MaxValue] </code> са достатъчно много, че да не могат да се съберат в каквато и да е структура от данни. Ако обаче всички числа във входния масив са положителни (както е в нашата задача), може да пазите само сумите в интервала <code>[1..N]</code>, защото от останалите са безперспективни и от тях не може да се получи търсената сума <code>N</code> чрез добавяне на едно или повече числа от входния масив. <br />
+<span class="tab"></span>Ако числата във входния масив не са задължително положителни, но са ограничени в някакъв интервал, тогава и всички възможни суми са ограничени в някакъв интервал и можем да ползваме описания по-горе алгоритъм. Например, ако диапазонът на числата във входния масив е от -50 до 50, то най-малката възможна сума е <code>-50*N</code>, а най-голямата е <code>50*N</code>. <br />
+<span class="tab"></span>Ако числата във входния масив са произволни и не са ограничени в някакъв интервал, задачата няма ефективно решение. <br />
+<span class="tab"></span>Можете да прочетете повече за тази класическа оптимизационна задача в Уикипедия: <br />
+<span class="tab"></span><a href="http://en.wikipedia.org/wiki/Subset_sum_problem"  target="_blank"><b><u> http://en.wikipedia.org/wiki/Subset_sum_problem </u></b></a>.<br /><br />
+<span class="tab"></span>Решение: <br />
+<span class="tab"></span><a href="https://github.com/ivanpop/CS-for-Dummies/blob/master/Chapter%2010%20Solution%209/Program.cs" target="_blank"><b><u>Link</u></b></a><hr>
+<span class="tab"></span>10. Дадена е матрица с проходими и непроходими клетки. Напишете рекурсивна програма, която намира всички пътища между две клетки в матрицата.<br /><br />
+<span class="tab"></span>Упътване: Прочетете за All Depth-First Search в интернет.<br /><br />
+<span class="tab"></span>Решение: <br />
+<span class="tab"></span><a href="https://github.com/ivanpop/CS-for-Dummies/blob/master/Chapter%2010%20Solution%2010/Program.cs" target="_blank"><b><u>Link</u></b></a><br /><hr>
+<span class="tab"></span><a href="javascript:history.back()">&#8592; Обратно</a>
