@@ -313,6 +313,7 @@
     <Content Include="Views\Projects\CSharpForDummies\CSharpForDummies5.cshtml" />
     <Content Include="Views\Projects\CSharpForDummies\CSharpForDummies6.cshtml" />
     <Content Include="Views\Projects\CSharpForDummies\CSharpForDummies7.cshtml" />
+    <Content Include="Views\Projects\CSharpForDummies\CSharpForDummies8.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
