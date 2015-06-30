@@ -292,6 +292,7 @@
     <Content Include="Views\Projects\CSharpForDummies\CSharpForDummies9.cshtml" />
     <Content Include="Views\Projects\CSharpForDummies\CSharpForDummies10.cshtml" />
     <Content Include="Views\Projects\CSharpForDummies\CSharpForDummies11.cshtml" />
+    <Content Include="Views\Projects\CSharpForDummies\CSharpForDummies12.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
