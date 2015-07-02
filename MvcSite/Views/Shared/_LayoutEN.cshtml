@@ -3,9 +3,9 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - Иван Попов</title>
+    <title>@ViewBag.Title - Ivan Popov</title>
     @Styles.Render("~/Content/css")
-    @Scripts.Render("~/bundles/modernizr")            
+    @Scripts.Render("~/bundles/modernizr")
 </head>
 <body>
     <div class="navbar navbar-inverse navbar-fixed-top">
@@ -16,24 +16,24 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                @Html.ActionLink("За мен", "Index", new { area = "" }, new { @class = "navbar-brand" })
+                @Html.ActionLink("About me", "Index", new { area = "" }, new { @class = "navbar-brand" })
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Автобиография", "Bio", "Home")</li>
-                    <li>@Html.ActionLink("Проекти", "Index", "Projects")</li>
-                    <li>@Html.ActionLink("Контакти", "Contact", "Home")</li>                    
+                    <li>@Html.ActionLink("Biography", "Bio", "Home")</li>
+                    <li>@Html.ActionLink("Projects", "Index", "Projects")</li>
+                    <li>@Html.ActionLink("Contacts", "Contact", "Home")</li>
                 </ul>
                 @Html.Partial("_Language")
             </div>
         </div>
     </div>
-    <div class="container body-content">        
-            @RenderBody()        
+    <div class="container body-content">
+        @RenderBody()
     </div>
     <div class="footer">
-            <p>&copy; @DateTime.Now.Year - Иван Попов</p>
-            <a href="#" class="scrollup">Scroll</a>
+        <p>&copy; @DateTime.Now.Year - Ivan Popov</p>
+        <a href="#" class="scrollup">Scroll</a>
     </div>
 
     @Scripts.Render("~/bundles/jquery")

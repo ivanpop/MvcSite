@@ -284,6 +284,8 @@
     <Content Include="Views\Projects\CSharpForDummies\CSharpForDummies10.cshtml" />
     <Content Include="Views\Projects\CSharpForDummies\CSharpForDummies11.cshtml" />
     <Content Include="Views\Projects\CSharpForDummies\CSharpForDummies12.cshtml" />
+    <Content Include="Views\Home\en\Index.cshtml" />
+    <Content Include="Views\Shared\_LayoutEN.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

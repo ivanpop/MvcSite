@@ -8,10 +8,13 @@ namespace MvcMovie.Controllers
     public class HomeController : Controller 
     { 
         // GET: /Home/ 
- 
-        public ActionResult Index() 
+
+        public ActionResult Index(string language = "bg") 
         {
-            return View(); 
+            if (language == "en")
+                return View("en/Index");
+            else
+                return View();
         } 
  
         // GET: /Home/Bio/ 
