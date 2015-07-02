@@ -1,0 +1,43 @@
+﻿@{
+    Layout = "~/Views/Shared/_LayoutEN.cshtml";
+    ViewBag.Title = "Проекти";
+}
+
+<h1>Projects</h1>
+<p><span class="tab"></span>Here I've shown some of the projects I'm working on.</p>
+
+<table>
+    <tr>
+        <td rowspan="4" width="40"></td>
+        <td width="300" height="50">
+            <b>&#9642; @Html.ActionLink("Countdown timer & Stopwatch", "CountdownTimer", "Projects")</b>
+        </td>
+        <td width="350">
+            <i>Countdown timer and a stopwatch.</i>
+        </td>
+    </tr>
+    <tr>
+        <td height="50">
+            <b>&#9642; @Html.ActionLink("Ryu: The Big Adventure!", "Ryu", "Projects")</b>
+        </td>
+        <td width="350">
+            <i>2D Action game. Written in Java it represents a 2D Beat 'em up simulator.</i>
+        </td>
+    </tr>
+    <tr>
+        <td height="50">
+            <b>&#9642; @Html.ActionLink("C# for Dummies", "CSharpForDummies", "Projects")</b>
+        </td>
+        <td width="350">
+            <i>Solutions from The C# book from Telerik.</i>
+        </td>
+    </tr>
+    <tr>
+        <td height="50">
+            <b>&#9642; @Html.ActionLink("Converter", "Converter", "Projects")</b>
+        </td>
+        <td width="350">
+            <i>Program for converting metric units.</i>
+        </td>
+    </tr>
+</table>

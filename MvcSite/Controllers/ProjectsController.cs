@@ -9,9 +9,12 @@ namespace MvcSite.Controllers
     public class ProjectsController : Controller
     {
         // GET: Projects
-        public ActionResult Index()
+        public ActionResult Index(string language = "bg")
         {
-            return View();
+            if (language == "en")
+                return View("en/Index");
+            else
+                return View();
         }
 
         // GET: Ryu

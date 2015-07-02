@@ -19,14 +19,20 @@ namespace MvcMovie.Controllers
  
         // GET: /Home/Bio/ 
 
-        public ActionResult Bio()
+        public ActionResult Bio(string language = "bg")
         {
-            return View();
+            if (language == "en")
+                return View("en/Bio");
+            else
+                return View();
         }
 
-        public ActionResult Contact()
+        public ActionResult Contact(string language = "bg")
         {
-            return View();
+            if (language == "en")
+                return View("en/Contact");
+            else
+                return View();
         }
 
         public void SendMail(string email, string descr, string text)
