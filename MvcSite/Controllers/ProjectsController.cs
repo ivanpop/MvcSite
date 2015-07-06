@@ -18,53 +18,65 @@ namespace MvcSite.Controllers
         }
 
         // GET: Ryu
-        public ActionResult Ryu(byte page = 1)
+        public ActionResult Ryu(string id = "1", string language = "bg")
         {
-            switch (page)
-            {
-                case 3: return View("Ryu3");
-                case 2: return View("Ryu2");
-                default: return View("Ryu");
-            }   
+            if (language == "en")
+                switch (id)
+                {
+                    case "3": return View("en/Ryu3");
+                    case "2": return View("en/Ryu2");
+                    default: return View("en/Ryu");
+                }
+
+            else
+                switch (id)
+                {
+                    case "3": return View("Ryu3");
+                    case "2": return View("Ryu2");
+                    default: return View("Ryu");
+                }  
         }
 
         // GET: CountdownTimer
-        public ActionResult CountdownTimer(byte page = 1)
+        public ActionResult CountdownTimer(string id = "1")
         {
-            switch (page)
+            switch (id)
             {
-                case 2: return View("CountdownTimer2");
-                case 3: return View("CountdownTimer3");
-                case 4: return View("CountdownTimer4");
+                case "2": return View("CountdownTimer2");
+                case "3": return View("CountdownTimer3");
+                case "4": return View("CountdownTimer4");
                 default: return View("CountdownTimer");
             }
         }
 
         // GET: C# for Dummies
-        public ActionResult CSharpForDummies(byte page = 0)
+        public ActionResult CSharpForDummies(string id = "1")
         {
-            switch (page)
+            switch (id)
             {
-                case 1: return View("CSharpForDummies/CSharpForDummies1");
-                case 2: return View("CSharpForDummies/CSharpForDummies2");
-                case 3: return View("CSharpForDummies/CSharpForDummies3");
-                case 4: return View("CSharpForDummies/CSharpForDummies4");
-                case 5: return View("CSharpForDummies/CSharpForDummies5");
-                case 6: return View("CSharpForDummies/CSharpForDummies6");
-                case 7: return View("CSharpForDummies/CSharpForDummies7");
-                case 8: return View("CSharpForDummies/CSharpForDummies8");
-                case 9: return View("CSharpForDummies/CSharpForDummies9");
-                case 10: return View("CSharpForDummies/CSharpForDummies10");
-                case 11: return View("CSharpForDummies/CSharpForDummies11");
-                case 12: return View("CSharpForDummies/CSharpForDummies12");
+                case "1": return View("CSharpForDummies/CSharpForDummies1");
+                case "2": return View("CSharpForDummies/CSharpForDummies2");
+                case "3": return View("CSharpForDummies/CSharpForDummies3");
+                case "4": return View("CSharpForDummies/CSharpForDummies4");
+                case "5": return View("CSharpForDummies/CSharpForDummies5");
+                case "6": return View("CSharpForDummies/CSharpForDummies6");
+                case "7": return View("CSharpForDummies/CSharpForDummies7");
+                case "8": return View("CSharpForDummies/CSharpForDummies8");
+                case "9": return View("CSharpForDummies/CSharpForDummies9");
+                case "10": return View("CSharpForDummies/CSharpForDummies10");
+                case "11": return View("CSharpForDummies/CSharpForDummies11");
+                case "12": return View("CSharpForDummies/CSharpForDummies12");
                 default: return View("CSharpForDummies/CSharpForDummies");
             }
         }
 
         // GET: Converter
-        public ActionResult Converter()
+        public ActionResult Converter(string language = "bg")
         {
-            return View();   
+            if (language == "en")
+                return View("en/Converter");
+            else
+                return View();  
         }
     }
 }

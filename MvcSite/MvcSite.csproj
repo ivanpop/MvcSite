@@ -289,6 +289,10 @@
     <Content Include="Views\Home\en\Bio.cshtml" />
     <Content Include="Views\Home\en\Contact.cshtml" />
     <Content Include="Views\Projects\en\Index.cshtml" />
+    <Content Include="Views\Projects\en\Converter.cshtml" />
+    <Content Include="Views\Projects\en\Ryu.cshtml" />
+    <Content Include="Views\Projects\en\Ryu2.cshtml" />
+    <Content Include="Views\Projects\en\Ryu3.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
