@@ -81,7 +81,10 @@
     &nbsp;&nbsp;}<br />
     }
 </div>
-<p><span class="tab"></span>Метода създава случайно число в интервала от 1 до 1000, с всеки един цикъл на играта. Когато числото е по-голямо от 900, метода изпраща сигнал за изпълняване на удар. Когато всички тези условия са изпълнени преминаваме към изпълнението на удара.</p>
+<p>
+    <span class="tab"></span>Метода създава случайно число в интервала от 1 до 1000, с всеки един цикъл на играта. Когато числото е по-голямо от 900, метода изпраща сигнал за изпълняване на удар.<br />
+    <span class="tab"></span>Когато всички тези условия са изпълнени преминаваме към изпълнението на удара.
+</p>
 <div class="code">
     <span class="Statement">if</span>&nbsp;(thugAtRyu(thugPosX,&nbsp;thugPosY)&nbsp;&amp;&amp;&nbsp;!ryuAttack()<br />
     &nbsp;&nbsp;&nbsp;&nbsp;&amp;&amp;&nbsp;enemyAttackChance()&nbsp;&amp;&amp;&nbsp;showThug&nbsp;&amp;&amp;&nbsp;thugHitRyu)<br />
@@ -183,6 +186,7 @@
 <div class="text-center">
     <div class="pages">
         <a href="Ryu?page=2">&#8656;</a>
+        @Html.ActionLink("1", "Ryu", new { id = 1})
         <a href="Ryu?page=1">1</a>
         <a href="Ryu?page=2">2</a>
         <div class="selected-page">

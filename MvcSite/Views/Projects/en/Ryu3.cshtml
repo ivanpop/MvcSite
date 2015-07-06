@@ -1,5 +1,199 @@
 ﻿@{
     Layout = "~/Views/Shared/_LayoutEN.cshtml";
+    ViewBag.Title = "Ryu: The Big Adventure!";
 }
 
+<h1>Ryu: The Big Adventure!</h1>
+<h3>Creating enemies</h3>
+<h4>Moving towards Ryu</h4>
+<p><span class="tab"></span>Each enemy is moving when Ryu gets inside his range, while he is alive and while he isn't next to Ryu. When these two conditions have been met, the enemy starts to move to the coordinates of shiftX and shiftY with the speed of delta * .1f. While moving his animation changes to a walking animation.</p>
+<div class="code">
+    <span class="Statement">if</span>&nbsp;(ryuPositionX&nbsp;&lt;&nbsp;-170&nbsp;&amp;&amp;&nbsp;thugHP&nbsp;&gt;&nbsp;0)<br />
+    {<br />
+    &nbsp;&nbsp;<span class="Statement">if</span>&nbsp;(thugPosY&nbsp;&lt;&nbsp;117)<br />
+    &nbsp;&nbsp;{<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;moveY&nbsp;+=&nbsp;delta&nbsp;*&nbsp;.1f;<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;thugSprite&nbsp;=&nbsp;thugWalkAnimation;<br />
+    &nbsp;&nbsp;}<br />
+    &nbsp;&nbsp;<span class="Statement">if</span>&nbsp;(thugPosY&nbsp;&gt;&nbsp;120)<br />
+    &nbsp;&nbsp;{<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;moveY&nbsp;-=&nbsp;delta&nbsp;*&nbsp;.1f;<br />
+    &nbsp;&nbsp;}<br />
+    &nbsp;&nbsp;<span class="Statement">if</span>&nbsp;(thugPosX&nbsp;&gt;&nbsp;170)<br />
+    &nbsp;&nbsp;{<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;moveX&nbsp;-=&nbsp;delta&nbsp;*&nbsp;.1f;<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;thugSprite&nbsp;=&nbsp;thugWalkAnimation;<br />
+    &nbsp;&nbsp;}<br />
+    }
+</div>
+<p><span class="tab"></span>When he reaches the main character he stops, because one of the condition isn't met – that of not being next to him.</p>
+<h4>Hitting</h4>
+<p>
+    <span class="tab"></span>To be able to hit Ryu, first we need to meet a series of conditions. The enemy must be right in front of Ryu, Ryu mustn't do any hits or skills at the moment and he must be alive.<br />
+    <span class="tab"></span>First the boolean method thugAtRyu() looks if the enemy is at the right place to perform a hit and returns true.
+</p>
+<div class="code">
+    <span class="Modifier">public</span>&nbsp;<span class="Type">boolean</span>&nbsp;thugAtRyu(<span class="Type">float</span>&nbsp;thugPosX,&nbsp;<span class="Type">float</span>&nbsp;thugPosY)<br />
+    {<br />
+    &nbsp;&nbsp;<span class="Statement">if</span>&nbsp;(thugPosX&nbsp;&lt;&nbsp;190&nbsp;&amp;&amp;&nbsp;thugPosX&nbsp;&gt;&nbsp;115&nbsp;&amp;&amp;&nbsp;<br />
+    &nbsp;&nbsp;thugPosY&nbsp;&lt;&nbsp;130&nbsp;&amp;&amp;&nbsp;thugPosY&nbsp;&gt;&nbsp;70)<br />
+    &nbsp;&nbsp;{<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;<span class="Statement">return</span>&nbsp;<span class="Keyword">true</span>;<br />
+    &nbsp;&nbsp;}<br />
+    &nbsp;&nbsp;<span class="Statement">else</span><br />
+    &nbsp;&nbsp;{<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;<span class="Statement">return</span>&nbsp;<span class="Keyword">false</span>;<br />
+    &nbsp;&nbsp;}<br />
+    }
+</div>
+<p><span class="tab"></span>With the next boolean method called ryuAttack(), we look if the main character isn't doing any hits or special skills.</p>
+<div class="code">
+    <span class="Modifier">public</span>&nbsp;<span class="Type">boolean</span>&nbsp;ryuAttack()<br />
+    {<br />
+    &nbsp;&nbsp;<span class="Statement">if</span>&nbsp;(ryuHadouken&nbsp;||&nbsp;ryuLowKick&nbsp;||&nbsp;ryuPunch&nbsp;||&nbsp;<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;ryuShoryuken&nbsp;||&nbsp;ryuShoryuken&nbsp;||&nbsp;ryuTatsaku)<br />
+    &nbsp;&nbsp;{<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;<span class="Statement">return</span>&nbsp;<span class="Keyword">true</span>;<br />
+    &nbsp;&nbsp;}<br />
+    &nbsp;&nbsp;<span class="Statement">else</span><br />
+    &nbsp;&nbsp;{<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;<span class="Statement">return</span>&nbsp;<span class="Keyword">false</span>;<br />
+    &nbsp;&nbsp;}<br />
+    }
+</div>
+<p>
+    <span class="tab"></span>As I mentioned before, for each action of Ryu there is a boolean. In this case, using them, we can check for these actions and use them in this method.<br />
+    <span class="tab"></span>The enemy must hit in an interval of time when he is at Ryu. For this purpose we use the method enemyAttackChance().<br />
+    <span class="tab"></span>enemyAttackChance() is the chance the enemy hits.
+</p>
+<div class="code">
+    <span class="Modifier">public</span>&nbsp;<span class="Type">boolean</span>&nbsp;enemyAttackChance()<br />
+    {<br />
+    &nbsp;&nbsp;Random&nbsp;rand&nbsp;=&nbsp;<span class="Keyword">new</span>&nbsp;Random();<br />
+    <br />
+    &nbsp;&nbsp;<span class="Statement">if</span>&nbsp;(rand.nextInt(1000)&nbsp;&gt;&nbsp;900)<br />
+    &nbsp;&nbsp;{<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;<span class="Statement">return</span>&nbsp;<span class="Keyword">true</span>;<br />
+    &nbsp;&nbsp;}<br />
+    &nbsp;&nbsp;<span class="Statement">else</span><br />
+    &nbsp;&nbsp;{<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;<span class="Statement">return</span>&nbsp;<span class="Keyword">false</span>;<br />
+    &nbsp;&nbsp;}<br />
+    }
+</div>
+<p>
+    <span class="tab"></span>This method creates a random nomber in the range from 1 to 1000 with each cicle of the game. When this number is greater than 900, the method sends a signal to perform a hit.<br />
+    <span class="tab"></span>When all these conditions have been met we can finally execute a punch.
+</p>
+<div class="code">
+    <span class="Statement">if</span>&nbsp;(thugAtRyu(thugPosX,&nbsp;thugPosY)&nbsp;&amp;&amp;&nbsp;!ryuAttack()<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&amp;&amp;&nbsp;enemyAttackChance()&nbsp;&amp;&amp;&nbsp;showThug&nbsp;&amp;&amp;&nbsp;thugHitRyu)<br />
+    {<br />
+    &nbsp;&nbsp;thugSprite&nbsp;=&nbsp;thugHitAnimation;<br />
+    &nbsp;&nbsp;getInitialTime&nbsp;=&nbsp;time;<br />
+    <br />
+    &nbsp;&nbsp;<span class="Statement">if</span>&nbsp;(!punchedSnd.playing()&nbsp;&amp;&amp;&nbsp;Menu.soundOn)<br />
+    &nbsp;&nbsp;{<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;punchedSnd.play(1,&nbsp;Menu.soundVolume);<br />
+    &nbsp;&nbsp;}<br />
+    <br />
+    &nbsp;&nbsp;ryuHurt&nbsp;=&nbsp;<span class="Keyword">true</span>;<br />
+    &nbsp;&nbsp;ryuHP--;<br />
+    &nbsp;&nbsp;thugHitRyu&nbsp;=&nbsp;<span class="Keyword">false</span>;<br />
+    }
+</div>
+<p>
+    <span class="tab"></span>First, the animation of the enemy changes to a hitting one. After that we create a timer, which returns him to static position after an interval of time. We check to see if sounds have been enabled and we execute a hitting sound. Also we check that this certain sound isn't been used at the moment using punchedSnd.playing(), which returns true if it's used. The reason of doing this is to prevent overlap of the sound. We change the animation to Ryu with the one which represents him in pain and we decrease his hit points. Finally, the timer returns Ryu to his static position.<br />
+    <span class="tab"></span>To create the timer we use the method delay().
+</p>
+<div class="code">
+    <span class="Modifier">public</span>&nbsp;<span class="Type">boolean</span>&nbsp;delay(<span class="Type">long</span>&nbsp;startTime,&nbsp;<span class="Type">int</span>&nbsp;number)<br />
+    {<br />
+    &nbsp;&nbsp;<span class="Statement">if</span>&nbsp;(startTime&nbsp;+&nbsp;number&nbsp;&lt;=&nbsp;time)<br />
+    &nbsp;&nbsp;{<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;<span class="Statement">return</span>&nbsp;<span class="Keyword">true</span>;<br />
+    &nbsp;&nbsp;}<br />
+    &nbsp;&nbsp;<span class="Statement">else</span><br />
+    &nbsp;&nbsp;{<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;<span class="Statement">return</span>&nbsp;<span class="Keyword">false</span>;<br />
+    &nbsp;&nbsp;}<br />
+    }
+</div>
+<p>
+    <span class="tab"></span>This method uses the variable time, which represents system time. StartTime is the time at which the timer has started, and number is the interval of time until his end. When the interval is over the method returns true and the timer stops.<br />
+    <span class="tab"></span>Ryu's punches are done in the same way.<br />
+    <span class="tab"></span>To do a hit we first have to check if there is an enemy close to Ryu and if he is alive. After that we play a punching sound in the exact same way, we change the animations of the two characters, create a timer and we decrease the enemy's hit points. After the timer has completed, they return to they're starting position and we can start all over again.
+</p>
+<h4>Animation for ending</h4>
+<p><span class="tab"></span>This animation is used when the user completes the level and it's made in the same way as the starting animation. In here we also use three sprites of Ryu, with which we show him as a winner.</p>
+<div class="code">
+    <span class="Modifier">public</span>&nbsp;<span class="Type">void</span>&nbsp;youWinAnimation(StateBasedGame&nbsp;sbg)<br />
+    {<br />
+    &nbsp;&nbsp;<span class="Statement">if</span>&nbsp;(winState)<br />
+    &nbsp;&nbsp;{<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;youWinScale1&nbsp;+=&nbsp;3;<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;youWinScale2&nbsp;+=&nbsp;2;<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;enableInput&nbsp;=&nbsp;<span class="Keyword">false</span>;<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;ryuSprite&nbsp;=&nbsp;ryuReadyAnimation;<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;ryuSprite.stopAt(6);<br />
+    <br />
+    &nbsp;&nbsp;&nbsp;&nbsp;<span class="Statement">if</span>&nbsp;(ryuSprite.isStopped())<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;{<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ryuSprite&nbsp;=&nbsp;ryuWin1Animation;<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ryuSprite.stopAt(3);<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ryuSprite&nbsp;=&nbsp;ryuWin2Animation;<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;}<br />
+    &nbsp;&nbsp;}<br />
+    <br />
+    &nbsp;&nbsp;<span class="Statement">if</span>&nbsp;(youWinScale1&nbsp;&gt;=&nbsp;100&nbsp;&amp;&amp;&nbsp;youWinScale1&nbsp;&lt;=&nbsp;105&nbsp;&amp;&amp;&nbsp;Menu.soundOn)<br />
+    &nbsp;&nbsp;{<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;youWinSnd.play(1,&nbsp;Menu.soundVolume);<br />
+    &nbsp;&nbsp;}<br />
+    <br />
+    &nbsp;&nbsp;<span class="Statement">if</span>&nbsp;(youWinScale1&nbsp;&gt;=&nbsp;600&nbsp;&amp;&amp;&nbsp;youWinScale1&nbsp;&lt;=&nbsp;610&nbsp;<br />
+    &nbsp;&nbsp;{<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;youWinScale1&nbsp;-=&nbsp;3;<br />
+    &nbsp;&nbsp;}<br />
+    <br />
+    &nbsp;&nbsp;<span class="Statement">if</span>&nbsp;(youWinScale2&nbsp;&gt;=&nbsp;1200)<br />
+    &nbsp;&nbsp;{<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;sbg.enterState(0);<br />
+    &nbsp;&nbsp;}<br />
+    }
+</div>
+<p><span class="tab"></span>The method is called youWinAnimation. It's executed with every cicle of the game, but it's activated when the boolean winState returns true. winState returns true when all enemies have been killed. It checks the hit points of each entity and executes when they all are at 0. The check itself is inside update(), which means that it's executed with every cicle of the game.</p>
+<img style="margin-left:auto;margin-right:auto;display:block;" src="/Resources/ryu12.png"><br />
+<p>
+    <span class="tab"></span>When true youWinImage is drawn on the screen, with youWinScale1 and youWinScale2 as it's vertical and horizontal size. These variables increase so that the animation can be done. When youWinScale1 reaches 100 a sound is played. When youWinScale1 reaches 600, the image is at it's full size, the scaling stops and a short time after that the user gets moved to the main menu, using sbg.enterState(0);.<br />
+    <span class="tab"></span>Ryu also has an animation for the ending. First, user movement is disabled using enableInput = false;. After that we move to the first sprite ryuReadyAnimation, which is made out of 6 sprites. We stop the animation at the 6th frame using ryuSprite.stopAt(6);, we do a check to see if it's stopped with ryuSprite.isStopped() and if that's true we move to the next sprite - ryuWin1Animation. Again we stop the sprite at the last frame, in this case frame 3, we check for the stopping of the animation and we go to the last animation ryuWin2Animation.
+</p>
+<h2>Conclusion</h2>
+<p>
+    <span class="tab"></span>In this project I've shown some of the most important components for building this game. I've mentioned LWJGL and Slick2D, which are needed for this purpose. I've shown the logic of the animation using spritesheets and I've shown some methods of realization, which I've used to create the logic of the game Ryu: The Big Adventure.<br />
+    <span class="tab"></span>From here there are many posibilities for further developing the game:<br />
+    <span class="tab"></span>The artificial intelligence can be drastically improved. Each of the enemies is create independently, which meants that they can have a different A.I. and can do their own things which can differ them from the others. There are different types of character classes in each game, like a tank, healer, archer and warrior, each of them specialized in a certain set of skills, with different advantages and disadvantages.<br />
+    <span class="tab"></span>The tank is a class which has the purpose to take hits and to protect the rest from damage. He does small amounts of damage, but has a lot of HP and is very hard to kill.<br />
+    <span class="tab"></span>The healer uses magical skills to heal his allies and to buff them, increasing they're power. He's easy to kill and doesn't do any kind of damage and so he has to be protected and in the back of every formation, where he uses his healings.<br />
+    <span class="tab"></span>The archer and the warrior are the classes which do the most damage. The tank takes the enemies attention, the healer keeps everyone alive and the archer and warrior do the damage.<br />
+    <span class="tab"></span>Each class will need its own type of A.I. ,which has to be a lot different from the others. This combination of classes can cause a lot of problems for the player, forcing him to use different type of strategies for each one of them.<br />
+    <span class="tab"></span>A database can be added, which can keep high scores. The score can be based on how long it took to complete the level, on what difficulty, how much HP remaining does the player haves at the end and others.<br />
+    <span class="tab"></span>The game can be ported to other platforms like iOS, Windows Mobile, Android and Blackberry or it can be played online using an internet browser.
+</p><br />
 
+<span class="tab"></span><b>Source: <a href="https://github.com/ivanpop/Ryu">Github</a></b>
+<span class="tab"></span><b>Download: <a href="~/Resources/ryu.zip" target="_blank">Link</a></b><br /><br />
+<div class="text-center">
+    <div class="pages">
+        <a href="Ryu?page=2">&#8656;</a>
+        <a href="Ryu?page=1">1</a>
+        <a href="Ryu?page=2">2</a>
+        <div class="selected-page">
+            <a href="#top">3</a>
+        </div>
+
+        <a href="Ryu?page=1">&#8658;</a>
+    </div>
+</div>
+<br />
+
+<span class="tab"></span><a href="javascript:history.back()">&#8592; Обратно</a>
