@@ -38,13 +38,19 @@ namespace MvcSite.Controllers
         }
 
         // GET: CountdownTimer
-        public ActionResult CountdownTimer(string id = "1")
+        public ActionResult CountdownTimer(string id = "1", string language = "bg")
         {
+            if (language == "en")
+                switch (id)
+                {
+                    case "2": return View("en/CountdownTimer2");
+                    default: return View("en/CountdownTimer");
+                }
+
+            else
             switch (id)
             {
                 case "2": return View("CountdownTimer2");
-                case "3": return View("CountdownTimer3");
-                case "4": return View("CountdownTimer4");
                 default: return View("CountdownTimer");
             }
         }

@@ -293,6 +293,8 @@
     <Content Include="Views\Projects\en\Ryu.cshtml" />
     <Content Include="Views\Projects\en\Ryu2.cshtml" />
     <Content Include="Views\Projects\en\Ryu3.cshtml" />
+    <Content Include="Views\Projects\en\CountdownTimer.cshtml" />
+    <Content Include="Views\Projects\en\CountdownTimer2.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

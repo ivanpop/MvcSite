@@ -21,12 +21,12 @@
     <span class="tab"></span><b>Download: <a href="~/Resources/countdown timer.exe" target="_blank">Link</a></b><br /><br />
     <div class="text-center">
         <div class="pages">
-            <a href="CountdownTimer?page=1">&#8656;</a>
-            <a href="CountdownTimer?page=1">1</a>
+            @Html.ActionLink(HttpUtility.HtmlDecode("&#8656;"), "CountdownTimer", new { id = "" })
+            @Html.ActionLink("1", "CountdownTimer", new { id = "" })
             <div class="selected-page">
                 <a href="#top">2</a>
-            </div>
-            <a href="CountdownTimer?page=1">&#8658;</a>
+            </div>            
+            @Html.ActionLink(HttpUtility.HtmlDecode("&#8658;"), "CountdownTimer", new { id = "" })
         </div>
     </div>
 <br />
