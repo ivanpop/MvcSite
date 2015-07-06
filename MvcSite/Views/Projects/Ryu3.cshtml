@@ -185,15 +185,13 @@
 <span class="tab"></span><b>Download: <a href="~/Resources/ryu.zip" target="_blank">Link</a></b><br /><br />
 <div class="text-center">
     <div class="pages">
-        <a href="Ryu?page=2">&#8656;</a>
-        @Html.ActionLink("1", "Ryu", new { id = 1})
-        <a href="Ryu?page=1">1</a>
-        <a href="Ryu?page=2">2</a>
+        @Html.ActionLink(HttpUtility.HtmlDecode("&#8656;"), "Ryu", new { id = 2 })
+        @Html.ActionLink("1", "Ryu", new { id = "" })
+        @Html.ActionLink("2", "Ryu", new { id = 2 })
         <div class="selected-page">
             <a href="#top">3</a>
-        </div>
-        
-        <a href="Ryu?page=1">&#8658;</a>
+        </div>        
+        @Html.ActionLink(HttpUtility.HtmlDecode("&#8658;"), "Ryu", new { id = "" })
     </div>
 </div>
 <br />
