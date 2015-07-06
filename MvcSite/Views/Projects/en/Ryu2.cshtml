@@ -1,5 +1,99 @@
 ﻿@{
     Layout = "~/Views/Shared/_LayoutEN.cshtml";
+    ViewBag.Title = "Ryu: The Big Adventure!";
 }
 
+<h1>Ryu: The Big Adventure!</h1>
+<h2>Realization</h2>
+<h3>Play</h3>
+<p><span class="tab"></span>The Play class is the main state of the game. In it the main character, his enemies, the structure of the level and the objects on the map have been initialized.</p>
+<h4>Start animation</h4>
+<p><span class="tab"></span>Starting a new game present us with an animation - „Round One“ and a corresponding sound. For this purpose we use an image (round1Image) and a scaling effect. To create the effect we use the command round1Image.draw() and the variable round1Scale, which scales the image. When we use the command round1Scale++; in the update method, the variable gets increased with every cicle of the game. This way the scale is increased and the animation is complete. When reaching a certain scale, the starting animation stops, the timer starts and the user takes control over the main character.</p>
+<div class="code">
+    <span class="Modifier">public</span>&nbsp;<span class="Type">void</span>&nbsp;round1Animation()<br />
+    {<br />
+    &nbsp;&nbsp;<span class="InlineComment">//round1&nbsp;animation&nbsp;and&nbsp;sound</span><br />
+    &nbsp;&nbsp;<span class="Statement">if</span>&nbsp;(round1Bool)&nbsp;&nbsp;<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;round1Scale&nbsp;+=&nbsp;4;<br />
+    &nbsp;&nbsp;<span class="Statement">if</span>&nbsp;(round1Scale&nbsp;&gt;=&nbsp;100&nbsp;&amp;&amp;&nbsp;round1Scale&nbsp;&lt;=&nbsp;105&nbsp;&amp;&amp;&nbsp;Menu.soundOn)<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;round1Snd.play(1,&nbsp;Menu.soundVolume);<br />
+    &nbsp;&nbsp;<span class="Statement">if</span>&nbsp;(round1Scale&nbsp;&gt;=&nbsp;600&nbsp;&amp;&amp;&nbsp;round1Scale&nbsp;&lt;=&nbsp;610)<br />
+    &nbsp;&nbsp;{<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;round1Bool&nbsp;=&nbsp;<span class="Keyword">false</span>;<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;enableInput&nbsp;=&nbsp;<span class="Keyword">true</span>;<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;round1Scale&nbsp;=&nbsp;1;<br />
+    &nbsp;&nbsp;}<br />
+    }
+</div>
+<p><span class="tab"></span>The method is round1Animation(). round1Bool takes care of the completion of the animation. When reaching scale of 100 a sound starts to play, and when reaching scale of 600 the animation ends. Beside the animation, this method is also responsible for changing the enemies health according to the difficulty, set in the options menu. The boolean enableInput is used to give or inhibit control over the main character. Beside at the beginning of the game, the boolean is used in other places, like when the pause menu is open.</p>
+<h4>Map of the level</h4>
+<p><span class="tab"></span>The map is one huge image, with greenish background imitating grass. First the image is scaled to an exact size so the level can be long enough. Other than the grass there is also a forest from the top and bottom. This forest is an obstruction, which haves the purpose to not allow the main character to go outside the boundries of the map. The forest is made of only one sprite, that of a tree. The sprite is downloaded from <a href="http://www.deviantart.com/" target="_blank"><b>www.deviantart.com</b></a>, a website for publication of user-made artwork.</p>
+<img style="margin-left:auto;margin-right:auto;display:block;" src="/Resources/ryu7.png"><br />
+<p>
+    <span class="tab"></span>After finding the correct sprite, using Photoshop, the tree is duplicated multiple times so the effect of a forest can be made. The process of building the map is fairly simple, the image must be in .png format because of a limitation in Slick2D. This means, that the resulting file is 10MB in size or nearly 3 larger than the equivalent in .jpg.<br />
+    <span class="tab"></span>When creating the map we also create two variables – shiftX and shiftY. They are used to move the image in the window ot the program. This way when moving Ryu we actually move the image below him. His coordinates remain the same but we get the effect of moving the character.
+</p>
+<h4>Creating Ryu</h4>
+<p>
+    <span class="tab"></span>To animate the main character in the game I've used a total of 14 different animations. Each animation is made of spritesheets.<br />
+    <span class="tab"></span>A spritesheet is an image in which there are a couple of sub-images or frames of the animation called sprites.
+</p>
+<img style="margin-left:auto;margin-right:auto;display:block;" src="/Resources/ryu8.png"><br />
+<p><span class="tab"></span>When declaring the spritesheet we give the path to the image, x and y, which correspond to the vertical and horizontal size of the sprite frame. The spritesheet must be in .png format and with transparent background.</p>
+<img style="margin-left:auto;margin-right:auto;display:block;" src="/Resources/ryu9.png"><br />
+<p>
+    <span class="tab"></span>The frames of the sprite have to be in an exact distance between each other. x is formed when we take the horizontal size of the spritesheet and we divide it by the count of frames inside it. If the distance isn't messured corectly, there will be inadequacyies when drawing the animation.<br />
+    <span class="tab"></span>The animation is declared with the spritesheet as source file followed by х which stands for the duration of each frame messured in milliseconds. After this duration has passed the framed is followed by the next in the spritesheet.
+</p>
+<ul>
+    <li><b>ryuStatic</b> - This is the static animation. It's used each time Ryu isn't moving or doing some action. Other than inside the game, this sprite is also used in the main menu.</li>
+    <li><b>ryuReady</b> - This animation is used when starting and finishing the game. It represents the action of Ryu when tying his headband.</li>
+    <li><b>ryuLeft</b> - Used when walking back.</li>
+    <li><b>ryuRight</b> - Used when walking forward/right, up and down.</li>
+    <li><b>ryuRight</b> - This is Ryu hitting with fist.</li>
+    <li><b>ryuLowKick</b> - Ryu hitting with kick.</li>
+    <li><b>ryuHadoukenryuShoryuken</b> and <b>ryuTatsaku.</b> - These animations represent the three special abilities that Ryu posses. <b>ryuHadouken</b> is used in combination with <b>ryuHadoukenBall</b>, which is the animation of the fired ball of energy.</li>
+    <li><b>ryuHurt</b> - This is the animation of Ryu when he gets hurt.</li>
+    <li><b>ryuWin1</b> and <b>ryuWin2</b> - These are two different animations which work in combination and are used when finishing the game. They illustrate Ryu as a winner.</li>
+</ul>
+<p>
+    <span class="tab"></span>Other the visual Ryu also uses a variety of sound effects, taken from different sources from the web.<br />
+    <span class="tab"></span>For the realization of Ryu there are also a variety of variables and methods, which are created for his needs.
+</p>
+<p><span class="tab"></span>ryuPhysics() takes care of moving, Ryu, switching between basic animations, hits, special abilities, his health and energy. This method listens to input from the keyboard and does the corresponding animation. Here there are the durations of the animations, the boundries of the level which cannot be passed, the relationship between Ryu and the traps and objects on the map and the monitoring of his HP and MP. To avoid duplications of animations each on of them is grouped with it's own boolean. When Ryu is in static position, the boolean ryuStatic is true and all other are false. In every moment only one boolean can be true. Otherwise we can see two different animations at the same time. To avoid this problem there is another method called removeDuplications(). It takes care of this, that only one boolean can be true and it switches all the others to false.</p>
+<p><span class="tab"></span>The coordinates of Ryu are described with 4 variables. First two, shiftX and shiftY determine his location on the window of the application. These coordinates are always the same and don't change. The other two are ryuPositionX and ryuPositionY. They determine his location on the map. They describe the movement of the background image behind Ryu. This way we get the effect that Ryu is moving, but actually his figure doesn't move from the left corner of the window.</p>
+<h4>Creating enemies</h4>
+<p>
+    <span class="tab"></span>The other important part of the game is creating the enemies, which will keep us busy throughout the level. They are created similarly to the main character – they are created using spritesheets, they make sounds, they have health and they can hit. The difference here is that they are controlled by the computer using artificial intelligence (A.I.).<br />
+    <span class="tab"></span>Each enemy is created using 5 different spritesheets: static animation, walking, hitting, being hit and a sprite for dying.
+</p>
+<img style="margin-left:auto;margin-right:auto;display:block;" src="/Resources/ryu10.png">
+<p><span class="tab"></span>The enemies are initialized in exact coordinates on the level. Unlike Ryu, the enemies don't have special abilities which means that they don't have energy (MP) either. Only health (HP), which is defined by the level of difficulty.</p>
+<h4>Creating artificial intelligence</h4>
+<h5>Overview</h5>
+<p>
+    <span class="tab"></span>Artificial intelligence alows computers to do things, which people can find reasonable. A.I. can analyze the surrounding environment and to make decisions, which increase the posibility to acomplish given tasks.<br />
+    <span class="tab"></span>Creating of A.I. is one of the most complex stages when creating a computer game. It haves a ceparate segment in IT and it's an academic field of study.<br />
+    <span class="tab"></span>An example of great A.I. is that in the game F.E.A.R.: First Encounter Assault Recon. This is a FPS (First person shooter), in which computer entities have a variety of different actions. Enemies can duck to travel under crawlspaces, jump through windows, vault over railings, climb ladders, and push over large objects to create cover. Various opponents may act as a team, taking back routes to surprise the player, using suppressive fire or taking cover if under fire. The game's artificial intelligence is often cited as being highly advanced,and its efficiency helped the game win GameSpot's "2005 Best AI Award," and earn the #2 ranking on AIGameDev's "Most Influential AI Games."<br />
+    <span class="tab"></span>For the purpose of this project, I've used a much simpler A.I.. It's the same for every enemy. What it does is to check the coordinates of Ryu, to move towards him and to perform hits.<br />
+    <span class="tab"></span>When starting the game, each enemy is created ot the map, but at a passive state and we don't see him. They have a field of action which Ryu must enter in order for them to activate. To prevent clutter of enemies in a same spot, they are created with their own separate coordinates and fields of action.<br />
+    <span class="tab"></span>The field is made in the way that when the enemy is on the screen, he is already active and is moving towards us. One active, he remains like so until the end of his lifespan, which is until his death, the death of Ryu or when the timer reaches zero.
+</p>
+<img style="margin-left:auto;margin-right:auto;display:block;" src="/Resources/ryu11.jpg"><br />
 
+<span class="tab"></span><b>Source: <a href="https://github.com/ivanpop/Ryu">Github</a></b>
+<span class="tab"></span><b>Download: <a href="~/Resources/ryu.zip" target="_blank">Link</a></b><br /><br />
+<div class="text-center">
+    <div class="pages">
+        <a href="Ryu?page=1">&#8656;</a>
+        <a href="Ryu?page=1">1</a>
+        <div class="selected-page">
+            <a href="#top">2</a>
+        </div>
+        <a href="Ryu?page=3">3</a>
+        <a href="Ryu?page=3">&#8658;</a>
+    </div>
+</div>
+<br />
+
+<span class="tab"></span><a href="javascript:history.back()">&#8592; Back</a>
