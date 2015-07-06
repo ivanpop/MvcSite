@@ -7,7 +7,43 @@
 <h2>Stopwatch</h2>
 <p><span class="tab"></span>The stopwatch is in its own tab called Stopwatch. It’s completely independent from the countdown timer and the two can work together independently. The stopwatch has the options to count time with a millisecond of precision, to count laps, to pause and to save the lap times in a text file. </p>
 <p><span class="tab"></span>The main method in here is called startMS() which is asynchronous. </p>
-<span class="tab"></span><img src="~/Resources/CT6.png" /><br /><br />
+<div class="code">
+    <span class="Modifier">public</span>&nbsp;<span class="Modifier">static</span>&nbsp;<span class="ValueType">void</span>&nbsp;startMs()<br />
+    {<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;tempSeconds1&nbsp;=&nbsp;(<span class="ValueType">byte</span>)DateTime.Now.Second;<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;<span class="Statement">if</span>&nbsp;(lapCount&nbsp;==&nbsp;0)<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;{<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;lapSeconds&nbsp;=&nbsp;seconds;<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;lapMinutes&nbsp;=&nbsp;minutes;<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;lapHours&nbsp;=&nbsp;hours;<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;}<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;<span class="Statement">if</span>&nbsp;(tempSeconds1&nbsp;==&nbsp;tempSeconds2)<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;{<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;seconds++;<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;lapSeconds++;<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tempSeconds2&nbsp;=&nbsp;(<span class="ValueType">byte</span>)(tempSeconds1&nbsp;+&nbsp;1);<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;}<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;<span class="Statement">if</span>&nbsp;(tempSeconds1&nbsp;==&nbsp;0&nbsp;&amp;&amp;&nbsp;!sixty)<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;{<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;seconds++;<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tempSeconds2&nbsp;=&nbsp;1;<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sixty&nbsp;=&nbsp;<span class="Keyword">true</span>;<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;}<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;<span class="Statement">if</span>&nbsp;(seconds&nbsp;==&nbsp;10)&nbsp;sixty&nbsp;=&nbsp;<span class="Keyword">false</span>;<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;<span class="Statement">if</span>&nbsp;(seconds&nbsp;&gt;&nbsp;59)<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;{<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;seconds&nbsp;=&nbsp;0;<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;minutes++;<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;lapMinutes++;<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;}<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;<span class="Statement">if</span>&nbsp;(minutes&nbsp;&gt;&nbsp;59)<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;{<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;minutes&nbsp;=&nbsp;0;<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;hours++;<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;lapHours++;<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;}<br />
+    }
+</div>
 <p><span class="tab"></span>It starts after the Start button has been pressed and it’s executed once in every 33 milliseconds, which means that the refresh interval of the time is also 33ms.</p>
 <h3>Realization</h3>
 <p>

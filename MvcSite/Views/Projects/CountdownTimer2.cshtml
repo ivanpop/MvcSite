@@ -7,7 +7,43 @@
 <h2>Секундомер</h2>
 <p><span class="tab"></span>Секундомера се намира в таба Stopwatch. Той е напълно независим от обратното броене и двете могат да работят успоредно едновременно. Секундомера разполага с опциите да засичаме време с точност до милисекунда, да засичаме отделни обиколки, да спрем отчитането за момент чрез пауза и да запишем времената на обиколките в текстов файл.</p>
 <p><span class="tab"></span>Основният метод тук се нарича startMS() който е асинхронен.</p>
-<span class="tab"></span><img src="~/Resources/CT6.png" /><br /><br />
+<div class="code">
+    <span class="Modifier">public</span>&nbsp;<span class="Modifier">static</span>&nbsp;<span class="ValueType">void</span>&nbsp;startMs()<br />
+    {<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;tempSeconds1&nbsp;=&nbsp;(<span class="ValueType">byte</span>)DateTime.Now.Second;<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;<span class="Statement">if</span>&nbsp;(lapCount&nbsp;==&nbsp;0)<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;{<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;lapSeconds&nbsp;=&nbsp;seconds;<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;lapMinutes&nbsp;=&nbsp;minutes;<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;lapHours&nbsp;=&nbsp;hours;<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;}<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;<span class="Statement">if</span>&nbsp;(tempSeconds1&nbsp;==&nbsp;tempSeconds2)<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;{<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;seconds++;<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;lapSeconds++;<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tempSeconds2&nbsp;=&nbsp;(<span class="ValueType">byte</span>)(tempSeconds1&nbsp;+&nbsp;1);<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;}<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;<span class="Statement">if</span>&nbsp;(tempSeconds1&nbsp;==&nbsp;0&nbsp;&amp;&amp;&nbsp;!sixty)<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;{<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;seconds++;<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tempSeconds2&nbsp;=&nbsp;1;<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sixty&nbsp;=&nbsp;<span class="Keyword">true</span>;<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;}<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;<span class="Statement">if</span>&nbsp;(seconds&nbsp;==&nbsp;10)&nbsp;sixty&nbsp;=&nbsp;<span class="Keyword">false</span>;<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;<span class="Statement">if</span>&nbsp;(seconds&nbsp;&gt;&nbsp;59)<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;{<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;seconds&nbsp;=&nbsp;0;<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;minutes++;<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;lapMinutes++;<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;}<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;<span class="Statement">if</span>&nbsp;(minutes&nbsp;&gt;&nbsp;59)<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;{<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;minutes&nbsp;=&nbsp;0;<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;hours++;<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;lapHours++;<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;}<br />
+    }
+</div>
 <p><span class="tab"></span>Той се задейства след натискането на Start бутона и се изпълнява веднъж на всеки 33 милисекунди, което означава и че опресняването на времето на екрана ще се осъществява за същия интервал.</p>
 <h3>Реализация</h3>
 <p>

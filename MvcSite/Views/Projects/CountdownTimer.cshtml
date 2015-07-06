@@ -20,7 +20,21 @@
 </p>
 <span class="tab"></span><img src="~/Resources/CT3.jpg" /><br /><br />
 <p><span class="tab"></span>Накрая се стартира и метода startCountdown(), който е основният метод на програмата и в него се извършва цялата дейност на обратното броене.</p>
-<span class="tab"></span><img src="~/Resources/CT4.jpg" /><br /><br />
+<div class="code">
+    <span class="Modifier">public</span>&nbsp;<span class="Modifier">async</span>&nbsp;<span class="ValueType">void</span>&nbsp;startCountdown()<br />
+    {<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;<span class="Statement">do</span>&nbsp;{<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;seconds--;<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;progressBar1.PerformStep();<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;updateTime();<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;addZero();<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;timeToSeconds();<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;taskbar.SetProgressValue(progressBar1.Value,&nbsp;time);<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;checkMinutes();<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="Modifier">await</span>&nbsp;Task.Delay(1000);<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;<span class="Statement">while</span>&nbsp;(timeToSeconds());<br />
+    }
+</div>
 <p>
     <span class="tab"></span>Методът е асинхронен и се изпълнява веднъж на всяка секунда. Първото нещо което прави е да премахне една секунда. След това извършва една стъпка на прогрес-бара. updateTime() служи за изобразяване на новото време в програмата, като конвертира числата на секундите, минутите и часовете в стрингове и ги поставя в съответните лейбъли. addZero() метода добавя “0” към стринговете за изписване на времето, когато числото е съставено от една цифра. За пример, когато секундите са 5 на екрана се изобразява “05”. timeToSeconds() метода следи времето и връща true, когато има още оставащо време. Когато секундите станат 0 метода променя стойността им на 60 и в същото време премахва една единица от минутите. Когато секундите са 0 и минутите са 0, секундите се променят на 60, минутите на 59, а от часовете се взима една единица. Когато часовете са 0 и не може да се вземе единица от тях, програмата изсвирва аларма за приключване и връща стойност false, която приключва и асинхронния метод startCountdown() и обратното време спира. taskbar.SetProgressValue(progressBar1.Value, time); използва стойностите на прогрес-бара вътре в програмата, за да обнови прогрес-бара в таскбара. checkMinutes() метода се използва заедно с бутоните за добавяне и отнемане на време, като ги отключва за използване и съответно ги заключва. Когато времето е 15:25 можем да използваме бутоните “-1”, ”-5” и ”-10” за да отнемем време, но не можем да използваме “-30”, защото нямаме достатъчно налично време.<br />
     <span class="tab"></span>updateTime() служи за изобразяване на новото време в програмата, като конвертира числата на секундите, минутите и часовете в стрингове и ги поставя в съответните лейбъли.<br />
@@ -31,7 +45,7 @@
 </p>
 <h2>Добавяне и отнемане на време</h2>
 <p><span class="tab"></span>Това са бутони които се използват за добавяне на допълнително време или за отнемане на време, докато таймера работи. Когато таймера работи и се натисне бутона “+5”, се добавят още 5 минути към времето. Бутоните за добавяне на време могат да се използват и преди стартирането на обратното броене, като въведат първоначално време. За отнемане на време се използва Plus-minus бутона. Той превключва функционалността на бутоните с минутите, като ги променя в добавяне или отнемане. При всяко променяне на времето се променят и стойностите на двата прогрес-бара.</p><br />
-<span class="tab"></span><img src="~/Resources/CT5.gif" /><br />
+<span class="tab"></span><img src="~/Resources/CT4.gif" /><br />
 <h2>Beep</h2>
 <p><span class="tab"></span>Когато времето изтече се чува силно бийпване. Бийпването може да се изключва чрез радио-бутона Beep, намиращ се в долната част на прозореца на програмата.</p><br />
 <span class="tab"></span><b>Source: <a href="https://github.com/ivanpop/stopwatch">Github</a></b>
