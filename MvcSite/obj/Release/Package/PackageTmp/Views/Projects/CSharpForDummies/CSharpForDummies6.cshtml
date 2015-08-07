@@ -1,0 +1,226 @@
+﻿@{
+    ViewBag.Title = "C# For Dummies";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>C# For Dummies</h1>
+<h2> Глава 6. Цикли</h2>
+<span class="tab"></span>1. Напишете програма, която отпечатва на конзолата числата от 1 до N. Числото N трябва да се чете от стандартния вход.<br /><br />
+<span class="tab"></span>Упътване: Използвайте <code>for</code> цикъл.<br /><br />
+<span class="tab"></span>Решение: <br />
+<div class="code">
+    <span class="Modifier">static</span>&nbsp;<span class="ValueType">void</span>&nbsp;Main(<span class="ReferenceType">string</span>[]&nbsp;args)<br />
+    {&nbsp;&nbsp;&nbsp;&nbsp;<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;Console.Write(<span class="String">"Enter&nbsp;first&nbsp;number:&nbsp;"</span>);<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;<span class="ValueType">int</span>&nbsp;length&nbsp;=&nbsp;Int32.Parse(Console.ReadLine());<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;<span class="Statement">for</span>&nbsp;(<span class="ValueType">int</span>&nbsp;i&nbsp;=&nbsp;1;&nbsp;i&nbsp;&lt;&nbsp;length;&nbsp;i++)<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Console.WriteLine(i);<br />
+    }
+</div>
+<hr>
+<span class="tab"></span>2. Напишете програма, която отпечатва на конзолата числата от 1 до N, които не се делят едновременно на 3 и 7. Числото N да се чете от стандартния вход.<br /><br />
+<span class="tab"></span>Упътване: Използвайте <code>for</code> цикъл и оператора % за намиране на остатък при целочислено деление. Едно число num не се дели на 3 и на 7 едновременно, ако <code> (num % (3*7) == 0) </code>.<br /><br />
+<span class="tab"></span>Решение: <br />
+<span class="tab"></span><a href="https://github.com/ivanpop/CS-for-Dummies/blob/master/Chapter%206%20Solution%202/Program.cs" target="_blank"><b><u>Link</u></b></a><hr>
+<span class="tab"></span>3. Напишете програма, която чете от конзолата поредица от цели числа и отпечатва най-малкото и най-голямото от тях.<br /><br />
+<span class="tab"></span>Упътване: Първо прочетете броя числа, примерно в променлива <code>n</code>. След това въведете <code>n</code> числа последователно с един <code>for</code> цикъл. Докато въвеждате всяко следващо число запазвайте в две променливи най-малкото и най-голямото число до момента.<br /><br />
+<span class="tab"></span>Решение: <br />
+<span class="tab"></span><a href="https://github.com/ivanpop/CS-for-Dummies/blob/master/Chapter%206%20Solution%203/Program.cs" target="_blank"><b><u>Link</u></b></a><hr>
+<span class="tab"></span>4. Напишете програма, която отпечатва всички възможни карти от стан­дартно тесте карти без джокери (имаме 52 карти: 4 бои по 13 карти).<br /><br />
+<span class="tab"></span>Упътване: Номерирайте картите от 2 до 14 (тези числа ще съответстват на картите от 2, 3, 4, 5, 6, 7, 8, 9, 10, J, Q, K, A). Номерирайте боите от 1 до 4 (1 – спатия, 2 – каро, 3 – купа, 4 – пика). Сега вече можете да завъртите 2 вложени цикъла и да отпечатате всяка от картите.<br /><br />
+<span class="tab"></span>Решение: <br />
+<span class="tab"></span><a href="https://github.com/ivanpop/CS-for-Dummies/blob/master/Chapter%206%20Solution%204/Program.cs" target="_blank"><b><u>Link</u></b></a><hr>
+<span class="tab"></span>5. Напишете програма, която чете от конзолата числото N и отпечатва сумата на първите N члена от редицата на Фибоначи: 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, ...<br /><br />
+<span class="tab"></span>Упътване: Числата на Фибоначи започват от 0 и 1, като всяко следващо се получава като сума от предходните две. Можете да намерите първите <code>n</code> числа на Фибоначи с <code>for</code> цикъл от 1 до <code>n</code>, като на всяка итерация пресмятате поредното число, използвайки предходните две (които ще пазите в две допълнителни променливи).<br /><br />
+<span class="tab"></span>Решение: <br />
+<span class="tab"></span><a href="https://github.com/ivanpop/CS-for-Dummies/blob/master/Chapter%206%20Solution%205/Program.cs" target="_blank"><b><u>Link</u></b></a><hr>
+<span class="tab"></span> 6. Напишете програма, която пресмята N!/K! за дадени N и K (1 < k < N).<br/><br/>
+<span class="tab"></span>Упътване: Умножете числата от K+1 до N.<br/><br/>
+<span class="tab"></span>Решение: <br/>
+<div class="code">
+    <span class="Modifier">static</span>&nbsp;<span class="ValueType">void</span>&nbsp;Main(<span class="ReferenceType">string</span>[]&nbsp;args)<br />
+    {&nbsp;&nbsp;&nbsp;&nbsp;<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;Console.Write(<span class="String">"Enter&nbsp;N:&nbsp;(1&lt;K&lt;N)&nbsp;"</span>);<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;<span class="ValueType">int</span>&nbsp;n&nbsp;=&nbsp;Int32.Parse(Console.ReadLine());<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;Console.Write(<span class="String">"Enter&nbsp;K:&nbsp;(1&lt;K&lt;N)&nbsp;"</span>);<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;<span class="ValueType">int</span>&nbsp;k&nbsp;=&nbsp;Int32.Parse(Console.ReadLine());<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;<span class="Statement">for</span>&nbsp;(<span class="ValueType">int</span>&nbsp;i&nbsp;=&nbsp;n&nbsp;-&nbsp;1;&nbsp;i&nbsp;&gt;&nbsp;0;&nbsp;i--)<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;{<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;n&nbsp;*=&nbsp;i;<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;}<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;<span class="Statement">for</span>&nbsp;(<span class="ValueType">int</span>&nbsp;i&nbsp;=&nbsp;k&nbsp;-&nbsp;1;&nbsp;i&nbsp;&gt;&nbsp;0;&nbsp;i--)<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;{<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;k&nbsp;*=&nbsp;i;<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;}<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;n&nbsp;/=&nbsp;k;&nbsp;&nbsp;&nbsp;&nbsp;<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;Console.WriteLine(<span class="String">"Result&nbsp;is&nbsp;{0}"</span>,&nbsp;n);<br />
+    }
+</div>
+<hr>
+<span class="tab"></span>7. Напишете програма, която пресмята N!*K!/(N-K)! за дадени N и K (1 < K < N).<br/><br/>
+<span class="tab"></span>Упътване:  Вариант за решение е поотделно да пресмятате всеки от факто­риелите и накрая да извършвате съответните операции с резултатите. Помис­лете как можете да оптимизирате пресмятанията, за да не смятате прекалено много факториели! При обикновени дроби, съставени от факто­риели има много възможности за съкращение на еднакви множи­тели в числителя и знаменателя. Тези оптимизации не само ще нама­лят изчисленията и ще увеличат производителността, но ще ви избавят и от препълвания в някои ситуации.<br/><br/>
+<span class="tab"></span>Решение: <br/>
+<span class="tab"></span><a href="https://github.com/ivanpop/CS-for-Dummies/blob/master/Chapter%206%20Solution%207/Program.cs" target="_blank"><b><u>Link</u></b></a><hr>
+<span class="tab"></span>8. В комбинаториката числата на Каталан (Catalan’s numbers) се изчис­ляват по следната формула:<br/>
+<span class="tab"></span><span class="tab"></span><img src="/Resources/CSResources/ch6-8.png">, за n ≥ 0.<br/>
+<span class="tab"></span>Напишете програма, която изчислява n-тото число на Каталан за дадено n.<br/><br/>
+<span class="tab"></span>Упътване: Погледнете предходната задача.<br/><br/>
+<span class="tab"></span>Решение: <br/>
+<span class="tab"></span><a href="https://github.com/ivanpop/CS-for-Dummies/blob/master/Chapter%206%20Solution%208/Program.cs" target="_blank"><b><u>Link</u></b></a><hr>
+<span class="tab"></span>9. Напишете програма, която за дадено цяло число n, пресмята сумата: <img src="/Resources/CSResources/ch6-9.png"><br/><br/>
+<span class="tab"></span>Упътване: Задачата може да решите с <code>for</code>-цикъл за <code>k=0…n</code>, като ползвате три допълнителни променливи <code>factoriel, power</code> и <code>sum</code>, в които да пазите за <code>k</code>-тата итерация на цикъла съответно <code>k!, xk</code> и сумата на първите <code>k</code> члена на редицата. Ако реализацията ви е добра, Трябва да имате само един цикъл и не трябва да ползвате външни функции за изчис­ление на факториел и за степенуване.<br/><br/>
+<span class="tab"></span>Решение: <br/>
+<div class="code">
+    <span class="Modifier">static</span>&nbsp;<span class="ValueType">void</span>&nbsp;Main(<span class="ReferenceType">string</span>[]&nbsp;args)<br />
+    {&nbsp;&nbsp;&nbsp;&nbsp;<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;<span class="ValueType">int</span>&nbsp;sum&nbsp;=&nbsp;1,&nbsp;temp&nbsp;=&nbsp;1;<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;Console.Write(<span class="String">"Enter&nbsp;n:&nbsp;"</span>);<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;<span class="ValueType">int</span>&nbsp;n&nbsp;=&nbsp;Int32.Parse(Console.ReadLine());<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;Console.Write(<span class="String">"Enter&nbsp;x:&nbsp;"</span>);<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;<span class="ValueType">int</span>&nbsp;x&nbsp;=&nbsp;Int32.Parse(Console.ReadLine());<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;<span class="Statement">for</span>&nbsp;(<span class="ValueType">int</span>&nbsp;i&nbsp;=&nbsp;1;&nbsp;i&nbsp;&lt;=&nbsp;n;&nbsp;i++)<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;{<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;temp&nbsp;*=&nbsp;i&nbsp;/&nbsp;x;<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sum&nbsp;+=&nbsp;temp;<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;&nbsp;&nbsp;<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;Console.WriteLine(<span class="String">"Result&nbsp;is&nbsp;{0}"</span>,&nbsp;sum);<br />
+    }
+</div>
+<hr>
+<span class="tab"></span>10. Напишете програма, която чете от конзолата положително цяло число N (N < 20) и отпечатва матрица с числа като на фигурата по-долу:<br/>
+<span class="tab"></span><img src="/Resources/CSResources/ch6-10 example.jpg"><br/><br/><span class="tab"></span>Упътване: Трябва да използвате два вложени цикъла, по подобие на задачата за отпечатване на триъгълник с числа. Външният цикъл трябва да върти от 1 до N, а вътрешният – от стойността на външния до стойността на външния + N - 1.<br/><br/>
+<span class="tab"></span>Решение: <br/>
+<div class="code">
+    <span class="Modifier">static</span>&nbsp;<span class="ValueType">void</span>&nbsp;Main(<span class="ReferenceType">string</span>[]&nbsp;args)<br />
+    {<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;Console.Write(<span class="String">"Enter&nbsp;N:&nbsp;(N&nbsp;&lt;&nbsp;20)&nbsp;"</span>);<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;<span class="ValueType">int</span>&nbsp;n&nbsp;=&nbsp;Int32.Parse(Console.ReadLine());<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;<span class="Statement">for</span>&nbsp;(<span class="ValueType">int</span>&nbsp;i&nbsp;=&nbsp;1;&nbsp;i&nbsp;&lt;=&nbsp;n;&nbsp;i++)<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;{<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="Statement">for</span>&nbsp;(<span class="ValueType">int</span>&nbsp;j&nbsp;=&nbsp;i;&nbsp;j&nbsp;&lt;=&nbsp;i;&nbsp;j++)<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Console.Write(<span class="String">"{0}&nbsp;"</span>,&nbsp;j);<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Console.WriteLine();<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
+    }
+</div>
+<hr>
+<span class="tab"></span>11. Напишете програма, която пресмята с колко нули завършва факториелът на дадено число. Примери:<br/>
+<span class="tab"></span>N = 10 -> N! = 36288<b>00</b> -> 2<br/>
+<span class="tab"></span>N = 20 -> N! = 243290200817664<b>0000</b> -> 4<br/><br/>
+<span class="tab"></span>Упътване: Броят на нулите в края на n! зависи от това, колко пъти числото 10 е делител на факториела. Понеже произведението 1*2*3…*n има повече на брой делители 2, отколкото 5, а 10 = 2 * 5, то броят нули в n! е точно толкова, колкото са множителите със стойност 5 в произведе­нието 1*2*3….*n. Понеже всяко пето число се дели на 5, а всяко 25-то число се дели на 5 двукратно и т.н., то броя нули в n! е сумата: n/5 + n/25 + n/125 + …<br/><br/>
+<span class="tab"></span>Решение: <br/>
+<div class="code">
+    <span class="Modifier">static</span>&nbsp;<span class="ValueType">void</span>&nbsp;Main(<span class="ReferenceType">string</span>[]&nbsp;args)<br />
+    {<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;Console.Write(<span class="String">"Enter&nbsp;N:&nbsp;"</span>);<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;<span class="ValueType">decimal</span>&nbsp;n&nbsp;=&nbsp;Int32.Parse(Console.ReadLine());<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;<span class="ValueType">int</span>&nbsp;zeroes&nbsp;=&nbsp;0;<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;<span class="Statement">for</span>&nbsp;(<span class="ValueType">int</span>&nbsp;i&nbsp;=&nbsp;(<span class="ValueType">int</span>)(n&nbsp;-&nbsp;1);&nbsp;i&nbsp;&gt;&nbsp;0;&nbsp;i--)<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;n&nbsp;*=&nbsp;i;<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;Console.Write(<span class="String">"N!&nbsp;is&nbsp;{0}&nbsp;and&nbsp;it&nbsp;ends&nbsp;"</span>,&nbsp;n);<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;<span class="Statement">do</span><br />
+    &nbsp;&nbsp;&nbsp;&nbsp;{<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;n&nbsp;/=&nbsp;10;<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;zeroes++;<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;<span class="Statement">while</span>&nbsp;(n&nbsp;%&nbsp;10&nbsp;==&nbsp;0);<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;Console.WriteLine(<span class="String">"with&nbsp;{0}&nbsp;zeroes."</span>,&nbsp;zeroes);<br />
+    }
+</div>
+<hr>
+<span class="tab"></span>12. Напишете програма, която преобразува дадено число от десетична в двоична бройна система.<br/><br/>
+<span class="tab"></span>Упътване: Прочетете в Уикипедия какво представляват бройните системи.<br/><br/>
+<span class="tab"></span>Решение: <br/>
+<div class="code">
+    <span class="Modifier">static</span>&nbsp;<span class="ValueType">void</span>&nbsp;Main(<span class="ReferenceType">string</span>[]&nbsp;args)<br />
+    {<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;Console.Write(<span class="String">"Enter&nbsp;number:&nbsp;"</span>);<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;<span class="ValueType">int</span>&nbsp;n&nbsp;=&nbsp;Int32.Parse(Console.ReadLine());&nbsp;&nbsp;&nbsp;&nbsp;<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;<span class="ReferenceType">string</span>&nbsp;binary&nbsp;=&nbsp;Convert.ToString(n,&nbsp;2);<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;Console.WriteLine(<span class="String">"Result&nbsp;is&nbsp;{0}"</span>,&nbsp;binary);<br />
+    }
+</div>
+<hr>
+<span class="tab"></span>13. Напишете програма, която преобразува дадено число от двоична в десетична бройна система.<br/><br/>
+<span class="tab"></span>Упътване: Погледнете предходната задача.<br/><br/>
+<span class="tab"></span>Решение: <br/>
+<div class="code">
+    <span class="Modifier">static</span>&nbsp;<span class="ValueType">void</span>&nbsp;Main(<span class="ReferenceType">string</span>[]&nbsp;args)<br />
+    {<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;Console.Write(<span class="String">"Enter&nbsp;binary&nbsp;number:&nbsp;"</span>);<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;<span class="ValueType">int</span>&nbsp;n&nbsp;=&nbsp;Int32.Parse(Console.ReadLine());<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;<span class="ReferenceType">string</span>&nbsp;toDecimal&nbsp;=&nbsp;Convert.ToString(Convert.ToInt32(n,&nbsp;2),&nbsp;10);<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;Console.WriteLine(<span class="String">"Result&nbsp;is&nbsp;{0}"</span>,&nbsp;toDecimal);<br />
+    }
+</div>
+<hr>
+<span class="tab"></span>14. Напишете програма, която преобразува дадено число от десетична в шестнайсетична бройна система.<br/><br/>
+<span class="tab"></span>Упътване: Погледнете предходната задача.<br/><br/>
+<span class="tab"></span>Решение: <br/>
+<div class="code">
+    <span class="Modifier">static</span>&nbsp;<span class="ValueType">void</span>&nbsp;Main(<span class="ReferenceType">string</span>[]&nbsp;args)<br />
+    {<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;Console.Write(<span class="String">"Enter&nbsp;decimal&nbsp;number:&nbsp;"</span>);<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;<span class="ValueType">int</span>&nbsp;n&nbsp;=&nbsp;Int32.Parse(Console.ReadLine());<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;<span class="ReferenceType">string</span>&nbsp;toDecimal&nbsp;=&nbsp;Convert.ToString(Convert.ToInt32(n,&nbsp;10),&nbsp;16);<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;Console.WriteLine(<span class="String">"Result&nbsp;is&nbsp;{0}"</span>,&nbsp;toDecimal);<br />
+    }
+</div>
+<hr>
+<span class="tab"></span>15. Напишете програма, която преобразува дадено число от шестнайсе­тична в десетична бройна система.<br/><br/>
+<span class="tab"></span>Упътване:  Погледнете предходната задача.<br/><br/>
+<span class="tab"></span>Решение: <br/>
+<div class="code">
+    <span class="Modifier">static</span>&nbsp;<span class="ValueType">void</span>&nbsp;Main(<span class="ReferenceType">string</span>[]&nbsp;args)<br />
+    {<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;Console.Write(<span class="String">"Enter&nbsp;decimal&nbsp;number:&nbsp;"</span>);<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;<span class="ValueType">int</span>&nbsp;n&nbsp;=&nbsp;Int32.Parse(Console.ReadLine());<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;<span class="ReferenceType">string</span>&nbsp;toDecimal&nbsp;=&nbsp;Convert.ToString(Convert.ToInt32(n,&nbsp;16),&nbsp;10);<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;Console.WriteLine(<span class="String">"Result&nbsp;is&nbsp;{0}"</span>,&nbsp;toDecimal);<br />
+    }
+</div>
+<hr>
+<span class="tab"></span>16. Напишете програма, която по дадено число N отпечатва числата от 1 до N, разбъркани в случаен ред.<br/><br/>
+<span class="tab"></span>Упътване: Потърсете в Интернет информация за класа <code>System.Random</code>. Прочетете в Интернет за масиви. Направете масив с N елемента и запишете в него числата от 1 до N. След това достатъчно много пъти (помислете точно колко) разменяйте двойки случайни числа от масива.<code>string</code>.<br/><br/>
+<span class="tab"></span>Решение: <br/>
+<span class="tab"></span><a href="https://github.com/ivanpop/CS-for-Dummies/blob/master/Chapter%206%20Solution%2016/Program.cs" target="_blank"><b><u>Link</u></b></a><hr>
+<span class="tab"></span>17. Напишете програма, която за дадени две числа, намира най-големия им общ делител.<br/><br/>
+<span class="tab"></span>Упътване: Потърсете в интернет за алгоритъма на Евклид.<br/><br/>
+<span class="tab"></span>Решение: <br/>
+<div class="code">
+    <span class="Modifier">static</span>&nbsp;<span class="ValueType">void</span>&nbsp;Main(<span class="ReferenceType">string</span>[]&nbsp;args)<br />
+    {<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;Console.Write(<span class="String">"Enter&nbsp;first&nbsp;number:&nbsp;"</span>);<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;<span class="ValueType">int</span>&nbsp;a&nbsp;=&nbsp;Int32.Parse(Console.ReadLine());<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;Console.Write(<span class="String">"Enter&nbsp;second&nbsp;number:&nbsp;"</span>);<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;<span class="ValueType">int</span>&nbsp;b&nbsp;=&nbsp;Int32.Parse(Console.ReadLine());<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;<span class="Statement">while</span>&nbsp;(a&nbsp;!=&nbsp;0&nbsp;&amp;&amp;&nbsp;b&nbsp;!=&nbsp;0)<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;{<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="Statement">if</span>&nbsp;(a&nbsp;&gt;&nbsp;b)&nbsp;a&nbsp;%=&nbsp;b;<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="Statement">else</span>&nbsp;b&nbsp;%=&nbsp;a;<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;}<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;<span class="Statement">if</span>&nbsp;(a&nbsp;==&nbsp;0)&nbsp;Console.WriteLine(b);<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;<span class="Statement">else</span>&nbsp;Console.WriteLine(a);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
+    }
+</div>
+<hr>
+<span class="tab"></span>18. Напишете програма, която по дадено число n, извежда матрица във формата на спирала. Пример при n=4:<br/>
+<span class="tab"></span><span class="tab"></span><img src="/Resources/CSResources/ch6-18.jpg"> <br/><br/>
+<span class="tab"></span>Упътване: Трябва да използвате двумерен масив.<br/><br/>
+<span class="tab"></span>Решение: <br/>
+<span class="tab"></span><a href="https://github.com/ivanpop/CS-for-Dummies/blob/master/Chapter%206%20Solution%2018/Program.cs" target="_blank"><b><u>Link</u></b></a><br/><hr>
+<span class="tab"></span><a href="javascript:history.back()">&#8592; Обратно</a>

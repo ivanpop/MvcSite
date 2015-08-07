@@ -1,0 +1,45 @@
+﻿
+@{
+    ViewBag.Title = "Contact";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Контакти</h1>
+
+<p>E-mail: <a href="mailto:ivanpop@abv.bg">ivanpop@abv.bg</a></p>
+<div id="skypename"><p>Skype: ivan9019</p></div>
+
+<script type="text/javascript" src="http://www.skypeassets.com/i/scom/js/skype-uri.js"></script>
+<div id="SkypeButton_Call_ivan9019_1">
+    <script type="text/javascript">
+    Skype.ui({
+      "name": "chat",
+      "element": "SkypeButton_Call_ivan9019_1",
+      "participants": ["ivan9019"],
+      "imageSize": 24
+    });
+    </script>
+</div>
+
+<p>Също така можете да ми изпратите съобщение като използвате формата за контакти.</p><br />
+
+<table>
+    <tbody>
+        <tr>
+            <td rowspan="4" width="40"></td>
+            <td width="250">
+                @using (Html.BeginForm("Sendmail", "Home"))
+                {
+                    <p>Вашият Email:</p>
+                    @Html.TextBox("email")
+                    <br /><br /><p>Тема:</p>
+                    @Html.TextBox("descr")
+                    <br /><br />
+                    
+                    <br /><br /><input type="submit" value="Изпрати" />
+                }
+            </td>            
+            <td width="280"><p>Съобщение:</p>@Html.TextArea("text", "", 9, 280, "")</td>
+        </tr>
+    </tbody>
+</table>

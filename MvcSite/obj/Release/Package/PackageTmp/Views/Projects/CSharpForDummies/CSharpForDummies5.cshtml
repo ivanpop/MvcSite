@@ -1,0 +1,125 @@
+﻿@{
+    ViewBag.Title = "C# For Dummies";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>C# For Dummies</h1>
+<h2> Глава 5. Условни конструкции</h2>
+<span class="tab"></span>1. Да се напише <code>if</code>-конструкция, която проверява стойността на две целочислени променливи и разменя техните стойности, ако стойността на първата променлива е по-голяма от втората.<br /><br />
+<span class="tab"></span>Упътване: Прочетете за if конструкции.<br /><br />
+<span class="tab"></span>Решение: <br />
+<div class="code">
+    <span class="Modifier">static</span>&nbsp;<span class="ValueType">void</span>&nbsp;Main(<span class="ReferenceType">string</span>[]&nbsp;args)<br />
+    {&nbsp;&nbsp;&nbsp;&nbsp;<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;Console.Write(<span class="String">"Enter&nbsp;first&nbsp;number:&nbsp;"</span>);<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;<span class="ValueType">int</span>&nbsp;a&nbsp;=&nbsp;Int32.Parse(Console.ReadLine());<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;Console.Write(<span class="String">"Enter&nbsp;second&nbsp;number:&nbsp;"</span>);<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;<span class="ValueType">int</span>&nbsp;b&nbsp;=&nbsp;Int32.Parse(Console.ReadLine());&nbsp;&nbsp;&nbsp;&nbsp;<br />
+    <br />
+    &nbsp;&nbsp;&nbsp;&nbsp;<span class="Statement">if</span>&nbsp;(a&nbsp;&gt;&nbsp;b)<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;{<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a&nbsp;=&nbsp;a&nbsp;+&nbsp;b;<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;b&nbsp;=&nbsp;a&nbsp;-&nbsp;b;<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a&nbsp;=&nbsp;a&nbsp;-&nbsp;b;<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;}<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;Console.WriteLine(<span class="String">"First&nbsp;number&nbsp;-&nbsp;{0},&nbsp;Second&nbsp;number&nbsp;-&nbsp;{1}."</span>,&nbsp;a,&nbsp;b);<br />
+    }
+</div>
+<hr>
+<span class="tab"></span>2. Напишете програма, която показва знака (+ или -) от произведението на три реални числа, без да го пресмята. Използвайте последователност от <code>if</code> оператори.<br /><br />
+<span class="tab"></span>Упътване: Множество от ненулеви числа имат положително произведение, ако отрицателните сред тях са четен брой. Ако отрицателните числа в множеството са нечетен брой, произведението е отрицателно. Ако някое от числата е нула, произведението е нула.<br /><br />
+<span class="tab"></span>Решение: <br /><span class="tab"></span><a href="https://github.com/ivanpop/CS-for-Dummies/blob/master/Chapter%205%20Solution%202/Program.cs" target="_blank"><b><u>Link</u></b></a><hr>
+<span class="tab"></span>3. Напишете програма, която намира най-голямото по стойност число, измежду три дадени числа.<br /><br />
+<span class="tab"></span>Упътване: Можете да използвате вложени <code>if</code> конструкции. <br /><br />
+<span class="tab"></span>Решение: <br />
+<span class="tab"></span><a href="https://github.com/ivanpop/CS-for-Dummies/blob/master/Chapter%205%20Solution%203/Program.cs" target="_blank"><b><u>Link</u></b></a><hr>
+<span class="tab"></span>4. Сортирайте 3 реални числа в намаляващ ред. Използвайте вложени <code>if</code> оператори.<br /><br />
+<span class="tab"></span>Упътване: Първо намерете най-малкото от трите числа, след това го разменете с първото. После проверете дали второто е по-голямо от третото и ако е така, ги разменете.<br /><br />
+<span class="tab"></span>Решение: <br />
+<span class="tab"></span><a href="https://github.com/ivanpop/CS-for-Dummies/blob/master/Chapter%205%20Solution%204/Program.cs" target="_blank"><b><u>Link</u></b></a><hr>
+<span class="tab"></span>5. Напишете програма, която за дадена цифра (0-9), зададена като вход, извежда името на цифрата на български език.<br /><br />
+<span class="tab"></span>Упътване: Най-подходящо е да използвате <code>switch</code> конструкция.<br /><br />
+<span class="tab"></span>Решение: <br />
+<div class="code">
+    <span class="Modifier">static</span>&nbsp;<span class="ValueType">void</span>&nbsp;Main(<span class="ReferenceType">string</span>[]&nbsp;args)<br />
+    {&nbsp;&nbsp;&nbsp;&nbsp;<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;Console.Write(<span class="String">"Enter&nbsp;first&nbsp;number:&nbsp;"</span>);<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;<span class="ValueType">int</span>&nbsp;number&nbsp;=&nbsp;Int32.Parse(Console.ReadLine());<br />
+    <br />
+    &nbsp;&nbsp;&nbsp;&nbsp;<span class="Statement">switch</span>&nbsp;(number)<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;{<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="Statement">case</span>&nbsp;0:&nbsp;Console.WriteLine(<span class="String">"Nula"</span>);&nbsp;<span class="Statement">break</span>;<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="Statement">case</span>&nbsp;1:&nbsp;Console.WriteLine(<span class="String">"Edno"</span>);&nbsp;<span class="Statement">break</span>;<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="Statement">case</span>&nbsp;2:&nbsp;Console.WriteLine(<span class="String">"Dve"</span>);&nbsp;<span class="Statement">break</span>;<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="Statement">case</span>&nbsp;3:&nbsp;Console.WriteLine(<span class="String">"Tri"</span>);&nbsp;<span class="Statement">break</span>;<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="Statement">case</span>&nbsp;4:&nbsp;Console.WriteLine(<span class="String">"Chetiri"</span>);&nbsp;<span class="Statement">break</span>;<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="Statement">case</span>&nbsp;5:&nbsp;Console.WriteLine(<span class="String">"Pet"</span>);&nbsp;<span class="Statement">break</span>;<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="Statement">case</span>&nbsp;6:&nbsp;Console.WriteLine(<span class="String">"Shest"</span>);&nbsp;<span class="Statement">break</span>;<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="Statement">case</span>&nbsp;7:&nbsp;Console.WriteLine(<span class="String">"Sedem"</span>);&nbsp;<span class="Statement">break</span>;<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="Statement">case</span>&nbsp;8:&nbsp;Console.WriteLine(<span class="String">"Osem"</span>);&nbsp;<span class="Statement">break</span>;<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="Statement">case</span>&nbsp;9:&nbsp;Console.WriteLine(<span class="String">"Devet"</span>);&nbsp;<span class="Statement">break</span>;<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="Modifier">default</span>:&nbsp;Console.WriteLine(<span class="String">"Wrong&nbsp;input"</span>);&nbsp;<span class="Statement">break</span>;<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;}<br />
+    }
+</div>
+<hr>
+<span class="tab"></span>6. Напишете програма, която при въвеждане на коефициентите (a, b и c) на квадратно уравнение: ax2+bx+c, изчислява и извежда неговите реални корени (ако има такива). Квадратните уравнения могат да имат 0, 1 или 2 реални корена.<br /><br />
+<span class="tab"></span>Упътване: Вижте начина за решаване на квадратно уравнение.<br /><br />
+<span class="tab"></span>Решение: <br />
+<span class="tab"></span><a href="https://github.com/ivanpop/CS-for-Dummies/blob/master/Chapter%205%20Solution%206/Program.cs" target="_blank"><b><u>Link</u></b></a><hr>
+<span class="tab"></span>7. Напишете програма, която намира най-голямото по стойност число измежду дадени 5 числа.<br /><br />
+<span class="tab"></span>Упътване:  Използвайте вложени <code>if</code> конструкции. Можете да използвате конструкцията за цикъл <code>for</code>, за която можете да прочетете в Интернет.<br /><br />
+<span class="tab"></span>Решение: <br />
+<div class="code">
+    <span class="Modifier">static</span>&nbsp;<span class="ValueType">void</span>&nbsp;Main(<span class="ReferenceType">string</span>[]&nbsp;args)<br />
+    {&nbsp;&nbsp;&nbsp;&nbsp;<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;Console.Write(<span class="String">"Enter&nbsp;first&nbsp;number:&nbsp;"</span>);<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;<span class="ValueType">int</span>&nbsp;a&nbsp;=&nbsp;Int32.Parse(Console.ReadLine());<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;Console.Write(<span class="String">"Enter&nbsp;second&nbsp;number:&nbsp;"</span>);<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;<span class="ValueType">int</span>&nbsp;b&nbsp;=&nbsp;Int32.Parse(Console.ReadLine());<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;Console.Write(<span class="String">"Enter&nbsp;third&nbsp;number:&nbsp;"</span>);<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;<span class="ValueType">int</span>&nbsp;c&nbsp;=&nbsp;Int32.Parse(Console.ReadLine());<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;Console.Write(<span class="String">"Enter&nbsp;fourth&nbsp;number:&nbsp;"</span>);<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;<span class="ValueType">int</span>&nbsp;d&nbsp;=&nbsp;Int32.Parse(Console.ReadLine());<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;Console.Write(<span class="String">"Enter&nbsp;fifth&nbsp;number:&nbsp;"</span>);<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;<span class="ValueType">int</span>&nbsp;e&nbsp;=&nbsp;Int32.Parse(Console.ReadLine());<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;<span class="Statement">if</span>&nbsp;(a&nbsp;&lt;&nbsp;b)&nbsp;a&nbsp;=&nbsp;b;<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;<span class="Statement">if</span>&nbsp;(a&nbsp;&lt;&nbsp;c)&nbsp;a&nbsp;=&nbsp;c;<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;<span class="Statement">if</span>&nbsp;(a&nbsp;&lt;&nbsp;d)&nbsp;a&nbsp;=&nbsp;d;<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;<span class="Statement">if</span>&nbsp;(a&nbsp;&lt;&nbsp;e)&nbsp;a&nbsp;=&nbsp;e;<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;Console.WriteLine(<span class="String">"{0}&nbsp;is&nbsp;the&nbsp;biggest&nbsp;number."</span>,&nbsp;a);<br />
+    }
+</div>
+<hr>
+<span class="tab"></span>8. Напишете програма, която по избор на потребителя прочита от конзолата променлива от тип <code>int</code>, <code>double</code> или <code>string</code>. Ако променливата е <code>int</code> или <code>double</code>, трябва да се увеличи с 1. Ако променливата е <code>string</code>, трябва да се прибави накрая символа "*". Отпечатайте получения резултат на конзолата. Използвайте <code>switch</code> конструкция.<br /><br />
+<span class="tab"></span>Упътване: Използвайте входна променлива, която да показва от какъв тип ще е входа, т.е. при въвеждане на 0 типа е <code>int</code>, при 1 е <code>double</code> и при 2 е <code>string</code>.<br /><br />
+<span class="tab"></span>Решение: <br />
+<span class="tab"></span><a href="https://github.com/ivanpop/CS-for-Dummies/blob/master/Chapter%205%20Solution%208/Program.cs" target="_blank"><b><u>Link</u></b></a><hr>
+<span class="tab"></span>9. Дадени са пет цели числа. Напишете програма, която намира онези подмножества от тях, които имат сума 0. Примери:<br />
+<span class="tab"></span>-  Ако са дадени числата {3, -2, 1, 1, 8}, сумата на -2, 1 и 1 е 0. <br />
+<span class="tab"></span>-Ако са дадени числата {3, 1, -7, 35, 22}, няма подмножества със сума 0.<br /><br />
+<span class="tab"></span>Упътване: Използвайте вложени <code>if</code> конструкции или последователност от сравнения, за да проверите сумите на всичките 15 подмножества на дадените числа (без празното).<br /><br />
+<span class="tab"></span>Решение: <br />
+<span class="tab"></span><a href="https://github.com/ivanpop/CS-for-Dummies/blob/master/Chapter%205%20Solution%209/Program.cs" target="_blank"><b><u>Link</u></b></a><hr>
+<span class="tab"></span>10. Напишете програма, която прилага бонус точки към дадени точки в интервала [1..9] чрез прилагане на следните правила: <br />
+<span class="tab"></span>-  Ако точките са между 1 и 3, програмата ги умножава по 10. <br />
+<span class="tab"></span>-  Ако точките са между 4 и 6, ги умножава по 100. <br />
+<span class="tab"></span>-  Ако точките са между 7 и 9, ги умножава по 1000. <br />
+<span class="tab"></span>-  Ако точките са 0 или повече от 9, се отпечатва съобщение за грешка.<br /><br />
+<span class="tab"></span>Упътване: Използвайте <code>switch</code> конструкция и накрая изведете като резултат на конзолата пресметнатите точки.<br /><br />
+<span class="tab"></span>Решение: <br />
+<span class="tab"></span><a href="https://github.com/ivanpop/CS-for-Dummies/tree/master/Chapter%205%20Solution%2010" target="_blank"><b><u>Link</u></b></a><hr>
+<span class="tab"></span>11. Напишете програма, която преобразува дадено число в интервала [0..999] в текст, съответстващ на българското произношение на числото. Примери:<br />
+<span class="tab"></span>-  0 → "Нула"<br />
+<span class="tab"></span>-  12 → "Дванадесет"<br /><span class="tab"></span>-  98 → "Деветдесет и осем"<br />
+<span class="tab"></span>-  273 → "Двеста седемдесет и три"<br />
+<span class="tab"></span>-  400 → "Четиристотин"<br />
+<span class="tab"></span>-  501 → "Петстотин и едно"<br />
+<span class="tab"></span>-  711 → "Седемстотин и единадесет"<br /><br />
+<span class="tab"></span>Упътване: Използвайте вложени <code>switch</code> конструкции. Да се обърне специално внимание на числата от 0 до 19 и на онези, в които единиците са 0.<br /><br />
+<span class="tab"></span>Решение: <br />
+<span class="tab"></span><a href="https://github.com/ivanpop/CS-for-Dummies/blob/master/Chapter%205%20Solution%2011/Program.cs" target="_blank"><b><u>Link</u></b></a><br /><hr>
+<span class="tab"></span><a href="javascript:history.back()">&#8592; Обратно</a>

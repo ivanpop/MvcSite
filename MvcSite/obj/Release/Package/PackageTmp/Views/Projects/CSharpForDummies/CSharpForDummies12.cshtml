@@ -1,0 +1,40 @@
+﻿@{
+    ViewBag.Title = "C# For Dummies";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>C# For Dummies</h1>
+<h2>Глава 12. Обработка на изключения</h2>
+<span class="tab"></span>1. Да се намерят всички стандартни изключения от йерархията на <code>System.IO.IOException</code>.<br /><br />
+<span class="tab"></span>Упътване: Потърсете в MSDN. Най-лесният начин да направите това е да напишете в Google \"IOException MSDN\".<br /><br />
+<span class="tab"></span>Решение:<br />
+<span class="tab"></span><a href="https://msdn.microsoft.com/en-us/library/system.io.ioexception%28v=vs.110%29.aspx" target="_blank"><b><u>Link</u></b></a><hr>
+<span class="tab"></span>2. Да се намерят всички стандартни изключения от йерархията на <code>System.IO.FileNotFoundException</code>.<br /><br />
+<span class="tab"></span>Упътване: Разгледайте упътването за предходната задача.<br /><br />
+<span class="tab"></span>Решение:<br />
+<span class="tab"></span><a href="https://msdn.microsoft.com/en-us/library/system.io.filenotfoundexception%28v=vs.110%29.aspx" target="_blank"><b><u>Link</u></b></a><hr>
+<span class="tab"></span>3. Да се намерят всички стандартни изключения от йерархията на <code>System.ApplicationException</code>.<br /><br />
+<span class="tab"></span>Упътване: Разгледайте упътването за предходната задача.<br /><br />
+<span class="tab"></span>Решение:<br />
+<span class="tab"></span><a href="https://msdn.microsoft.com/en-us/library/system.applicationexception%28v=vs.110%29.aspx" target="_blank"><b><u>Link</u></b></a><hr>
+<span class="tab"></span>4. Напишете програма, която прочита от конзолата цяло положително число и отпечатва на конзолата корен квадратен от това число. Ако числото е отрицателно или невалидно, да се изпише \"Invalid Number\" на конзолата. Във всички случаи да се принтира на конзолата \"Good Bye\".<br /><br />
+<span class="tab"></span>Упътване: Направете <code>try{} - catch(){} - finally{}</code> конструкция.<br /><br />
+<span class="tab"></span>Решение: <br />
+<span class="tab"></span><a href="https://github.com/ivanpop/CS-for-Dummies/tree/master/Chapter%2012%20Solution%204" target="_blank"><b><u>Link</u></b></a><hr>
+<span class="tab"></span>5. Напишете метод <code>ReadNumber(int start, int end)</code>, който въвежда от конзолата число в диапазона <code>[start…end]</code>. В случай на въведено невалидно число или число, което не е в подадения диапазон хвърлете подходящо изключение. Използвайки този метод напишете програма, която въвежда 10 числа <code>a1, a2, …, a10</code>, такива, че <code>1 < a1 < … < a10 < 100</code>.<br /><br />
+<span class="tab"></span>Упътване: При въведено невалидно число може да хвърляте изключението Exception поради липсва на друг клас изключения, който по-точно да описва проблема. Алтернативно можете да дефинирате собствен клас изключение <code>InvalidNumberException</code>.<br /><br />
+<span class="tab"></span>Решение: <br />
+<span class="tab"></span><a href="https://github.com/ivanpop/CS-for-Dummies/tree/master/Chapter%2012%20Solution%205" target="_blank"><b><u>Link</u></b></a><hr>
+<span class="tab"></span>6. Напишете метод, който приема като параметър име на текстов файл, прочита съдържанието му и го връща като <code>string</code>. Какво е правилно да направи методът с евентуално възникващите изключения?<br /><br />
+<span class="tab"></span>Упътване:  Прочетете файла ред по ред с класа <code>System.IO.StreamReader</code> и добавяйте редовете в <code>System.Text.StringBuilder</code>. Изхвърляйте всички изключе­ния от метода без да ги прихващате. <br /><br />
+<span class="tab"></span>Решение: <br />
+<span class="tab"></span><a href="https://github.com/ivanpop/CS-for-Dummies/tree/master/Chapter%2012%20Solution%206" target="_blank"><b><u>Link</u></b></a><hr>
+<span class="tab"></span>7. Напишете програма, която прочита от потребителя пълен път до даден файл (например C:\Windows\win.ini), прочита съдържанието на файла и го извежда на конзолата. Намерете вMSDN как да използвате метода <code>System.IO.File.ReadAllText(…)</code>. Уверете се, че прихващате всички възможни изключения, които могат да възникнат по време на работа на метода и извеждайте на конзолата съобщения за грешка, разбираеми за обикновения потребител.<br /><br />
+<span class="tab"></span>Упътване: Потърсете всички възможни изключения, които възникват в следствие на работата на метода и за всяко от тях дефинирайте <code>catch</code> блок.<br /><br />
+<span class="tab"></span>Решение:<br />
+<span class="tab"></span><a href="https://github.com/ivanpop/CS-for-Dummies/tree/master/Chapter%2012%20Solution%207" target="_blank"><b><u>Link</u></b></a><hr>
+<span class="tab"></span>8. Напишете програма, която изтегля файл от Интернет по даден URL адрес, примерно (http://www.devbg.org/img/Logo-BASD.jpg).<br /><br />
+<span class="tab"></span>Упътване: Потърсете в Интернет статии на тема изтегляне на файл от C#. Ако се затруднявате, потърсете информация и примери за използване конкретно на класа <code>WebClient</code>. Уверете се, че прихващате и обра­ботвате правилно всички изключения, които могат да възникнат. <br /><br />
+<span class="tab"></span>Решение: <br />
+<span class="tab"></span><a href="https://github.com/ivanpop/CS-for-Dummies/tree/master/Chapter%2012%20Solution%208" target="_blank"><b><u>Link</u></b></a><br /><hr>
+<span class="tab"></span><a href="javascript:history.back()">&#8592; Обратно</a>

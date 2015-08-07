@@ -1,0 +1,65 @@
+﻿@{
+    ViewBag.Title = "Countdown timer & Stopwatch";
+    Layout = "~/Views/Shared/_LayoutEN.cshtml";
+}
+
+<h1>Countdown timer & Stopwatch</h1>
+
+<p>
+    <span class="tab"></span>Written in C#, this is a countdown timer and a stopwatch. When the timer reaches 0, there is a beep. The progress can be seen in the taskbar, even if the program is minimized. Perfect if you often boil eggs or cook. ;) <br />
+    <span class="tab"></span>The stopwatch has a precision of a millisecond. There is an option to count a lap, pause and to save the lap times in a text file.<br />
+    <span class="tab"></span>The countdown timer and the stopwatch are completly independent on from the other and can work simultaneously.
+</p>
+<span class="tab"></span><img src="~/Resources/CT1.jpg" alt="CT1" />
+<span class="tab"></span><img src="~/Resources/CT2.jpg" alt="CT2" height="419" /><br />
+<h2>Realization</h2>
+<p>
+    <span class="tab"></span>Time is stored in the timeArr array, which has 3 lines and 2 columns. The columns represent the two digits of the number for time and the three lines are for seconds, minutes and hours.<br />
+    <span class="tab"></span>When pressing a digit, it’s inserted in the place of the units of the seconds. Whit every other input, the inserted digits move one position to the left. The number which is in the units in the seconds gets moved to the tenths and the new digit goes to the place of the units. In the same way, with entering another digit, minutes and hours get populated.<br />
+    <span class="tab"></span>Pressing Start, the first thing that happens is converting the digits into time. For example, when 89 is inserted as seconds, it’s converted to 29 seconds and minutes gets increased by 1. Also a variable is declared with the name “time”, which represents the total time in seconds. For example, when the program is showing 30 minutes and 25 seconds, time will be equal to 1825. Time is used for the progress bar, positioned at the bottom of the program’s window and also for the progress bar in the taskbar. They’re minimum value is 0, maximum is time and the step is 1.
+</p>
+<span class="tab"></span><img src="~/Resources/CT3.jpg" /><br /><br />
+<p><span class="tab"></span>Last the method startCountdown() is started, which is the main method of the program and inside him is the whole job of the countdown.</p>
+<div class="code">
+    <span class="Modifier">public</span>&nbsp;<span class="Modifier">async</span>&nbsp;<span class="ValueType">void</span>&nbsp;startCountdown()<br />
+    {<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;<span class="Statement">do</span>&nbsp;{<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;seconds--;<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;progressBar1.PerformStep();<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;updateTime();<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;addZero();<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;timeToSeconds();<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;taskbar.SetProgressValue(progressBar1.Value,&nbsp;time);<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;checkMinutes();<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="Modifier">await</span>&nbsp;Task.Delay(1000);<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;<span class="Statement">while</span>&nbsp;(timeToSeconds());<br />
+    }
+</div>
+<p>
+    <span class="tab"></span>This method is asynchronous and is executed once in every second. The first thing it does is to remove a second. After that it does one step of the progress bar.<br />
+    <span class="tab"></span>updateTime() is used for showing the updated time on the window by converting the numbers of the seconds, minutes and hours into strings and puts them in the correct labels.<br />
+    <span class="tab"></span>The addZero() method adds “0” to the strings for time, when the number is made only from one digit. For example, when the seconds are 5 we see “05” on the screen. <br />
+    <span class="tab"></span>timeToSeconds() checks the time and returns true when there is remaining time. When the seconds are 0 the method changes they’re value to 60 and in the same time it removes 1 minute from the minutes. When the seconds are 0 and the minutes are also 0, seconds gets changed to 60, minutes to 59 and 1 hour is removed. When the hours are also 0 and we can’t get an hour from them, the method plays a beeping sound and returns false, which stops the asynchronous method startCountdown() and the countdown ends. <br />
+    <span class="tab"></span>taskbar.SetProgressValue(progressBar1.Value, time); uses the properties of the progress bar inside the program window to update the progress bar in the taskbar. <br />
+    <span class="tab"></span>The checkMinutes() method is used along with the buttons for adding and taking time to enable and disable them for usage. When the time is 15:25 we can use the buttons “-1”, ”-5” и ”-10” to take time, but we can’t use “-30” because we don’t have enough time left.
+</p>
+<h2>Adding and removing time</h2>
+<p><span class="tab"></span>There are buttons which are used to add additional or remove time while the timer is working. When the timer is working and the button “+5” is pressed, an additional 5 minutes are added to the time. The buttons for adding time can be used before the countdown has begun, to input a starting time. The Plus-minus button is used for removing time. It changes the functionality of the buttons, changing them from adding time to removing time. With every changing of time the status of the two progress-bars is also updated.</p><br />
+<span class="tab"></span><img src="~/Resources/CT4.gif" /><br />
+<h2>Beep</h2>
+<p><span class="tab"></span>When the countdown ends a beeping sound is played. This beep can be turned on or off using the “Beep” radio button, which is located at the bottom of the program window.</p><br />
+<span class="tab"></span><b>Source: <a href="https://github.com/ivanpop/stopwatch">Github</a></b>
+<span class="tab"></span><b>Download: <a href="~/Resources/countdown timer.rar" target="_blank">Link</a></b><br /><br />
+<div class="text-center">
+    <div class="pages">
+        @Html.ActionLink(HttpUtility.HtmlDecode("&#8656;"), "CountdownTimer", new { id = 2 })
+        <div class="selected-page">
+            <a href="#top">1</a>
+        </div>
+        @Html.ActionLink("2", "CountdownTimer", new { id = 2 })
+        @Html.ActionLink(HttpUtility.HtmlDecode("&#8658;"), "CountdownTimer", new { id = 2 })
+    </div>
+</div>
+<br />
+
+<span class="tab"></span><a href="javascript:history.back()">&#8592; Back</a>
