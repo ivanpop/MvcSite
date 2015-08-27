@@ -56,7 +56,7 @@ namespace MvcSite.Controllers
         }
 
         // GET: C# for Dummies
-        public ActionResult CSharpForDummies(string id = "1")
+        public ActionResult CSharpForDummies(string id = "0")
         {
             switch (id)
             {
