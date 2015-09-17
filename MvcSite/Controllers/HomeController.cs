@@ -7,8 +7,7 @@ namespace MvcMovie.Controllers
 { 
     public class HomeController : Controller 
     { 
-        // GET: /Home/ 
-
+        // GET: /Home/
         public ActionResult Index(string language = "bg") 
         {
             if (language == "en")
@@ -17,8 +16,7 @@ namespace MvcMovie.Controllers
                 return View();
         } 
  
-        // GET: /Home/Bio/ 
-
+        // GET: /Home/Bio/
         public ActionResult Bio(string language = "bg")
         {
             if (language == "en")

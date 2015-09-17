@@ -56,23 +56,45 @@ namespace MvcSite.Controllers
         }
 
         // GET: C# for Dummies
-        public ActionResult CSharpForDummies(string id = "0")
+        public ActionResult CSharpForDummies(string id = "0", string language = "bg")
         {
-            switch (id)
+            if (language == "en")
             {
-                case "1": return View("CSharpForDummies/CSharpForDummies1");
-                case "2": return View("CSharpForDummies/CSharpForDummies2");
-                case "3": return View("CSharpForDummies/CSharpForDummies3");
-                case "4": return View("CSharpForDummies/CSharpForDummies4");
-                case "5": return View("CSharpForDummies/CSharpForDummies5");
-                case "6": return View("CSharpForDummies/CSharpForDummies6");
-                case "7": return View("CSharpForDummies/CSharpForDummies7");
-                case "8": return View("CSharpForDummies/CSharpForDummies8");
-                case "9": return View("CSharpForDummies/CSharpForDummies9");
-                case "10": return View("CSharpForDummies/CSharpForDummies10");
-                case "11": return View("CSharpForDummies/CSharpForDummies11");
-                case "12": return View("CSharpForDummies/CSharpForDummies12");
-                default: return View("CSharpForDummies/CSharpForDummies");
+                switch (id)
+                {
+                    case "1": return View("CSharpForDummies/CSharpForDummies");
+                    case "2": return View("CSharpForDummies/CSharpForDummies");
+                    case "3": return View("CSharpForDummies/CSharpForDummies");
+                    case "4": return View("CSharpForDummies/CSharpForDummies");
+                    case "5": return View("CSharpForDummies/CSharpForDummies");
+                    case "6": return View("CSharpForDummies/CSharpForDummies");
+                    case "7": return View("CSharpForDummies/CSharpForDummies");
+                    case "8": return View("CSharpForDummies/CSharpForDummies");
+                    case "9": return View("CSharpForDummies/CSharpForDummies");
+                    case "10": return View("CSharpForDummies/CSharpForDummies");
+                    case "11": return View("CSharpForDummies/CSharpForDummies");
+                    case "12": return View("CSharpForDummies/CSharpForDummies");
+                    default: return View("en/CSharpForDummies/CSharpForDummies");
+                }
+            }
+            else
+            {
+                switch (id)
+                {
+                    case "1": return View("CSharpForDummies/CSharpForDummies1");
+                    case "2": return View("CSharpForDummies/CSharpForDummies2");
+                    case "3": return View("CSharpForDummies/CSharpForDummies3");
+                    case "4": return View("CSharpForDummies/CSharpForDummies4");
+                    case "5": return View("CSharpForDummies/CSharpForDummies5");
+                    case "6": return View("CSharpForDummies/CSharpForDummies6");
+                    case "7": return View("CSharpForDummies/CSharpForDummies7");
+                    case "8": return View("CSharpForDummies/CSharpForDummies8");
+                    case "9": return View("CSharpForDummies/CSharpForDummies9");
+                    case "10": return View("CSharpForDummies/CSharpForDummies10");
+                    case "11": return View("CSharpForDummies/CSharpForDummies11");
+                    case "12": return View("CSharpForDummies/CSharpForDummies12");
+                    default: return View("CSharpForDummies/CSharpForDummies");
+                }
             }
         }
 
