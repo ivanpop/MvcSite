@@ -293,6 +293,7 @@
     <Content Include="Views\Projects\en\Ryu3.cshtml" />
     <Content Include="Views\Projects\en\CountdownTimer.cshtml" />
     <Content Include="Views\Projects\en\CountdownTimer2.cshtml" />
+    <Content Include="Views\Projects\en\CSharpForDummies\CSharpForDummies.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
