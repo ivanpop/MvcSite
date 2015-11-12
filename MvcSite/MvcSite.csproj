@@ -294,6 +294,7 @@
     <Content Include="Views\Projects\en\CountdownTimer.cshtml" />
     <Content Include="Views\Projects\en\CountdownTimer2.cshtml" />
     <Content Include="Views\Projects\en\CSharpForDummies\CSharpForDummies.cshtml" />
+    <Content Include="Views\Shared\_FontSize.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

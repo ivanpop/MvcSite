@@ -1,0 +1,6 @@
+﻿@using Microsoft.AspNet.Identity
+
+<ul class="nav navbar-nav navbar-right" style="margin-right:30px">
+    <li><a href="javascript:void(0);" onclick="increaseSize()">+A</a></li>
+    <li>@Html.ActionLink("-A", ViewContext.RouteData.Values["action"].ToString(), new { onclick = "someFunction();" })</li>
+</ul>

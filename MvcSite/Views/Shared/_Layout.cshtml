@@ -41,8 +41,9 @@
                     <li>@Html.ActionLink("Автобиография", "Bio", "Home")</li>
                     <li>@Html.ActionLink("Проекти", "Index", "Projects")</li>
                     <li>@Html.ActionLink("Контакти", "Contact", "Home")</li>                    
-                </ul>
+                </ul>                
                 @Html.Partial("_Language")
+                @Html.Partial("_FontSize")
             </div>
         </div>
     </div>
@@ -74,6 +75,11 @@
             return false;
         });
     });
+
+    function increaseSize() {
+        var size = parseInt($('body').css('font-size'));
+        if (size < 20) $('body').css("font-size", size + 2);
+    }
     </script>
 </body>
 </html>

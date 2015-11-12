@@ -3,8 +3,32 @@
     ViewBag.Title = "About me";
 }
 
+@section ExtraHeadContent {
+    <meta name="description" content="My name is Ivan Popov and I'm a computer programmer.This is my personal web page. Here you will find information about me and the projects I'm working on.My interests are mainly in the field of information technology, programming languages and their programming environments.">
+    <meta name="author" content="Ivan Popov">
+    <meta name="thumbnail" content="http://localhost:49690/Resources/ivanpopov.jpg" />
+    <link rel="image_src" href="http://localhost:49690/Resources/ivanpopov.jpg" />
+}
+
 <h1>About me</h1>
 <p>Hello,</p>
 <p><span class="tab"></span>My name is Ivan Popov and I'm a computer programmer.</p>
 <p><span class="tab"></span>This is my personal web page. Here you will find information about me and the projects I'm working on.</p>
 <p><span class="tab"></span>My interests are mainly in the field of information technology, programming languages and their programming environments.</p>
+<h2>About this website</h2>
+<p>
+    <span class="tab"></span>This website was made with the idea of me trying out the ASP.NET technology and more particularly the Web Forms. Originally this website used ASP.NET Web forms and had a very simplified design and structure.<br />
+    Regardless of that, I published some of my projects in it, I added some effects and styles and it turn out to be a rather attractive and easy to use.<br />
+    I chose ASP.NET because I like the idea of using an .NET programming language as a core to my project.<br />
+    I already had started to study C# and to write desktop applications with it and this was a good solution for me, to make a website without me having to start learning a new language like PHP or a new technology like JSP.<br />
+    <span class="tab"></span>This is kind of a shortcut, for a person already working with desktop applications to quickly and easily transition to web=programming and making web-services.<br />
+    <span class="tab"></span>In time, I decided to try the MVC model for creating websites. Using different online lessons and examples, I managed to migrate my site and all of its contents to this model.<br />
+    <span class="tab"></span>As a result you can see the site, which you are viewing right now. It covers all the standards and is optimized using a number of techniques so it can work as fast and effective as possible.
+</p>
+<h3>MVC</h3>
+<p>
+    <span class="tab"></span>MVC (Model-View-Controller) is a template for projects in programming, which divides the projects in three main parts - the logic of the project (Model), management of user commands (Controller) and the user interface (View).<br />
+    <span class="tab"></span> The controller accepts requests from the user and turns them into commands that the model have to process. The controller can also send commands directly to the view. The model is the core component of MVC. It stores and processes all the data and the rules of the application. The data are requested from the user, using the controller, then they are processed in the model and they are sent to the view for the user to see the result<br />
+    <span class="tab"></span>The advantage of this template is that the three parts can be modified independently. One model can use different views. The controller and the view can be modified without the need to modify the model also. The model can be created independently from the controller and the view.<br />
+    <span class="tab"></span>Another advantage is that almost the whole application is processed by the server. The user receives only the view and sends requests using links and filled forms. The requests are sent to the controller on the server where they are processed by the model and the updated view is sent back to the user.
+</p>
