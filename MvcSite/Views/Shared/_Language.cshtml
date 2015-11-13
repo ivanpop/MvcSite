@@ -2,5 +2,5 @@
 
 <ul class="nav navbar-nav navbar-right">
     <li>@Html.ActionLink("BG", ViewContext.RouteData.Values["action"].ToString(), new { language = "bg" })</li>
-    <li>@Html.ActionLink("EN", ViewContext.RouteData.Values["action"].ToString(), new { language = "en" })</li>
+    <li>@Html.ActionLink("EN", ViewContext.RouteData.Values["action"].ToString(), new { language = "en" }, new { title = "Смени езика на Английски" })</li>
 </ul>

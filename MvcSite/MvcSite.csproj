@@ -297,6 +297,7 @@
     <Content Include="Views\Projects\en\CSharpForDummies\CSharpForDummies.cshtml" />
     <Content Include="Views\Shared\_FontSize.cshtml" />
     <Content Include="Views\Shared\_FontSizeEN.cshtml" />
+    <Content Include="Views\Shared\_LanguageEN.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
