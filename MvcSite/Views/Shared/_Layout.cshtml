@@ -80,6 +80,11 @@
         var size = parseInt($('body').css('font-size'));
         if (size < 20) $('body').css("font-size", size + 2);
     }
+
+    function decreaseSize() {
+        var size = parseInt($('body').css('font-size'));
+        if (size > 14) $('body').css("font-size", size - 2);
+    }
     </script>
 </body>
 </html>
