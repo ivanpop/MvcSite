@@ -20,6 +20,7 @@
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -295,6 +296,7 @@
     <Content Include="Views\Projects\en\CountdownTimer2.cshtml" />
     <Content Include="Views\Projects\en\CSharpForDummies\CSharpForDummies.cshtml" />
     <Content Include="Views\Shared\_FontSize.cshtml" />
+    <Content Include="Views\Shared\_FontSizeEN.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
