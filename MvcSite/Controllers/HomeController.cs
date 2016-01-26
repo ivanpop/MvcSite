@@ -1,12 +1,27 @@
 ﻿using System.Net;
 using System.Net.Mail;
+using System.Text;
 using System.Web;
-using System.Web.Mvc; 
- 
+using System.Web.Mvc;
+
 namespace MvcMovie.Controllers 
 { 
     public class HomeController : Controller 
-    { 
+    {
+        [Route("robots.txt", Name = "GetRobotsText"), OutputCache(Duration = 86400)]
+        public ContentResult RobotsText()
+        {
+            StringBuilder stringBuilder = new StringBuilder();
+
+            stringBuilder.AppendLine("user-agent: *");
+            stringBuilder.AppendLine("disallow: /error/");
+            stringBuilder.AppendLine("allow: /error/foo");
+            stringBuilder.Append("sitemap: ");
+            stringBuilder.AppendLine(this.Url.RouteUrl("GetSitemapXml", null, this.Request.Url.Scheme).TrimEnd('/'));
+
+            return this.Content(stringBuilder.ToString(), "text/plain", Encoding.UTF8);
+        }
+
         // GET: /Home/
         public ActionResult Index(string language = "bg") 
         {
