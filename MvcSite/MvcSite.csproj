@@ -298,6 +298,8 @@
     <Content Include="Views\Shared\_FontSize.cshtml" />
     <Content Include="Views\Shared\_FontSizeEN.cshtml" />
     <Content Include="Views\Shared\_LanguageEN.cshtml" />
+    <Content Include="Views\Projects\MVCSite.cshtml" />
+    <Content Include="Views\Projects\en\MVCSite.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -106,5 +106,14 @@ namespace MvcSite.Controllers
             else
                 return View();  
         }
+
+        // GET: MVCSite
+        public ActionResult MVCSite(string language = "bg")
+        {
+            if (language == "en")
+                return View("en/MVCSite");
+            else
+                return View();
+        }
     }
 }
