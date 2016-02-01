@@ -333,6 +333,10 @@ textarea {
   background-image: none;
 }
 
+  a.sitemap, a.sitemap:hover{
+      color:white;
+  }
+
 a {
   color: #e74c3c;
   text-decoration: none;
@@ -6819,4 +6823,6 @@ td.visible-print {
   td.hidden-print {
     display: none !important;
   }
+
+
 }

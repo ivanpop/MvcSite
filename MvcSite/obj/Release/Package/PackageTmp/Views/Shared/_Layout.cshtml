@@ -34,15 +34,16 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                @Html.ActionLink("За мен", "Index", new { area = "" }, new { @class = "navbar-brand" })
+                @Html.ActionLink("За мен", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li>@Html.ActionLink("Автобиография", "Bio", "Home")</li>
                     <li>@Html.ActionLink("Проекти", "Index", "Projects")</li>
                     <li>@Html.ActionLink("Контакти", "Contact", "Home")</li>                    
-                </ul>
+                </ul>                
                 @Html.Partial("_Language")
+                @Html.Partial("_FontSize")
             </div>
         </div>
     </div>
@@ -50,7 +51,7 @@
             @RenderBody()        
     </div>
     <div class="footer">
-            <p>&copy; @DateTime.Now.Year - Иван Попов</p>
+            <p>&copy; @DateTime.Now.Year - Иван Попов // <a class="sitemap" href="~/sitemap.xml">XML</a></p>
             <a href="#" class="scrollup">Scroll</a>
     </div>
 
@@ -74,6 +75,22 @@
             return false;
         });
     });
+
+    function increaseSize() {
+        var size = parseInt($('body').css('font-size'));
+        if (size < 20) $('body').css("font-size", size + 2);
+    }
+
+    function decreaseSize() {
+        var size = parseInt($('body').css('font-size'));
+        if (size > 11) $('body').css("font-size", size - 2);
+    }
+
+    function defaultSize() {
+        var size = parseInt($('body').css('font-size'));
+        if (size != 14) $('body').css("font-size", 14);
+    }
+
     </script>
 </body>
 </html>

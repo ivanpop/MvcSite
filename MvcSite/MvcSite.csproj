@@ -216,6 +216,7 @@
     <Content Include="Resources\ryu9.png" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="xml-sitemap.xsl" />
     <None Include="Properties\PublishProfiles\MvcSite9989.pubxml" />
     <Content Include="Resources\converter.rar" />
     <Content Include="Resources\countdown timer.rar" />

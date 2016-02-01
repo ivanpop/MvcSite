@@ -1,0 +1,6 @@
+﻿@using Microsoft.AspNet.Identity
+
+<ul class="nav navbar-nav navbar-right">
+    <li>@Html.ActionLink("BG", ViewContext.RouteData.Values["action"].ToString(), new { language = "bg" }, new { title = "Change the language to Bulgarian" })</li>
+    <li>@Html.ActionLink("EN", ViewContext.RouteData.Values["action"].ToString(), new { language = "en" })</li>
+</ul>

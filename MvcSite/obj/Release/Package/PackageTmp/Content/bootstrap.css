@@ -333,6 +333,10 @@ textarea {
   background-image: none;
 }
 
+  a.sitemap, a.sitemap:hover{
+      color:white;
+  }
+
 a {
   color: #e74c3c;
   text-decoration: none;
@@ -4087,7 +4091,11 @@ textarea.input-group-sm > .input-group-btn > .btn {
   overflow-x: visible;
   border-top: 1px solid transparent;
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
-  -webkit-overflow-scrolling: touch;
+  -webkit-overflow-scrolling: touch;  
+}
+
+.navbar-collapse, .navbar {
+    font-weight: bold;
 }
 
 .navbar-collapse:before,
@@ -4192,7 +4200,6 @@ textarea.input-group-sm > .input-group-btn > .btn {
 .navbar-brand {
   float: left;
   padding: 15px 15px;
-  font-size: 18px;
   line-height: 20px;
 }
 
@@ -6816,4 +6823,6 @@ td.visible-print {
   td.hidden-print {
     display: none !important;
   }
+
+
 }

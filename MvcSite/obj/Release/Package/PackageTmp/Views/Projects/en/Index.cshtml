@@ -1,6 +1,6 @@
 ﻿@{
     Layout = "~/Views/Shared/_LayoutEN.cshtml";
-    ViewBag.Title = "Проекти";
+    ViewBag.Title = "Projects";
 }
 
 @section ExtraHeadContent {
@@ -15,23 +15,7 @@
 
 <table>
     <tr>
-        <td rowspan="4" width="40"></td>
-        <td width="300" height="50">
-            <b>&#9642; @Html.ActionLink("Countdown timer & Stopwatch", "CountdownTimer", "Projects")</b>
-        </td>
-        <td width="350">
-            <i>Countdown timer and a stopwatch.</i>
-        </td>
-    </tr>
-    <tr>
-        <td height="50">
-            <b>&#9642; @Html.ActionLink("Ryu: The Big Adventure!", "Ryu", "Projects")</b>
-        </td>
-        <td width="350">
-            <i>2D Action game. Written in Java it represents a 2D Beat 'em up simulator.</i>
-        </td>
-    </tr>
-    <tr>
+        <td rowspan="5" width="40"></td>
         <td height="50">
             <b>&#9642; @Html.ActionLink("C# for Dummies", "CSharpForDummies", "Projects")</b>
         </td>
@@ -45,6 +29,30 @@
         </td>
         <td width="350">
             <i>Program for converting metric units.</i>
+        </td>
+    </tr>
+    <tr>
+        <td width="300" height="50">
+            <b>&#9642; @Html.ActionLink("Countdown timer & Stopwatch", "CountdownTimer", "Projects")</b>
+        </td>
+        <td width="350">
+            <i>Countdown timer and a stopwatch.</i>
+        </td>
+    </tr>
+    <tr>
+        <td height="50">
+            <b>&#9642; @Html.ActionLink("MVC Personal Website", "MVCSite", "Projects")</b>
+        </td>
+        <td width="350">
+            <i>On this page, I've described how I made my website. I've used the .NET MVC technology.</i>
+        </td>
+    </tr>
+    <tr>
+        <td height="50">
+            <b>&#9642; @Html.ActionLink("Ryu: The Big Adventure!", "Ryu", "Projects")</b>
+        </td>
+        <td width="350">
+            <i>2D Action game. Written in Java it represents a 2D Beat 'em up simulator.</i>
         </td>
     </tr>
 </table>
