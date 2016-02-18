@@ -62,18 +62,18 @@ namespace MvcSite.Controllers
             {
                 switch (id)
                 {
-                    case "1": return View("CSharpForDummies/CSharpForDummies");
-                    case "2": return View("CSharpForDummies/CSharpForDummies");
-                    case "3": return View("CSharpForDummies/CSharpForDummies");
-                    case "4": return View("CSharpForDummies/CSharpForDummies");
-                    case "5": return View("CSharpForDummies/CSharpForDummies");
-                    case "6": return View("CSharpForDummies/CSharpForDummies");
-                    case "7": return View("CSharpForDummies/CSharpForDummies");
-                    case "8": return View("CSharpForDummies/CSharpForDummies");
-                    case "9": return View("CSharpForDummies/CSharpForDummies");
-                    case "10": return View("CSharpForDummies/CSharpForDummies");
-                    case "11": return View("CSharpForDummies/CSharpForDummies");
-                    case "12": return View("CSharpForDummies/CSharpForDummies");
+                    case "1": return View("en/CSharpForDummies/CSharpForDummies1");
+                    case "2": return View("en/CSharpForDummies/CSharpForDummies2");
+                    case "3": return View("en/CSharpForDummies/CSharpForDummies3");
+                    case "4": return View("en/CSharpForDummies/CSharpForDummies4");
+                    case "5": return View("en/CSharpForDummies/CSharpForDummies5");
+                    case "6": return View("en/CSharpForDummies/CSharpForDummies6");
+                    case "7": return View("en/CSharpForDummies/CSharpForDummies7");
+                    case "8": return View("en/CSharpForDummies/CSharpForDummies8");
+                    case "9": return View("en/CSharpForDummies/CSharpForDummies9");
+                    case "10": return View("en/CSharpForDummies/CSharpForDummies10");
+                    case "11": return View("en/CSharpForDummies/CSharpForDummies11");
+                    case "12": return View("en/CSharpForDummies/CSharpForDummies12");
                     default: return View("en/CSharpForDummies/CSharpForDummies");
                 }
             }

@@ -298,12 +298,24 @@
     <Content Include="Views\Projects\en\Ryu3.cshtml" />
     <Content Include="Views\Projects\en\CountdownTimer.cshtml" />
     <Content Include="Views\Projects\en\CountdownTimer2.cshtml" />
-    <Content Include="Views\Projects\en\CSharpForDummies\CSharpForDummies.cshtml" />
     <Content Include="Views\Shared\_FontSize.cshtml" />
     <Content Include="Views\Shared\_FontSizeEN.cshtml" />
     <Content Include="Views\Shared\_LanguageEN.cshtml" />
     <Content Include="Views\Projects\MVCSite.cshtml" />
     <Content Include="Views\Projects\en\MVCSite.cshtml" />
+    <Content Include="Views\Projects\en\CSharpForDummies\CSharpForDummies.cshtml" />
+    <Content Include="Views\Projects\en\CSharpForDummies\CSharpForDummies1.cshtml" />
+    <Content Include="Views\Projects\en\CSharpForDummies\CSharpForDummies10.cshtml" />
+    <Content Include="Views\Projects\en\CSharpForDummies\CSharpForDummies11.cshtml" />
+    <Content Include="Views\Projects\en\CSharpForDummies\CSharpForDummies12.cshtml" />
+    <Content Include="Views\Projects\en\CSharpForDummies\CSharpForDummies2.cshtml" />
+    <Content Include="Views\Projects\en\CSharpForDummies\CSharpForDummies3.cshtml" />
+    <Content Include="Views\Projects\en\CSharpForDummies\CSharpForDummies4.cshtml" />
+    <Content Include="Views\Projects\en\CSharpForDummies\CSharpForDummies5.cshtml" />
+    <Content Include="Views\Projects\en\CSharpForDummies\CSharpForDummies6.cshtml" />
+    <Content Include="Views\Projects\en\CSharpForDummies\CSharpForDummies7.cshtml" />
+    <Content Include="Views\Projects\en\CSharpForDummies\CSharpForDummies8.cshtml" />
+    <Content Include="Views\Projects\en\CSharpForDummies\CSharpForDummies9.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
