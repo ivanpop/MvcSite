@@ -169,7 +169,7 @@
     }
 </div>
 <p><span class="tab"></span>The method is called youWinAnimation. It's executed with every cicle of the game, but it's activated when the boolean winState returns true. winState returns true when all enemies have been killed. It checks the hit points of each entity and executes when they all are at 0. The check itself is inside update(), which means that it's executed with every cicle of the game.</p>
-<img style="margin-left:auto;margin-right:auto;display:block;" src="/Resources/ryu12.png"><br />
+<img id="centerImg" src="/Resources/ryu12.png"><br />
 <p>
     <span class="tab"></span>When true youWinImage is drawn on the screen, with youWinScale1 and youWinScale2 as it's vertical and horizontal size. These variables increase so that the animation can be done. When youWinScale1 reaches 100 a sound is played. When youWinScale1 reaches 600, the image is at it's full size, the scaling stops and a short time after that the user gets moved to the main menu, using sbg.enterState(0);.<br />
     <span class="tab"></span>Ryu also has an animation for the ending. First, user movement is disabled using enableInput = false;. After that we move to the first sprite ryuReadyAnimation, which is made out of 6 sprites. We stop the animation at the 6th frame using ryuSprite.stopAt(6);, we do a check to see if it's stopped with ryuSprite.isStopped() and if that's true we move to the next sprite - ryuWin1Animation. Again we stop the sprite at the last frame, in this case frame 3, we check for the stopping of the animation and we go to the last animation ryuWin2Animation.
