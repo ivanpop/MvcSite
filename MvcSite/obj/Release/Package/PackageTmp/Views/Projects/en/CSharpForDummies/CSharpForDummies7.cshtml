@@ -1,0 +1,124 @@
+﻿@{
+    ViewBag.Title = "C# For Dummies";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section ExtraHeadContent {
+    <meta name="description" content="C# for Dummies представлява условията на задачите от книгата за C# на Академия Телерик и техните упътванията, като аз съм ги решавал или поне съм се опитал :)">
+    <meta name="author" content="Иван Попов">
+    <meta name="thumbnail" content="http://localhost:49690/Resources/ivanpopov.jpg" />
+    <link rel="image_src" href="http://localhost:49690/Resources/ivanpopov.jpg" />
+}
+
+<h1>C# For Dummies</h1>
+<h2> Глава 7. Масиви</h2>
+<span class="tab"></span>1. Да се напише програма, която създава масив с 20 елемента от целочислен тип и инициализира всеки от елементите със стойност равна на индекса на елемента умножен по 5. Елементите на масива да се изведат на конзолата.<br /><br />
+<span class="tab"></span>Упътване: Използвайте  масив и <code>for</code> цикъл.<br /><br />
+<span class="tab"></span>Решение: <br />
+<span class="tab"></span><a href="https://github.com/ivanpop/CS-for-Dummies/blob/master/Chapter%207%20Solution%201/Program.cs" target="_blank"><b><u>Link</u></b></a><hr>
+<span class="tab"></span>2. Да се напише програма, която чете два масива от конзолата и прове­рява дали са еднакви.<br /><br />
+<span class="tab"></span>Упътване: Два масива са еднакви, когато имат еднаква дължина и стойностите на елементите в тях съответно съвпадат. Второто условие можете да проверите с <code>for</code> цикъл.<br /><br />
+<span class="tab"></span>Решение: <br />
+<span class="tab"></span><a href="https://github.com/ivanpop/CS-for-Dummies/blob/master/Chapter%207%20Solution%202/Program.cs" target="_blank"><b><u>Link</u></b></a><hr>
+<span class="tab"></span>3. Да се напише програма, която сравнява два масива от тип char лексикографски (буква по буква) и проверява кой от двата е по-рано в лексикографската подредба.<br /><br />
+<span class="tab"></span>Упътване: При лексикографската наредба символите се сравняват един по един като се започва от най-левия. При несъвпадащи символи по-рано е масивът, чийто текущ символ е по-рано в азбуката. При съвпадение се продължава със следващия символ вдясно. Ако се стигне до края на единия масив, по-краткият е лексикографски по-рано. Ако всички съответни символи от двата масива съвпаднат, то масивите са еднакви и никой о тях не е по-рано в лексикографската наредба.<br /><br />
+<span class="tab"></span>Решение: <br />
+<span class="tab"></span><a href="https://github.com/ivanpop/CS-for-Dummies/blob/master/Chapter%207%20Solution%203/Program.cs" target="_blank"><b><u>Link</u></b></a><hr>
+<span class="tab"></span>4. Напишете програма, която намира максимална редица от последова­телни еднакви елементи в масив. <br />
+<span class="tab"></span>Пример: {2, 1, 1, 2, 3, 3, <b>2, 2, 2</b>, 1} <span style="font-family: Wingdings;">à</span> {2, 2, 2}.<br /><br />
+<span class="tab"></span>Упътване: Сканирайте масива отляво надясно. Всеки път, когато текущото число е различно от предходното, от него започва нова подредица, а всеки път, когато текущото число съвпада с предходното, то е продължение на текущата подредица. Следователно, ако пазите в две променливи <code>start</code> и <code>len</code> съответно индекса на началото на текущата подредица от еднакви елементи (в началото той е 0) и дължината на текущата подредица (в началото той е 1), можете да намерите всички подредици от еднакви елементи и техните дължини. От тях лесно може да се избере най-дългата и да се запомня в две допълнителни променливи – <code>bestStart</code> и <code>bestLen</code>.<br /><br />
+<span class="tab"></span>Решение: <br />
+<span class="tab"></span><a href="https://github.com/ivanpop/CS-for-Dummies/blob/master/Chapter%207%20Solution%204/Program.cs" target="_blank"><b><u>Link</u></b></a><hr>
+<span class="tab"></span>5. Напишете програма, която намира максималната редица от последова­телни нараст­ващи елементи в масив. <br />
+<span class="tab"></span>Пример: {3, <b>2, 3, 4</b>, 2, 2, 4} <span style="font-family: Wingdings;">à</span>  {2, 3, 4}.<br /><br />
+<span class="tab"></span>Упътване: Тази задача е много подобна на предходната, но при нея даден елемент се счита за продължение на текущата редица тогава и само тогава, когато е по-голям от предхождащия го елемент.<br /><br />
+<span class="tab"></span>Решение: <br />
+<span class="tab"></span><a href="https://github.com/ivanpop/CS-for-Dummies/blob/master/Chapter%207%20Solution%205/Program.cs" target="_blank"><b><u>Link</u></b></a><hr>
+<span class="tab"></span> 6. Напишете програма, която намира максималната подредица от нараст­ващи елементи в масив <code>arr[n]</code>. Елементите може и да не са последо­вателни. <br />
+<span class="tab"></span>Пример: {9, 6, <b>2</b>, 7, <b>4</b>, 7, <b>6</b>, 5, <b>8</b>, 4} <span style="font-family: Wingdings;">à</span>  {2, 4, 6, 8}.<br /><br />
+<span class="tab"></span>Упътване: Задачата може да се реши с два вложени цикъла и допълнителен масив <code>len[0..n-1] </code>. Нека в стойността <code>len[i] </code> пазим дължината на най-дългата нарастваща подредица, която започва някъде в масива (не е важно къде) и завършва с елемента <code>arr[i] </code>. Тогава <code>len[0]=1</code>, a <code>len[x] </code> е максималната сума <code>max(1+len[prev]) </code>, където <code> prev < x </code> и <code>arr[prev] < arr[x] </code>. Следвайки дефиницията <code>len[0..n-1] </code> може да се пресметне с два вложени цикъла по следния начин: първият цикъл обхожда масива последователно отляво надясно с водеща променлива x. Вторият цикъл (който е вложен в първия) обхожда масива от началото до позиция <code>x-1</code> и търси елемент <code>prev</code> с максимална стойност на <code>len[prev]</code>, за който <code> arr[prev] < arr[x] </code>. След приключване на търсенето <code>len[x] </code> се инициализира с 1 + най-голямата намерена стойност на <code>len[prev] </code>или с 1, ако такава не е намерена. <br />
+<span class="tab"></span>Описаният алгоритъм намира дължините на всички максимални нарастващи подредици, завършващи във всеки негов елемент. Най-голямата от тези стойности е дължината на най-дългата нарастваща подредица. Ако трябва да намерим самите елементи съставящи тази максимална нарастваща подредица, можем да започнем от елемента, в който тя завършва (нека той е на индекс x), да го отпечатаме и да търсим предходния елемент (<code>prev</code>). За него е в сила, че <code>prev < x</code> и <code>len[x]=1+len[prev] </code>. Така намирайки и отпечатвайки предходния елемент докато има такъв, можем да намерим елементите съставящи най-дългата нарастваща подредица в обратен ред (от последния към първия).<br /><br />
+<span class="tab"></span>Решение: <br />
+<span class="tab"></span><a href="https://github.com/ivanpop/CS-for-Dummies/blob/master/Chapter%207%20Solution%206/Program.cs" target="_blank"><b><u>Link</u></b></a><hr>
+<span class="tab"></span>7. Да се напише програма, която чете от конзолата две цели числа N и K (K < N), и масив от N елемента. Да се намерят тези K поредни елемента, които имат максимална сума.<br /><br />
+<span class="tab"></span>Упътване:  Можете да проверите коя от поредица от K числа има най-голяма сума като проверите сумите на всички такива поредици. Първата такава поредица започва от индекс 0 и завършва в индекс K-1 и нека тя има сума S. Тогава втората редица от K елемента започва от индекс 1 и завършва в индекс K, като нейната сума може да се получи като от S се извади нулевия елемент и се добави K-ти елемент. По същия начин може да се продължи до достигане на края на редицата.<br /><br />
+<span class="tab"></span>Решение: <br />
+<span class="tab"></span><a href="https://github.com/ivanpop/CS-for-Dummies/blob/master/Chapter%207%20Solution%207/Program.cs" target="_blank"><b><u>Link</u></b></a><hr>
+<span class="tab"></span>8. Сортиране на масив означава да подредим елементите му в нарастващ (намаляващ) ред. Напишете програма, която сортира масив. Да се използва алгоритъма "<code>Selection sort</code>".<br /><br />
+<span class="tab"></span>Упътване: Потърсете в Интернет информация за алгоритъма "<code>Selection sort</code>" и неговите реализации. Накратко идеята е да се намери най-малкият елемент, после да се сложи на първа позиция, след това да се намери втория най-малък и да се сложи на втора позиция и т.н., докато целият масив се подреди в нарастващ ред.<br /><br />
+<span class="tab"></span>Решение: <br />
+<span class="tab"></span><a href="https://github.com/ivanpop/CS-for-Dummies/blob/master/Chapter%207%20Solution%208/Program.cs" target="_blank"><b><u>Link</u></b></a><hr>
+<span class="tab"></span>9. Напишете програма, която намира последователност от числа, чиито сума е максимална. <br />
+<span class="tab"></span>Пример: {2, 3, -6, -1, <b>2, -1, 6, 4</b>, -8, 8} <span style="font-family: Wingdings;">à</span>  <b>11</b><br /><br />
+<span class="tab"></span>Упътване: Тази задача има два начина, по които може да се реши. Един от тях е с пълно изчерпване, т.е. с два цикъла проверяваме всяка възможна сума. Втория е масива да се обходи само с 1 цикъл като на всяко завъртане на цикъла проверяваме дали текущата сума е по-голяма от вече намерената максимална сума. Задачата може да се реши и с техниката "Динамично оптимиране". Потърсете повече за нея в Интернет.<br /><br />
+<span class="tab"></span>Решение: <br />
+<span class="tab"></span><a href="https://github.com/ivanpop/CS-for-Dummies/blob/master/Chapter%207%20Solution%209/Program.cs" target="_blank"><b><u>Link</u></b></a><hr>
+<span class="tab"></span>10. Напишете програма, която намира най-често срещания елемент в масив. <br />
+<span class="tab"></span>Пример: {<b>4</b>, 1, 1, <b>4</b>, 2, 3, <b>4</b>, <b>4</b>, 1, 2, <b>4</b>, 9, 3} <span style="font-family: Wingdings;">à</span>  4 (среща се 5 пъти).<br /><br />
+<span class="tab"></span>Упътване: Тази задача може да се решите по много начини. Един от тях е следният: взимате първото число и проверявате колко пъти се повтаря в масива, като пазите този брой в променлива. След всяко прочитане на еднакво число го заменяте с <code>int.MinValue</code>. След това взимате следващото и отново правите същото действие. Неговия брой среща­ния сравнявате с числото, което сте запазили в променливата и ако то е по-голямо, го присвоявате на променливата. Както се досещате, ако намерите число равно на <code>int.MinValue</code> преминавате към следващото.<br /><br />
+<span class="tab"></span>Решение: <br />
+<span class="tab"></span><a href="https://github.com/ivanpop/CS-for-Dummies/blob/master/Chapter%207%20Solution%2010/Program.cs" target="_blank"><b><u>Link</u></b></a><hr>
+<span class="tab"></span>11. Да се напише програма, която намира последователност от числа в масив, които имат сума равна на число, въведено от конзолата (ако има такава). <br />
+<span class="tab"></span>Пример: {4, 3, 1, <b>4</b>, <b>2</b>, <b>5</b>, 8}, S=11 <span style="font-family: Wingdings;">à</span> {4, 2, 5}.<br /><br />
+<span class="tab"></span>Упътване: Задачата може да се реши с два вложени цикъла. Първият задава началната позиция за втория – от първия до последния елемент. Вторият цикъл започва от позицията, зададена от първия цикъл и сумира последова­телно числата надясно едно по едно, докато сумата не надвиши S. Ако сумата е равна на S, се запомня числото от първия цикъл (то е началото на поредицата) и числото от втория цикъл (то е краят на поредицата). <br />
+<span class="tab"></span>Ако всички числа са положителни, съществува и много по-бърз алгоритъм. Сумирате числата отляво надясно като започвате от нулевото. В момента, в който текущата сума надвиши S, премахвате най-лявото число от редицата и го изваждате от текущата сума. Ако тя пак е по-голяма от търсената, премахвате и следващото число отляво и т.н. докато текущата сума не стане по-малка от S. След това продължавате с поредното число отдясно. Ако намерите търсената сума, я отпечатвате заедно с редицата, която я образува. Така само с едно сканиране на елементите на масива и добавяне на числа от дясната страна към текущата редица и премахване на числа от лявата й страна (при нужда), решавате задачата.<br /><br />
+<span class="tab"></span>Решение: <br />
+<span class="tab"></span><a href="https://github.com/ivanpop/CS-for-Dummies/blob/master/Chapter%207%20Solution%2011/Program.cs" target="_blank"><b><u>Link</u></b></a><hr>
+<span class="tab"></span>12. Напишете програма, която създава следните квадратни матрици и ги извежда на конзолата във форматиран вид. Размерът на матриците се въвежда от конзолата. <br />
+<span class="tab"></span>Пример за <code>(4,4)</code>:<br />
+<span class="tab"></span><img src="/Resources/CSResources/ch7-12.gif"><br /><br />
+<span class="tab"></span>Упътване: Помислете за подходящи начини за итерация върху масивите с два вложени цикъла. <br />
+<span class="tab"></span>За d) може да приложите следната стратегия: започвате от позиция (0,0) и се движите надолу N пъти. След това се движите надясно N-1 пъти, след това нагоре N-1 пъти, след това наляво N-2 пъти, след това надолу N-2 пъти и т.н. При всяко преместване слагате в клетката, която напускате поредното число 1, 2, 3, ..., N.<br /><br />
+<span class="tab"></span>Решение: <br />
+<span class="tab"></span><a href="https://github.com/ivanpop/CS-for-Dummies/blob/master/Chapter%207%20Solution%2012/Program.cs" target="_blank"><b><u>Link 12a</u></b></a><br />
+<span class="tab"></span><a href="https://github.com/ivanpop/CS-for-Dummies/blob/master/Chapter%207%20Solution%2012b/Program.cs" target="_blank"><b><u>Link 12b</u></b></a><br />
+<span class="tab"></span><a href=" https://github.com/ivanpop/CS-for-Dummies/blob/master/Chapter%207%20Solution%2012c/Program.cs " target="_blank"><b><u>Link 12c</u></b></a><br />
+<span class="tab"></span><a href=" https://github.com/ivanpop/CS-for-Dummies/blob/master/Chapter%207%20Solution%2012d/Program.cs " target="_blank"><b><u>Link 12d</u></b></a><hr>
+<span class="tab"></span>13. Да се напише програма, която създава правоъгълна матрица с размер n на m. Размерността и елементите на матрицата да се четат от конзолата. Да се намери подматрицата с размер <code>(3,3)</code>, която има максимална сума. <br /><br />
+<span class="tab"></span>Упътване: Погледнете предходната задача.<br /><br />
+<span class="tab"></span>Решение: <br />
+<span class="tab"></span><a href="https://github.com/ivanpop/CS-for-Dummies/blob/master/Chapter%207%20Solution%2013/Program.cs" target="_blank"><b><u>Link</u></b></a><hr>
+<span class="tab"></span>14. Да се напише програма, която намира най-дългата последователност от еднакви stringелементи в матрица. Последователност в матрица дефинираме като елементите са на съседни и са на същия ред, колона или диагонал. <br />
+<span class="tab"></span><img src="/Resources/CSResources/ch7-14.jpeg"><br><br /><br />
+<span class="tab"></span>Упътване: Задача може да се реши, като се провери за всеки елемент дали като тръгнем по диагонал, надолу или надясно, ще получим поредица. Ако получим поредица проверяваме дали тази поредица е по дълга от предходната най-дълга.<br /><br />
+<span class="tab"></span>Решение: <br />
+<span class="tab"></span><a href="https://github.com/ivanpop/CS-for-Dummies/blob/master/Chapter%207%20Solution%2014/Program.cs" target="_blank"><b><u>Link</u></b></a><hr>
+<span class="tab"></span>15. Да се напише програма, която създава масив с всички букви от латинската азбука. Да се даде възможност на потребител да въвежда дума от конзолата и в резултат да се извеждат индексите на буквите от думата.<br /><br />
+<span class="tab"></span>Упътване:  Задачата може да решите с масив и два вложени <code>for</code> цикъла (по буквите на думата и по масива за всяка буква). Задачата има и хитро решение без масив: индексът на дадена главна буква <code>ch</code> от латинската азбука може да се сметне чрез израза: <code> (int) ch – (int) 'A'</code>.<br /><br />
+<span class="tab"></span>Решение: <br />
+<span class="tab"></span><a href="https://github.com/ivanpop/CS-for-Dummies/blob/master/Chapter%207%20Solution%2015/Program.cs" target="_blank"><b><u>Link</u></b></a><hr>
+<span class="tab"></span>16. Да се реализира двоично търсене (<code>binary search</code>) в <b>сортиран</b> целочислен масив.<br /><br />
+<span class="tab"></span>Упътване: Потърсете в Интернет информация за алгоритъма "<code>binary search</code>". Какво трябва да е изпълнено, за да използваме този алгоритъм?.<br /><br />
+<span class="tab"></span>Решение: <br />
+<span class="tab"></span><a href="https://github.com/ivanpop/CS-for-Dummies/blob/master/Chapter%207%20Solution%2016/Program.cs" target="_blank"><b><u>Link</u></b></a><hr>
+<span class="tab"></span>17. Напишете програма, която сортира целочислен масив по алгоритъма "<code>merge sort</code>".<br /><br />
+<span class="tab"></span>Упътване: Потърсете в Интернет информация за алгоритъма "<code>merge sort</code>" и негови реализации.<br /><br />
+<span class="tab"></span>Решение: <br />
+<span class="tab"></span><a href="https://github.com/ivanpop/CS-for-Dummies/blob/master/Chapter%207%20Solution%2017/Program.cs" target="_blank"><b><u>Link</u></b></a><hr>
+<span class="tab"></span>18. Напишете програма, която сортира целочислен масив по алгоритъма "<code>quick sort</code>".<br /><br />
+<span class="tab"></span>Упътване: Потърсете в Интернет информация за алгоритъма "<code>quick sort</code>" и негови реализации.<br /><br />
+<span class="tab"></span>Решение: <br />
+<span class="tab"></span><a href="https://github.com/ivanpop/CS-for-Dummies/blob/master/Chapter%207%20Solution%2018/Program.cs" target="_blank"><b><u>Link</u></b></a><hr>
+<span class="tab"></span>19. Напишете програма, която намира всички прости числа в диапазона [1…10 000 000]. <br /><br />
+<span class="tab"></span>Упътване: Потърсете в Интернет информация за "<code>Sieve of Erathostenes</code>" (Решетото на Ератостен, учено в часовете по математика).<br /><br />
+<span class="tab"></span>Решение: <br />
+<span class="tab"></span><a href="https://github.com/ivanpop/CS-for-Dummies/blob/master/Chapter%207%20Solution%2019/Program.cs" target="_blank"><b><u>Link</u></b></a><hr>
+<span class="tab"></span>20. Напишете програма, която по дадени N числа и число S, проверявадали може да се получи сума равна на S с използване на подмасив от N-те числа (не непременно последователни).<br />
+<span class="tab"></span>Пример: {2, 1, 2, 4, 3, 5, 2, 6}, S = 14 <span style="font-family: Wingdings;">à</span> yes (1 + 2 + 5 + 6 = 14)<br /><br />
+<span class="tab"></span>Упътване: Образувайте всички възможни суми по следния алгоритъм: взимате първото число и го маркирате като "възможна сума". След това взимате следващото подред число и за всяка вече получена "възможна сума" маркирате като възможна сумата на всяка от тях с поредното число. В момента, в който получите числото <code>S</code>, спирате с образуването на сумите. Можете да си пазите "възможните суми" или в булев масив където всеки индекс е някоя от сумите, или с по-сложна структура от данни (като <code>Set</code> например).<br /><br />
+<span class="tab"></span>Решение: <br />
+<span class="tab"></span><a href="https://github.com/ivanpop/CS-for-Dummies/blob/master/Chapter%207%20Solution%2020/Program.cs" target="_blank"><b><u>Link</u></b></a><hr>
+<span class="tab"></span>21. Напишете програма, която по дадени <code>N</code>, <code>K</code> и <code>S</code>, намира <code>К</code> на брой елементи измежду <code>N</code>-те числа, чиито сума е точно <code>S</code> или показва, че това е невъзможно.<br /><br /><span class="tab"></span>Упътване: Подобна на задача 20 с тази разлика, че ако сумата е равна на <code>S</code>, но броя елементи е различен от К, продължаваме да търсим. Помислете как да пазите броя числа, с които сте получили определена сума.<br /><br />
+<span class="tab"></span>Решение: <br />
+<span class="tab"></span><a href="https://github.com/ivanpop/CS-for-Dummies/blob/master/Chapter%207%20Solution%2021/Program.cs" target="_blank"><b><u>Link</u></b></a><hr>
+<span class="tab"></span>22. Напишете програма, която прочита от конзолата масив от цели числа и премахва минимален на брой числа, така че останали числа да са сортирани в нарастващ ред. Отпечатайте резултата.<br />
+<span class="tab"></span>Пример: {6, <b>1</b>, 4, <b>3</b>, 0, <b>3</b>, 6, <b>4</b>, <b>5</b>} <span style="font-family: Wingdings;">à</span> {1, 3, 3, 4, 5}<br /><br />
+<span class="tab"></span>Упътване: Задачата може да се реши като се направи допълнителен масив със дължина броя на елементите. В този масив ще пазим текущата най-дълга редица с край елемента на този индекс.<br /><br />
+<span class="tab"></span>Решение: <br />
+<span class="tab"></span><a href="https://github.com/ivanpop/CS-for-Dummies/blob/master/Chapter%207%20Solution%2022/Program.cs" target="_blank"><b><u>Link</u></b></a><hr>
+<span class="tab"></span>23. Напишете програма, която прочита цяло число N от конзолата и отпечатва всички пермутации на числата [1…N]. <br />
+<span class="tab"></span>Пример:  N = 3 <span style="font-family: Wingdings;">à</span> {1, 2, 3}, {1, 3, 2}, {2, 1, 3}, {2, 3, 1}, {3, 1, 2}, {3, 2, 1}<br /><br />
+<span class="tab"></span>Упътване: Задачата може да се реши с рекурсия. Напишете подходяща рекурсия и всеки път променяме позицията на всеки елемент.<br /><br />
+<span class="tab"></span>Решение: <br />
+<span class="tab"></span><a href="https://github.com/ivanpop/CS-for-Dummies/blob/master/Chapter%207%20Solution%2023/Program.cs" target="_blank"><b><u>Link</u></b></a><br /><hr>
+<span class="tab"></span><a href="javascript:history.back()">&#8592; Обратно</a>
