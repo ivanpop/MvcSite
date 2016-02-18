@@ -6787,6 +6787,11 @@ td.hidden-lg {
   }
 }
 
+#fontSize {
+    margin-right:30px !important;
+    float: right !important;
+}
+
 .visible-print {
   display: none !important;
 }
