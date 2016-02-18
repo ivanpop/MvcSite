@@ -188,3 +188,21 @@ span.InlineComment,
 span.JavaDoc {
   color: green;
 }
+
+#incrFont {
+    font-size: 22px;
+    padding-right: 0px;
+}
+
+#defFont {
+    padding-right:0px;
+    font-size:18px;
+}
+
+#decrFont {
+    font-size:14px
+}
+
+.nav.navbar-nav.navbar-right {
+    margin-right:30px !important
+}
