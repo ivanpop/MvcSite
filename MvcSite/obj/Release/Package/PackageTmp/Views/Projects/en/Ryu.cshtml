@@ -57,19 +57,19 @@
     <span class="tab"></span>The state diagram shows how the game Ryu: The Big Adventure handles user commands.<br />
     <span class="tab"></span>The diagram is created using The Unified Modeling Language (UML), a general-purpose modeling language in the field of software engineering, which is designed to provide a standard way to visualize the design of a system
 </p>
-<img style="margin-left:auto;margin-right:auto;display:block;" src="~/Resources/ryu4.png" /><br />
+<img id="centerImg" src="~/Resources/ryu4.png" /><br />
 <p><span class="tab"></span>There are 4 different states in the project - menu, options, credits and the game itself. We can see the ways we can pass through different states.</p>
 <h2>Realization</h2>
 <h3>User menu</h3>
 <p><span class="tab">The first part of the project is to create a main menu.</span></p>
-<img style="margin-left:auto;margin-right:auto;display:block;" src="~/Resources/ryu5.jpg" /><br />
+<img id="centerImg" src="~/Resources/ryu5.jpg" /><br />
 <p><span class="tab"></span>The menu provides options to start a new game, to go to the settings screen, go ot the credits screen and exit the game. In the menu we can see the main character.</p>
 <h3>Settings</h3>
 <p>
     <span class="tab"></span>The options menu contains to tickable squares, for turning music and sounds on and off, two sliders for controling sound volume and an option to control game difficulty, also there is a back button.<br />
     <span class="tab"></span>In the settings menu I've used global variables, which are available in every class. They are declared in the main menu, can be changed in the settings menu and can be red from all states. This way sound and music can work in the same way in every part of the game.
 </p>
-<img style="margin-left:auto;margin-right:auto;display:block;" src="~/Resources/ryu6.jpg" /><br />
+<img id="centerImg" src="~/Resources/ryu6.jpg" /><br />
 <p>
     <span class="tab"></span>Difficulty changes enemies health by increasing or decreasing it. When the difficulty is set on Hard, enemies are much harder and require much more effort to kill. To make this I've used a global variable named Difficulty, which can take three different numbers: 0 for Easy, 1 for Normal and 2 for Hard. At 0 health of enemies is decreased by 50% from normal, at 1 health isn't changed and at 2, it's increased by 50%.<br />
     <span class="tab"></span>The music slider uses the method music.setVolume(float volume); for changing music volume and music.getVolume(float volume); to read the current volume and to change it's state accordingly.<br />

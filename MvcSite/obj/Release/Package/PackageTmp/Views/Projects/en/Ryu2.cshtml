@@ -47,7 +47,7 @@
 </p>
 <img style="margin-left:auto;margin-right:auto;display:block;" src="/Resources/ryu8.png"><br />
 <p><span class="tab"></span>When declaring the spritesheet we give the path to the image, x and y, which correspond to the vertical and horizontal size of the sprite frame. The spritesheet must be in .png format and with transparent background.</p>
-<img style="margin-left:auto;margin-right:auto;display:block;" src="/Resources/ryu9.png"><br />
+<img id="centerImg" src="/Resources/ryu9.png"><br />
 <p>
     <span class="tab"></span>The frames of the sprite have to be in an exact distance between each other. x is formed when we take the horizontal size of the spritesheet and we divide it by the count of frames inside it. If the distance isn't messured corectly, there will be inadequacyies when drawing the animation.<br />
     <span class="tab"></span>The animation is declared with the spritesheet as source file followed by х which stands for the duration of each frame messured in milliseconds. After this duration has passed the framed is followed by the next in the spritesheet.
@@ -86,7 +86,7 @@
     <span class="tab"></span>When starting the game, each enemy is created ot the map, but at a passive state and we don't see him. They have a field of action which Ryu must enter in order for them to activate. To prevent clutter of enemies in a same spot, they are created with their own separate coordinates and fields of action.<br />
     <span class="tab"></span>The field is made in the way that when the enemy is on the screen, he is already active and is moving towards us. One active, he remains like so until the end of his lifespan, which is until his death, the death of Ryu or when the timer reaches zero.
 </p>
-<img style="margin-left:auto;margin-right:auto;display:block;" src="/Resources/ryu11.jpg"><br />
+<img id="centerImg" src="/Resources/ryu11.jpg"><br />
 
 <span class="tab"></span><b>Source: <a href="https://github.com/ivanpop/Ryu">Github</a></b>
 <span class="tab"></span><b>Download: <a href="~/Resources/ryu.rar" target="_blank">Link</a></b><br /><br />
