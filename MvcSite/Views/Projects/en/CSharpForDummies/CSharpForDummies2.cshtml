@@ -1,20 +1,21 @@
 ﻿@{
     ViewBag.Title = "C# For Dummies";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+    Layout = "~/Views/Shared/_LayoutEN.cshtml";
 }
 
 @section ExtraHeadContent {
-    <meta name="description" content="C# for Dummies представлява условията на задачите от книгата за C# на Академия Телерик и техните упътванията, като аз съм ги решавал или поне съм се опитал :)">
-    <meta name="author" content="Иван Попов">
+    <meta name="description" content="C# for Dummies are the poblems from The C# Book of The Telerik Academy, their guidelines and the solutions, which I wrote or tried to :)">
+    <meta name="author" content="Ivan Popov">
     <meta name="thumbnail" content="http://localhost:49690/Resources/ivanpopov.jpg" />
     <link rel="image_src" href="http://localhost:49690/Resources/ivanpopov.jpg" />
 }
 
 <h1>C# For Dummies</h1>
-<h2>Глава 2. Примитивни типове и променливи</h2>
-<span class="tab"></span>1. Декларирайте няколко променливи, като изберете за всяка една най-подходящия от типовете sbyte, byte, short, ushort, int, uint, long и ulong, за да им присвоите следните стойности: 52130, -115, 4825932, 97, -10000, 20000; 224; 970700000; 112; -44; -1000000; 1990; 123456789123456789.<br /><br />
-<span class="tab"></span>Упътване: Погледнете размерността на числените типове.<br /><br />
-<span class="tab"></span>Решение: <br />
+
+<h2>Chapter 2. Primitive Types and Variables</h2>
+<span class="tab"></span><b>Declare several variables</b> by selecting for each one of them the most appropriate of the types <code>sbyte</code>, <code>byte</code>, <code>short</code>, <code>ushort</code>, <code>int</code>, <code>uint</code>, <code>long</code> and <code>ulong</code> in order to assign them the following values: 52,130; -115; 4825932; 97; -10000; 20000; 224; 970,700,000; 112; -44; -1,000,000; 1990; 123456789123456789.<br /><br />
+<span class="tab"></span>Guidelines: Look at the ranges of the numerical types in C#.<br /><br />
+<span class="tab"></span>Solution: <br />
 <div class="code">
     <span class="ReferenceType">class</span>&nbsp;Program<br />
     {<br />
@@ -37,9 +38,9 @@
     }
 </div>
 <hr>
-<span class="tab"></span>2. Кои от следните стойности може да се присвоят на променливи от тип float, double и decimal: 34.567839023; 12.345; 8923.1234857; 3456.091124875956542151256683467?<br /><br />
-<span class="tab"></span>Упътване: Имайте предвид броя символи след десетичния знак. Направете справка в таблицата с размерите на типовете float, double и decimal.<br /><br />
-<span class="tab"></span>Решение: <br />
+<span class="tab"></span>2. Which of the following values can be assigned to variables of type <code>float</code>, <code>double</code> and <code>decimal</code>: 5, -5.01, 34.567839023; 12.345; 8923.1234857; 3456.091124875956542151256683467? <br /><br />
+<span class="tab"></span>Guidelines: Consider the number of digits after the decimal point. Refer to the table with sizes of the types <code>float</code>, <code>double</code> and <code>decimal</code>.<br /><br />
+<span class="tab"></span>Solution: <br />
 <div class="code">
     <span class="ReferenceType">class</span>&nbsp;Program<br />
     {<br />
@@ -53,8 +54,9 @@
     }
 </div>
 <hr>
-<span class="tab"></span>3. Напишете програма, която изчислява вярно променливи с плаваща запетая с точност до 0.000001.<br /><br />
-<span class="tab"></span>Упътване: Използвайте типа данни decimal.<br /><br /><span class="tab"></span>Решение: <br />
+<span class="tab"></span>3. Write a program, which <b>compares correctly two real numbers</b> with accuracy at least <b>0.000001</b>.<br /><br />
+<span class="tab"></span>Guidelines: Two floating-point variables are considered equal if their difference is less than some predefined precision (e.g. <b>0.000001</b>).<br /><br />
+<span class="tab"></span>Solution: <br />
 <div class="code">
     <span class="ReferenceType">class</span>&nbsp;Program<br />
     {<br />
@@ -68,8 +70,9 @@
     }
 </div>
 <hr>
-<span class="tab"></span>4. Инициализирайте променлива от тип int със стойност 256 в шестна­десетичен формат (256 е 100 в бройна система с основа 16).<br /><br />
-<span class="tab"></span>Упътване: Вижте секцията за целочислени литерали. За да преобразувате лесно числата в различна бройна система използвайте вградения в Windows калкулатор. За шестнайсетично представяне на литерал използвайте префикса 0x.<br /><br /><span class="tab"></span>Решение: <br />
+<span class="tab"></span>4. <b>Initialize</b> a variable of type int with a value of 256 in <b>hexadecimal</b> format (256 is 100 in a numeral system with base 16).<br /><br />
+<span class="tab"></span>Guidelines: Look at the section about Integer Literals. To easily convert numbers to a different numeral system use the built-in Windows calculator. For a hexadecimal representation of the literal use prefix 0x.<br /><br />
+<span class="tab"></span>Solution: <br />
 <div class="code">
     <span class="ReferenceType">class</span>&nbsp;Program<br />
     {<br />
@@ -80,9 +83,9 @@
     }
 </div>
 <hr>
-<span class="tab"></span>5. Декларирайте променлива от тип char и присвоете като стойност символа който има Unicode код 72 (използвайте калкулатора на Windows за да намерите шестнайсетичното представяне на 72). <br /><br />
-<span class="tab"></span>Упътване: Прочетете за целочислени литерали.<br /><br />
-<span class="tab"></span>Решение: <br />
+<span class="tab"></span>5. Declare a variable of type <code>char</code> and assign as a value the character, which has <b>Unicode</b> code, 72 (use the Windows calculator in order to find hexadecimal representation of 72).<br /><br />
+<span class="tab"></span>Guidelines: Read about character literals.<br /><br />
+<span class="tab"></span>Solution: <br />
 <div class="code">
     <span class="ReferenceType">class</span>&nbsp;Program<br />
     {<br />
@@ -93,8 +96,8 @@
     }
 </div>
 <hr>
-<span class="tab"></span>6. Декларирайте променлива isMale от тип bool и присвоете стойност на последната в зависимост от вашия пол.<br /><br />
-<span class="tab"></span>Упътване:  Прочетете за булеви променливи.<br /><br /><span class="tab"></span>Решение: <br />
+<span class="tab"></span>6. Declare a variable <code>isMale</code> of type <code>bool</code> and assign a value to it depending on your gender.<br /><br />
+<span class="tab"></span>Guidelines:  Read about Boolean literals.<br /><br /><span class="tab"></span>Solution: <br />
 <div class="code">
     <span class="ReferenceType">class</span>&nbsp;Program<br />
     {<br />
@@ -105,9 +108,9 @@
     }
 </div>
 <hr>
-<span class="tab"></span>7. Декларирайте две променливи от тип string със стойности "Hello" и "World". Декларирайте променлива от тип object. Присвоете на тази променлива стойността, която се получава от конкатенацията на двете стрингови променливи (добавете интервал, ако е необходимо). Отпе­чатайте променливата от тип object.<br /><br />
-<span class="tab"></span>Упътване: Вижте секциите за символни низове и за обектен тип данни.<br /><br />
-<span class="tab"></span>Решение: <br />
+<span class="tab"></span>7. Declare two variables of type <code>string</code> with values "Hello" and "World". Declare a variable of type <code>object</code>. Assign to this variable the value obtained of concatenation of the two string variables (add space if necessary). Print the variable of type <code>object</code>.<br /><br />
+<span class="tab"></span>Guidelines: Read about Strings and Object Data Type.<br /><br />
+<span class="tab"></span>Solution: <br />
 <div class="code">
     <span class="ReferenceType">class</span>&nbsp;Program<br />
     {<br />
@@ -120,9 +123,9 @@
     }
 </div>
 <hr>
-<span class="tab"></span>8. Декларирайте две променливи от тип string и им присвоете стойности "Hello" и "World". Декларирайте променлива от тип object и и присвоете стойността на конкатенацията на двете променливи от тип string (не изпускайте интервала по средата). Декларирайте трета променлива от тип string и я инициализирайте със стойността на променливата от тип object ( трябва да използвате type casting).<br /><br />
-<span class="tab"></span>Упътване: Прочетете за символни низове и за обектен тип данни.<br /><br />
-<span class="tab"></span>Решение: <br />
+<span class="tab"></span>8. Declare two variables of type <code>string</code> and assign them values "Hello" and "World". Declare a variable of type <code>object</code> and assign to it the value obtained of concatenation of the two variables of type string (do not miss the space in the middle). Declare a third variable of type <code>string</code> and initialize it with the value of the variable of type <code>object</code> (you should use type casting).<br /><br />
+<span class="tab"></span>Guidelines: Read about Strings and Object Data Type <br /><br />
+<span class="tab"></span>Solution: <br />
 <div class="code">
     <span class="ReferenceType">class</span>&nbsp;Program<br />
     {<br />
@@ -136,9 +139,9 @@
     }
 </div>
 <hr>
-<span class="tab"></span>9. Декларирайте две променливи от тип string и им присвоете стойност "The "use" of quotations causes difficulties." (без първите и последни кавички). В едната променлива използвайте quoted string, а в другата не го използвайте.<br /><br />
-<span class="tab"></span>Упътване: Прочетете за символни литерали. Необходимо е да използвате символа за escaping (наклонена черта "\").<br /><br />
-<span class="tab"></span>Решение: <br />
+<span class="tab"></span>9. Declare two variables of type <code>string</code> and assign them a value “<b>The "use" of quotations causes difficulties.</b>” (without the outer quotes). In one of the variables use quoted string and in the other do not use it. <br /><br />
+<span class="tab"></span>Guidelines: Read about Character Literals. It is necessary to use the <b>escaping character</b> "\" or <b>verbatim strings</b>.<br /><br />
+<span class="tab"></span>Solution: <br />
 <div class="code">
     <span class="ReferenceType">class</span>&nbsp;Program<br />
     {<br />
@@ -149,9 +152,9 @@
     &nbsp;&nbsp;&nbsp;&nbsp;}<br />
     }
 </div><hr>
-<span class="tab"></span>10. Напишете програма, която принтира фигура във формата на сърце със знака "o".<br /><br />
-<span class="tab"></span>Упътване: Използвайте Console.Writeline(…) като използвате само символа ‘о’ и интервали.<br /><br />
-<span class="tab"></span>Решение: <br />
+<span class="tab"></span>10. Write a program to print a figure in the shape of a <b>heart</b> by the sign \"o\". <br /><br />
+<span class="tab"></span>Guidelines: Use Console.WriteLine(…), the character 'o' and spaces. <br /><br />
+<span class="tab"></span>Solution: <br />
 <div class="code">
     <span class="ReferenceType">class</span>&nbsp;Program<br />
     {<br />
@@ -169,9 +172,9 @@
     }
 </div>
 <hr>
-<span class="tab"></span>11. Напишете програма, която принтира на конзолата равнобедрен триъгълник, като страните му са очертани от символа звездичка "©".<br /><br />
-<span class="tab"></span>Упътване: Използвайте Console.Writeline(…) като използвате само знака © и интервали. Използвайте Windows Character Map, за да намерите Unicode кода на знака "©".<br /><br />
-<span class="tab"></span>Решение: <br />
+<span class="tab"></span>11. Write a program that prints on the console isosceles triangle which sides consist of the copyright character \"©\".<br /><br />
+<span class="tab"></span>Guidelines: Use Console.WriteLine(…), the character © and spaces. Use Windows Character Map in order to find the Unicode code of the sign \"©\".<br /><br />
+<span class="tab"></span>Solution: <br />
 <div class="code">
     <span class="ReferenceType">class</span>&nbsp;Program<br />
     {<br />
@@ -186,9 +189,9 @@
     }
 </div>
 <hr>
-<span class="tab"></span>12. Фирма, занимаваща се с маркетинг, иска да пази запис с данни на нейните служители. Всеки запис трябва да има следната характе­ристика – първо име, фамилия, възраст, пол (‘м’ или ‘ж’) и уникален номер на служителя (27560000 до 27569999). Декларирайте необходи­мите променливи, нужни за да се запази информацията за един служи­тел, като използвате подходящи типове данни и описателни имена.<br /><br />
-<span class="tab"></span>Упътване: За имената използвайте тип string, за пола използвайте тип char (имаме само един символ м/ж), а за уникалния номер и възрастта използвайте подходящ целочислен тип.<br /><br />
-<span class="tab"></span>Решение: <br />
+<span class="tab"></span>12. A company dealing with marketing wants to keep a data record of its <b>employees</b>. Each record should have the following characteristic – first name, last name, age, gender (‘m’ or ‘f’) and unique employee number (27560000 to 27569999). <b>Declare appropriate variables</b> needed to maintain the information for an employee by using the appropriate data types and attribute names. <br /><br />
+<span class="tab"></span>Guidelines: For the names use type <code>string</code>, for the gender use type <code>char</code> (only one char <code>m/f</code>), and for the unique number and age use some integer type.<br /><br />
+<span class="tab"></span>Solution: <br />
 <div class="code">
     <span class="ReferenceType">class</span>&nbsp;Program<br />
     {<br />
@@ -203,9 +206,9 @@
     }
 </div>
 <hr>
-<span class="tab"></span>13. Декларирайте две променливи от тип int. Задайте им стойности съответно 5 и 10. Разменете стойностите им и ги отпечатайте.<br /><br />
-<span class="tab"></span>Упътване: Използвайте трета временна променлива за размяната на променливи. За целочислените променливи е възможно и друго решение, което не използва трета променлива.<br /><br />
-<span class="tab"></span>Решение: <br />
+<span class="tab"></span>13. Declare two variables of type <code>int</code>. Assign to them values 5 and 10 respectively. <b>Exchange (swap) their values</b> and print them.<br /><br />
+<span class="tab"></span>Guidelines: Use a <b>third temporary variable</b> for exchanging the variables. To swap integer variables <b>other solutions</b> exist which do not use a third variable. <br /><br />
+<span class="tab"></span>Solution: <br />
 <div class="code">
     <span class="ReferenceType">class</span>&nbsp;Program<br />
     {<br />
@@ -221,4 +224,4 @@
     }
 </div>
 <hr>
-<span class="tab"></span><a href="javascript:history.back()">&#8592; Обратно</a>
+<span class="tab"></span><a href="javascript:history.back()">&#8592; Back</a>
