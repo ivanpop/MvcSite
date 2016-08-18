@@ -220,8 +220,8 @@
     <Content Include="xml-sitemap.xsl" />
     <None Include="Properties\PublishProfiles\MvcSite9989.pubxml" />
     <Content Include="Resources\converter.rar" />
-    <Content Include="Resources\countdown timer.rar" />
     <Content Include="Resources\Mario.rar" />
+    <Content Include="Resources\countdown timer.rar" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
