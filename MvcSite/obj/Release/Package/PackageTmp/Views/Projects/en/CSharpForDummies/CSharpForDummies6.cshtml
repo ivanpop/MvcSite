@@ -1,20 +1,20 @@
 ﻿@{
     ViewBag.Title = "C# For Dummies";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+    Layout = "~/Views/Shared/_LayoutEN.cshtml";
 }
 
 @section ExtraHeadContent {
-    <meta name="description" content="C# for Dummies представлява условията на задачите от книгата за C# на Академия Телерик и техните упътванията, като аз съм ги решавал или поне съм се опитал :)">
-    <meta name="author" content="Иван Попов">
+    <meta name="description" content="C# for Dummies are the poblems from The C# Book of The Telerik Academy, their guidelines and the solutions, which I wrote or tried to :)">
+    <meta name="author" content="Ivan Popov">
     <meta name="thumbnail" content="http://localhost:49690/Resources/ivanpopov.jpg" />
     <link rel="image_src" href="http://localhost:49690/Resources/ivanpopov.jpg" />
 }
 
 <h1>C# For Dummies</h1>
-<h2> Глава 6. Цикли</h2>
-<span class="tab"></span>1. Напишете програма, която отпечатва на конзолата числата от 1 до N. Числото N трябва да се чете от стандартния вход.<br /><br />
-<span class="tab"></span>Упътване: Използвайте <code>for</code> цикъл.<br /><br />
-<span class="tab"></span>Решение: <br />
+<h2>Chapter 6. Loops</h2>
+<span class="tab"></span>1. Write a program that prints on the console <b>the numbers from 1 to N</b>. The number <b>N</b> should be read from the standard input.<br /><br />
+<span class="tab"></span>Guidelines: Use a <code>for</code>-loop.<br /><br />
+<span class="tab"></span>Solution: <br />
 <div class="code">
     <span class="Modifier">static</span>&nbsp;<span class="ValueType">void</span>&nbsp;Main(<span class="ReferenceType">string</span>[]&nbsp;args)<br />
     {&nbsp;&nbsp;&nbsp;&nbsp;<br />
@@ -26,25 +26,25 @@
     }
 </div>
 <hr>
-<span class="tab"></span>2. Напишете програма, която отпечатва на конзолата числата от 1 до N, които не се делят едновременно на 3 и 7. Числото N да се чете от стандартния вход.<br /><br />
-<span class="tab"></span>Упътване: Използвайте <code>for</code> цикъл и оператора % за намиране на остатък при целочислено деление. Едно число num не се дели на 3 и на 7 едновременно, ако <code> (num % (3*7) == 0) </code>.<br /><br />
-<span class="tab"></span>Решение: <br />
+<span class="tab"></span>2. Write a program that prints on the console the numbers from 1 to N, which are <b>not divisible by 3 and 7 simultaneously</b>. The number N should be read from the standard input.<br /><br />
+<span class="tab"></span>Guidelines: Use a <code>for</code>-loop and the operator % for finding <b>the remainder</b> in integer division. A number number is not divisible by 3 and 7 simultaneously exactly when <code>(num % (3*7) == 0)</code>.<br /><br />
+<span class="tab"></span>Solution: <br />
 <span class="tab"></span><a href="https://github.com/ivanpop/CS-for-Dummies/blob/master/Chapter%206%20Solution%202/Program.cs" target="_blank"><b><u>Link</u></b></a><hr>
-<span class="tab"></span>3. Напишете програма, която чете от конзолата поредица от цели числа и отпечатва най-малкото и най-голямото от тях.<br /><br />
-<span class="tab"></span>Упътване: Първо прочетете броя числа, примерно в променлива <code>n</code>. След това въведете <code>n</code> числа последователно с един <code>for</code> цикъл. Докато въвеждате всяко следващо число запазвайте в две променливи най-малкото и най-голямото число до момента.<br /><br />
-<span class="tab"></span>Решение: <br />
+<span class="tab"></span>3. Write a program that reads from the console a series of integers and prints the <b>smallest</b> and <b>largest</b> of them.<br /><br />
+<span class="tab"></span>Guidelines: First <b>read the count</b> of numbers, for example in a variable <code>n</code>. Then <b>consequently enter n numbers</b> with one <code>for</code> loop. While entering each new number, save in two variables the <b>smallest</b> and the <b>largest</b> number until this moment. At the start initialize the smallest and the largest number with <code>Int32.MaxValue</code> and <code>Int32.MinValue</code> respectively.<br /><br />
+<span class="tab"></span>Solution: <br />
 <span class="tab"></span><a href="https://github.com/ivanpop/CS-for-Dummies/blob/master/Chapter%206%20Solution%203/Program.cs" target="_blank"><b><u>Link</u></b></a><hr>
-<span class="tab"></span>4. Напишете програма, която отпечатва всички възможни карти от стан­дартно тесте карти без джокери (имаме 52 карти: 4 бои по 13 карти).<br /><br />
-<span class="tab"></span>Упътване: Номерирайте картите от 2 до 14 (тези числа ще съответстват на картите от 2, 3, 4, 5, 6, 7, 8, 9, 10, J, Q, K, A). Номерирайте боите от 1 до 4 (1 – спатия, 2 – каро, 3 – купа, 4 – пика). Сега вече можете да завъртите 2 вложени цикъла и да отпечатате всяка от картите.<br /><br />
-<span class="tab"></span>Решение: <br />
+<span class="tab"></span>4. Write a program that prints <b>all possible cards from a standard deck</b> of cards, without jokers (there are 52 cards: 4 suits of 13 cards).<br /><br />
+<span class="tab"></span>Guidelines: <b>Number the cards</b> from 2 to 14 (these numbers will match the cards 2, 3, 4, 5, 6, 7, 8, 9, 10, J, Q, K, A). <b>Number the suits</b> from 1 to 4 (1 – club, 2 – diamond, 3 – heart and 4 – spades). Now you can use the <b>two nested loops</b> and print each of the cards with two <code>switch</code> statements.<br /><br />
+<span class="tab"></span>Solution: <br />
 <span class="tab"></span><a href="https://github.com/ivanpop/CS-for-Dummies/blob/master/Chapter%206%20Solution%204/Program.cs" target="_blank"><b><u>Link</u></b></a><hr>
-<span class="tab"></span>5. Напишете програма, която чете от конзолата числото N и отпечатва сумата на първите N члена от редицата на Фибоначи: 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, ...<br /><br />
-<span class="tab"></span>Упътване: Числата на Фибоначи започват от 0 и 1, като всяко следващо се получава като сума от предходните две. Можете да намерите първите <code>n</code> числа на Фибоначи с <code>for</code> цикъл от 1 до <code>n</code>, като на всяка итерация пресмятате поредното число, използвайки предходните две (които ще пазите в две допълнителни променливи).<br /><br />
-<span class="tab"></span>Решение: <br />
+<span class="tab"></span>5. Write a program that reads from the console number N and print the sum of the first N members of the <b>Fibonacci sequence</b>: 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, …<br /><br />
+<span class="tab"></span>Guidelines: <b>Fibonacci numbers</b> start from 0 and 1, each additional is obtained as the <b>sum of the previous two</b>. You can find the first <code>n</code> Fibonacci numbers with a <code>for</code>-loop from 1 to <code>n</code>, and at each iteration calculate the next number by using the previous two (which you will keep in two additional variables).<br /><br />
+<span class="tab"></span>Solution: <br />
 <span class="tab"></span><a href="https://github.com/ivanpop/CS-for-Dummies/blob/master/Chapter%206%20Solution%205/Program.cs" target="_blank"><b><u>Link</u></b></a><hr>
-<span class="tab"></span> 6. Напишете програма, която пресмята N!/K! за дадени N и K (1 < k < N).<br/><br/>
-<span class="tab"></span>Упътване: Умножете числата от K+1 до N.<br/><br/>
-<span class="tab"></span>Решение: <br/>
+<span class="tab"></span>6. Write a program that calculates <b>N!/K!</b> for given N and K (1 < K < N). <br /><br />
+<span class="tab"></span>Guidelines: Multiply the numbers from K+1 to N (think why this is correct).<br /><br />
+<span class="tab"></span>Solution: <br />
 <div class="code">
     <span class="Modifier">static</span>&nbsp;<span class="ValueType">void</span>&nbsp;Main(<span class="ReferenceType">string</span>[]&nbsp;args)<br />
     {&nbsp;&nbsp;&nbsp;&nbsp;<br />
@@ -68,19 +68,19 @@
     }
 </div>
 <hr>
-<span class="tab"></span>7. Напишете програма, която пресмята N!*K!/(N-K)! за дадени N и K (1 < K < N).<br/><br/>
-<span class="tab"></span>Упътване:  Вариант за решение е поотделно да пресмятате всеки от факто­риелите и накрая да извършвате съответните операции с резултатите. Помис­лете как можете да оптимизирате пресмятанията, за да не смятате прекалено много факториели! При обикновени дроби, съставени от факто­риели има много възможности за съкращение на еднакви множи­тели в числителя и знаменателя. Тези оптимизации не само ще нама­лят изчисленията и ще увеличат производителността, но ще ви избавят и от препълвания в някои ситуации.<br/><br/>
-<span class="tab"></span>Решение: <br/>
+<span class="tab"></span>7. Write a program that calculates <b>N!*K!/(N-K)!</b> for given N and K (1 < K < N).<br/><br/>
+<span class="tab"></span>Guidelines: <b>One solution</b> is to calculate separately each factorial and at the end to perform the respective operations with the results.<br />Think how you can <b>optimize the calculations</b>, in order to not calculate too many factorials! In <b>fractions</b> of factorials there are many possibilities to <b>reduce the same factors</b> in the numerator and denominator. These optimizations will not only reduce the calculations and increase the performance but will <b>save you from overflows</b> in some situations. You might need to use arrays <code>num[0..N]</code> and <code>denum[0..n]</code> to hold the factors in the numerator and in the denominator and to <b>cancel the fraction</b>.<br/><br/>
+<span class="tab"></span>Solution: <br/>
 <span class="tab"></span><a href="https://github.com/ivanpop/CS-for-Dummies/blob/master/Chapter%206%20Solution%207/Program.cs" target="_blank"><b><u>Link</u></b></a><hr>
-<span class="tab"></span>8. В комбинаториката числата на Каталан (Catalan’s numbers) се изчис­ляват по следната формула:<br/>
-<span class="tab"></span><span class="tab"></span><img src="/Resources/CSResources/ch6-8.png">, за n ≥ 0.<br/>
-<span class="tab"></span>Напишете програма, която изчислява n-тото число на Каталан за дадено n.<br/><br/>
-<span class="tab"></span>Упътване: Погледнете предходната задача.<br/><br/>
-<span class="tab"></span>Решение: <br/>
+<span class="tab"></span>8. In combinatorics, the Catalan numbers are calculated by the following formula: <br/>
+<span class="tab"></span><span class="tab"></span><img src="/Resources/CSResources/ch6-8.png">, for n ≥ 0.<br/>
+<span class="tab"></span>Write a program that calculates the n-th Catalan number by given n.<br/><br/>
+<span class="tab"></span>Guidelines: Use the same concept of <b>canceling the faction of simple factors</b>, like you probably did in the <b>previous problem</b>.<br/><br/>
+<span class="tab"></span>Solution: <br/>
 <span class="tab"></span><a href="https://github.com/ivanpop/CS-for-Dummies/blob/master/Chapter%206%20Solution%208/Program.cs" target="_blank"><b><u>Link</u></b></a><hr>
-<span class="tab"></span>9. Напишете програма, която за дадено цяло число n, пресмята сумата: <img src="/Resources/CSResources/ch6-9.png"><br/><br/>
-<span class="tab"></span>Упътване: Задачата може да решите с <code>for</code>-цикъл за <code>k=0…n</code>, като ползвате три допълнителни променливи <code>factoriel, power</code> и <code>sum</code>, в които да пазите за <code>k</code>-тата итерация на цикъла съответно <code>k!, xk</code> и сумата на първите <code>k</code> члена на редицата. Ако реализацията ви е добра, Трябва да имате само един цикъл и не трябва да ползвате външни функции за изчис­ление на факториел и за степенуване.<br/><br/>
-<span class="tab"></span>Решение: <br/>
+<span class="tab"></span>9. Write a program that for a given integers <b>n</b> and <b>x</b>, <b>calculates the sum</b>: <img src="/Resources/CSResources/ch6-9.png"><br/><br/>
+<span class="tab"></span>Guidelines: You can solve the problem with a <code>for</code>-loop for <code>k=0…n</code>, by using three additional variables <code>factorial, power</code> and <code>sum</code> in which you will keep for the <b>k-th</b> iteration of the loop respectively <b>k!, x-k</b> and the <b>sum of the first k members</b> of sequence. If your implementation is good, you should have only one loop and you should not use external functions to calculate factorials and to raise power.<br/><br/>
+<span class="tab"></span>Solution: <br/>
 <div class="code">
     <span class="Modifier">static</span>&nbsp;<span class="ValueType">void</span>&nbsp;Main(<span class="ReferenceType">string</span>[]&nbsp;args)<br />
     {&nbsp;&nbsp;&nbsp;&nbsp;<br />
@@ -100,9 +100,10 @@
     }
 </div>
 <hr>
-<span class="tab"></span>10. Напишете програма, която чете от конзолата положително цяло число N (N < 20) и отпечатва матрица с числа като на фигурата по-долу:<br/>
-<span class="tab"></span><img src="/Resources/CSResources/ch6-10 example.jpg"><br/><br/><span class="tab"></span>Упътване: Трябва да използвате два вложени цикъла, по подобие на задачата за отпечатване на триъгълник с числа. Външният цикъл трябва да върти от 1 до N, а вътрешният – от стойността на външния до стойността на външния + N - 1.<br/><br/>
-<span class="tab"></span>Решение: <br/>
+<span class="tab"></span>10. Write a program that reads from the console a <b>positive integer number N</b> (N < 20) and prints a <b>matrix</b> of numbers as on the figures below:<br/>
+<span class="tab"></span><img src="/Resources/CSResources/ch6-10 example.jpg"><br/><br/>
+<span class="tab"></span>Guidelines: You should use <b>two nested loops</b>, similar to the problem \"Printing a Triangle\". The outer loop must run from 1 to N, and the inner – from the value of the outer loop to the value of the outer loop + N - 1.<br/><br/>
+<span class="tab"></span>Solution: <br/>
 <div class="code">
     <span class="Modifier">static</span>&nbsp;<span class="ValueType">void</span>&nbsp;Main(<span class="ReferenceType">string</span>[]&nbsp;args)<br />
     {<br />
@@ -120,11 +121,11 @@
     }
 </div>
 <hr>
-<span class="tab"></span>11. Напишете програма, която пресмята с колко нули завършва факториелът на дадено число. Примери:<br/>
+<span class="tab"></span>11. Write a program that calculates with <b>how many zeroes the factorial of a given number ends</b>. Examples:<br/>
 <span class="tab"></span>N = 10 -> N! = 36288<b>00</b> -> 2<br/>
 <span class="tab"></span>N = 20 -> N! = 243290200817664<b>0000</b> -> 4<br/><br/>
-<span class="tab"></span>Упътване: Броят на нулите в края на n! зависи от това, колко пъти числото 10 е делител на факториела. Понеже произведението 1*2*3…*n има повече на брой делители 2, отколкото 5, а 10 = 2 * 5, то броят нули в n! е точно толкова, колкото са множителите със стойност 5 в произведе­нието 1*2*3….*n. Понеже всяко пето число се дели на 5, а всяко 25-то число се дели на 5 двукратно и т.н., то броя нули в n! е сумата: n/5 + n/25 + n/125 + …<br/><br/>
-<span class="tab"></span>Решение: <br/>
+<span class="tab"></span>Guidelines: The <b>number of zeros at the end of n!</b> depends on how many times the number 10 is a divisor of the factorial. Because the product 1*2*3…*n has a greater number of divisors 2, than 5 and because 10 = 2 * 5, then the <b>number of zeros in n!</b> is exactly as many as the <b>multipliers with value 5 in the product 1 * 2 * 3 * … * n</b>. Because every fifth number is divisible by 5, and every 25th number is divisible by 5 two times, etc., the number of zeros in n! is <b>the sum: n/5 + n/25 + n/125 + …</b><br/><br/>
+<span class="tab"></span>Solution: <br/>
 <div class="code">
     <span class="Modifier">static</span>&nbsp;<span class="ValueType">void</span>&nbsp;Main(<span class="ReferenceType">string</span>[]&nbsp;args)<br />
     {<br />
@@ -147,9 +148,9 @@
     }
 </div>
 <hr>
-<span class="tab"></span>12. Напишете програма, която преобразува дадено число от десетична в двоична бройна система.<br/><br/>
-<span class="tab"></span>Упътване: Прочетете в Уикипедия какво представляват бройните системи.<br/><br/>
-<span class="tab"></span>Решение: <br/>
+<span class="tab"></span>12. Write a program that converts a given number <b>from decimal to binary notation</b> (numeral system).<br/><br/>
+<span class="tab"></span>Guidelines: Read in Wikipedia what <b>numeral systems</b> are.<br/><br/>
+<span class="tab"></span>Solution: <br/>
 <div class="code">
     <span class="Modifier">static</span>&nbsp;<span class="ValueType">void</span>&nbsp;Main(<span class="ReferenceType">string</span>[]&nbsp;args)<br />
     {<br />
@@ -160,9 +161,9 @@
     }
 </div>
 <hr>
-<span class="tab"></span>13. Напишете програма, която преобразува дадено число от двоична в десетична бройна система.<br/><br/>
-<span class="tab"></span>Упътване: Погледнете предходната задача.<br/><br/>
-<span class="tab"></span>Решение: <br/>
+<span class="tab"></span>13. Write a program that converts a given number <b>from binary to decimal notation</b>.<br/><br/>
+<span class="tab"></span>Guidelines: See the previous problem.<br/><br/>
+<span class="tab"></span>Solution: <br/>
 <div class="code">
     <span class="Modifier">static</span>&nbsp;<span class="ValueType">void</span>&nbsp;Main(<span class="ReferenceType">string</span>[]&nbsp;args)<br />
     {<br />
@@ -173,9 +174,9 @@
     }
 </div>
 <hr>
-<span class="tab"></span>14. Напишете програма, която преобразува дадено число от десетична в шестнайсетична бройна система.<br/><br/>
-<span class="tab"></span>Упътване: Погледнете предходната задача.<br/><br/>
-<span class="tab"></span>Решение: <br/>
+<span class="tab"></span>14. Write a program that converts a given number <b>from decimal to hexadecimal notation</b>.<br/><br/>
+<span class="tab"></span>Guidelines: See the previous problem.<br/><br/>
+<span class="tab"></span>Solution: <br/>
 <div class="code">
     <span class="Modifier">static</span>&nbsp;<span class="ValueType">void</span>&nbsp;Main(<span class="ReferenceType">string</span>[]&nbsp;args)<br />
     {<br />
@@ -186,9 +187,9 @@
     }
 </div>
 <hr>
-<span class="tab"></span>15. Напишете програма, която преобразува дадено число от шестнайсе­тична в десетична бройна система.<br/><br/>
-<span class="tab"></span>Упътване:  Погледнете предходната задача.<br/><br/>
-<span class="tab"></span>Решение: <br/>
+<span class="tab"></span>15. Write a program that converts a given number <b>from hexadecimal to decimal notation</b>.<br/><br/>
+<span class="tab"></span>Guidelines:  See the previous problem.<br/><br/>
+<span class="tab"></span>Solution: <br/>
 <div class="code">
     <span class="Modifier">static</span>&nbsp;<span class="ValueType">void</span>&nbsp;Main(<span class="ReferenceType">string</span>[]&nbsp;args)<br />
     {<br />
@@ -199,13 +200,13 @@
     }
 </div>
 <hr>
-<span class="tab"></span>16. Напишете програма, която по дадено число N отпечатва числата от 1 до N, разбъркани в случаен ред.<br/><br/>
-<span class="tab"></span>Упътване: Потърсете в Интернет информация за класа <code>System.Random</code>. Прочетете в Интернет за масиви. Направете масив с N елемента и запишете в него числата от 1 до N. След това достатъчно много пъти (помислете точно колко) разменяйте двойки случайни числа от масива.<code>string</code>.<br/><br/>
-<span class="tab"></span>Решение: <br/>
+<span class="tab"></span>16. Write a program that by a given integer <b>N</b> prints the numbers from 1 to N in <b>random order</b>.<br/><br/>
+<span class="tab"></span>Guidelines: Search in the Internet for information about the class <code>System.Random</code>. Read in the Internet about <b>arrays</b>. Create an <b>array with N elements</b> and write in it the numbers from 1 to N. After that a few times (think exactly how many) <b>swap two random pairs</b> of elements from the array.<code>string</code>.<br/><br/>
+<span class="tab"></span>Solution: <br/>
 <span class="tab"></span><a href="https://github.com/ivanpop/CS-for-Dummies/blob/master/Chapter%206%20Solution%2016/Program.cs" target="_blank"><b><u>Link</u></b></a><hr>
-<span class="tab"></span>17. Напишете програма, която за дадени две числа, намира най-големия им общ делител.<br/><br/>
-<span class="tab"></span>Упътване: Потърсете в интернет за алгоритъма на Евклид.<br/><br/>
-<span class="tab"></span>Решение: <br/>
+<span class="tab"></span>17. Write a program that given two numbers finds their <b>greatest common divisor (GCD)</b>.<br/><br/>
+<span class="tab"></span>Guidelines: Search the Internet for the <b>Euclidean algorithm</b> for calculation the <b>greatest common divisor (CGD)</b> or read about it in Wikipedia.<br/><br/>
+<span class="tab"></span>Solution: <br/>
 <div class="code">
     <span class="Modifier">static</span>&nbsp;<span class="ValueType">void</span>&nbsp;Main(<span class="ReferenceType">string</span>[]&nbsp;args)<br />
     {<br />
@@ -225,9 +226,37 @@
     }
 </div>
 <hr>
-<span class="tab"></span>18. Напишете програма, която по дадено число n, извежда матрица във формата на спирала. Пример при n=4:<br/>
-<span class="tab"></span><span class="tab"></span><img src="/Resources/CSResources/ch6-18.jpg"> <br/><br/>
-<span class="tab"></span>Упътване: Трябва да използвате двумерен масив.<br/><br/>
-<span class="tab"></span>Решение: <br/>
+<span class="tab"></span>18. Write a program that for a given number n, outputs a matrix in the form of a <b>spiral</b>: Example with n=4:<br/>
+<table id="table1">
+    <tbody id="tbody1">
+        <tr>            
+            <td id="td1">1</td>
+            <td id="td1">2</td>
+            <td id="td1">3</td>
+            <td id="td1">4</td>
+        </tr>
+        <tr>
+            <td id="td1">12</td>
+            <td id="td1">13</td>
+            <td id="td1">14</td>
+            <td id="td1">5</td>
+        </tr>
+        <tr>
+            <td id="td1">11</td>
+            <td id="td1">16</td>
+            <td id="td1">15</td>
+            <td id="td1">6</td>
+        </tr>
+        <tr>
+            <td id="td1">10</td>
+            <td id="td1">9</td>
+            <td id="td1">8</td>
+            <td id="td1">7</td>
+        </tr>
+    </tbody>
+</table>
+<br/>
+<span class="tab"></span>Guidelines: You should use a <b>two-dimensional array</b> (matrix). The algorithm of <b>filling a spiral matrix</b> in not straightforward and may require a bit of thinking.<br/><br/>
+<span class="tab"></span>Solution: <br/>
 <span class="tab"></span><a href="https://github.com/ivanpop/CS-for-Dummies/blob/master/Chapter%206%20Solution%2018/Program.cs" target="_blank"><b><u>Link</u></b></a><br/><hr>
-<span class="tab"></span><a href="javascript:history.back()">&#8592; Обратно</a>
+<span class="tab"></span><a href="javascript:history.back()">&#8592; Back</a>

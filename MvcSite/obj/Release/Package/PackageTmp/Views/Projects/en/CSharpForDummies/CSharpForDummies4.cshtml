@@ -1,20 +1,20 @@
 ﻿@{
     ViewBag.Title = "C# For Dummies";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+    Layout = "~/Views/Shared/_LayoutEN.cshtml";
 }
 
 @section ExtraHeadContent {
-    <meta name="description" content="C# for Dummies представлява условията на задачите от книгата за C# на Академия Телерик и техните упътванията, като аз съм ги решавал или поне съм се опитал :)">
-    <meta name="author" content="Иван Попов">
+    <meta name="description" content="C# for Dummies are the poblems from The C# Book of The Telerik Academy, their guidelines and the solutions, which I wrote or tried to :)">
+    <meta name="author" content="Ivan Popov">
     <meta name="thumbnail" content="http://localhost:49690/Resources/ivanpopov.jpg" />
     <link rel="image_src" href="http://localhost:49690/Resources/ivanpopov.jpg" />
 }
 
 <h1>C# For Dummies</h1>
-<h2> Глава 4. Вход и изход от конзолата</h2><br />
-<span class="tab"></span>1. Напишете програма, която чете от конзолата три числа от тип int и отпечатва тяхната сума.<br /><br />
-<span class="tab"></span>Упътване: Използвайте методите Console.ReadLine() и Int32.Parse().<br /><br />
-<span class="tab"></span>Решение: <br />
+<h2>Chapter 4. Console Input and Output</h2><br />
+<span class="tab"></span>1. Write a program that <b>reads</b> from the console <b>three numbers</b> of type int and prints their sum.<br /><br />
+<span class="tab"></span>Guidelines: Use the methods <code>Console.ReadLine()</code> and <code>Int32.Parse()</code>.<br /><br />
+<span class="tab"></span>Solution: <br />
 <div class="code">
     <span class="Modifier">static</span>&nbsp;<span class="ValueType">void</span>&nbsp;Main(<span class="ReferenceType">string</span>[]&nbsp;args)<br />
     {<br />
@@ -28,9 +28,9 @@
     }
 </div>
 <hr>
-<span class="tab"></span>2. Напишете програма, която чете от конзолата радиуса "r" на кръг и отпечатва неговия периметър и обиколка.<br /><br />
-<span class="tab"></span>Упътване: Използвайте константата Math.PI и добре известните формули от планиметрията.<br /><br />
-<span class="tab"></span>Решение: <br />
+<span class="tab"></span>2. Write a program that <b>reads</b> from the console the <b>radius</b> "r" of a circle and prints its <b>perimeter and area</b>.<br /><br />
+<span class="tab"></span>Guidelines: Use <code>Math.PI</code> constant and the well-known <b>geometric formulas</b>.<br /><br />
+<span class="tab"></span>Solution: <br />
 <div class="code">
     <span class="Modifier">static</span>&nbsp;<span class="ValueType">void</span>&nbsp;Main(<span class="ReferenceType">string</span>[]&nbsp;args)<br />
     {<br />
@@ -40,13 +40,13 @@
     }
 </div>
 <hr>
-<span class="tab"></span>3. Дадена фирма има име, адрес, телефонен номер, факс номер, уеб сайт и мениджър. Мениджърът има име, фамилия и телефонен номер. Напишете програма, която чете информацията за фирмата и нейния мениджър и я отпечатва след това на конзолата.<br /><br />
-<span class="tab"></span>Упътване: Форматирайте текста с Write(…) или WriteLine(…).<br /><br />
-<span class="tab"></span>Решение: <br />
+<span class="tab"></span>3. A given company has name, address, phone number, fax number, web site and manager. The manager has name, surname and phone number. Write a program that <b>reads information about the company</b> and its manager and then <b>prints it</b> on the console.<br /><br />
+<span class="tab"></span>Guidelines: Format the text with <code>Write(…)</code> or <code>WriteLine(…)</code>.<br /><br />
+<span class="tab"></span>Solution: <br />
 <span class="tab"></span><a href="https://github.com/ivanpop/CS-for-Dummies/blob/master/Chapter%204%20Solution%203/Program.cs" target="_blank"><b><u>Link</u></b></a><hr>
-<span class="tab"></span>4. Напишете програма, която отпечатва три числа в три виртуални колони на конзолата. Всяка колона трябва да е с широчина 10 символа, а числата трябва да са ляво подравнени. Първото число трябва да е цяло число в шестнадесетична бройна система, второто да е дробно положи­телно, а третото – да е дробно отрицателно. Последните две числа да се закръглят до втория знак след десетичната запетая.<br /><br />
-<span class="tab"></span>Упътване: Използвайте форматиращите настройки, предоставени от съставното форматиране и метода Console.WriteLine().<br /><br />
-<span class="tab"></span>Решение: <br />
+<span class="tab"></span>4. Write a program that <b>prints three numbers in three virtual columns</b> on the console. Each column should have a width of 10 characters and the numbers should be <b>left aligned</b>. The first number should be an integer in <b>hexadecimal</b>; the second should be <b>fractional positive</b>; and the third – a <b>negative fraction</b>. The last two numbers have to be rounded to the second decimal place.<br /><br />
+<span class="tab"></span>Guidelines: Use format strings and the method <code>Console.WriteLine()</code>.<br /><br />
+<span class="tab"></span>Solution: <br />
 <div class="code">
     <span class="Modifier">static</span>&nbsp;<span class="ValueType">void</span>&nbsp;Main(<span class="ReferenceType">string</span>[]&nbsp;args)<br />
     {<br />
@@ -57,11 +57,11 @@
     }
 </div>
 <hr>
-<span class="tab"></span>5. Напишете програма, която чете от конзолата две цели числа (int) и отпечатва, колко числа има между тях, такива, че остатъкът им от деленето на 5 да е 0. Пример: в интервала (17, 25) има 2 такива числа.<br /><br />
-<span class="tab"></span>Упътване: Има два подхода за решаване на задачата:<br />
-<span class="tab"></span><span class="tab"></span>Първи подход: Използват се математически хитрини за оптимизирано изчисляване, базирани на факта, че всяко пето число се дели на 5.<br />
-<span class="tab"></span><span class="tab"></span>Вторият подход е по-лесен, но работи по-бавно. Чрез for цикъл може да се провери всяко число в дадения интервал. За целта трябва да прочетете от Интернет как се използва for цикъл.<br /><br />
-<span class="tab"></span>Решение: <br />
+<span class="tab"></span>5. Write a program that reads from the console two integer numbers (int) and prints how many numbers between them exist, such that the remainder of their division by 5 is 0. Example: in the range (14, 25) there are 3 such numbers: 15, 20 and 25.<br /><br />
+<span class="tab"></span>Guidelines: There are two approaches for solving the problem:<br />
+<span class="tab"></span><span class="tab"></span><b>First approach</b>: Use mathematical tricks for optimized calculation based on the fact that <b>every fifth number is divisible by 5</b>. Think how to implement this correctly and about the borderline cases.<br />
+<span class="tab"></span><span class="tab"></span>The <b>second approach</b> is easier but it works slower. With a <code>for-</code><b>loop</b> each number within the given range can be checked. You should read on the Internet about how to use <code>for-</code>loops.<br /><br />
+<span class="tab"></span>Solution: <br />
 <div class="code">
     <span class="Modifier">static</span>&nbsp;<span class="ValueType">void</span>&nbsp;Main(<span class="ReferenceType">string</span>[]&nbsp;args)<br />
     {<br />
@@ -81,9 +81,9 @@
     }
 </div>
 <hr>
-<span class="tab"></span>6. Напишете програма, която чете две числа от конзолата и отпечатва по-голямото от тях. Решете задачата без да използвате условни конструкции.<br /><br />
-<span class="tab"></span>Упътване: По-голямото от двете числа можете да намерите с функцията Math.Max(a, b), а по-малкото с Math.Min(a, b).<br /><br />
-<span class="tab"></span>Решение: <br />
+<span class="tab"></span>6. Write a program that reads two numbers from the console and <b>prints the greater of them</b>. Solve the problem without using conditional statements.<br /><br />
+<span class="tab"></span>Guidelines: Since the problem requires a solution, which <b>does not use conditional statements</b>, you should use a different approach. Two possible solutions of the problem include the use of functions of class <code>Math</code>. The <b>greater</b> of the two numbers you can find with the function <code>Math.Max(a, b)</code> and the <b>smaller</b> with <code>Math.Min(a, b)</code>.<br /><br />
+<span class="tab"></span>Solution: <br />
 <div class="code">
     <span class="Modifier">static</span>&nbsp;<span class="ValueType">void</span>&nbsp;Main(<span class="ReferenceType">string</span>[]&nbsp;args)<br />
     {&nbsp;&nbsp;&nbsp;&nbsp;<br />
@@ -96,21 +96,21 @@
     }
 </div>
 <hr>
-<span class="tab"></span>7. Напишете програма, която чете пет числа и отпечатва тяхната сума. При невалидно въведено число да се подкани потребителя да въведе друго число.<br /><br />
-<span class="tab"></span>Упътване: Можете да прочетете числата в пет различни променливи и накрая да ги сумирате. При парсване на поредното число използвайте условно парсване с TryParse(…). При въведено невалидно число повторете четенето на число. Можете да сторите това чрез while цикъл с подходящо условие за изход. За да няма повторение на код, можете да раз­гледате конструк­цията за цикъл "for".<br /><br />
-<span class="tab"></span>Решение: <br />
+<span class="tab"></span>7. Write a program that <b>reads five integer numbers and prints their sum</b>. If an invalid number is entered the program should prompt the user to enter another number.<br /><br />
+<span class="tab"></span>Guidelines: You can read the numbers in <b>five different variables</b> and finally sum them and print the obtained sum. Note that the sum of 5 <code>int</code> values may not fit in the <code>int</code> type so you should use <code>long</code>.<br /><br />
+<span class="tab"></span>Solution: <br />
 <span class="tab"></span><a href="https://github.com/ivanpop/CS-for-Dummies/blob/master/Chapter%204%20Solution%207/Program.cs" target="_blank"><b><u>Link</u></b></a><hr>
-<span class="tab"></span>8. Напишете програма, която чете пет числа от конзолата и отпечатва най-голямото от тях.<br /><br />
-<span class="tab"></span>Упътване: Трябва да използвате конструкцията за сравнение "if", за която можете да прочетете в Интернет.<br /><br />
-<span class="tab"></span>Решение: <br />
+<span class="tab"></span>8. Write a program that reads five numbers from the console and prints the <b>greatest</b> of them.<br /><br />
+<span class="tab"></span>Guidelines: You can use the <b>comparison statement</b> \"<code>if</code>\". You can read about it on the Internet.<br /><br />
+<span class="tab"></span>Solution: <br />
 <span class="tab"></span><a href="https://github.com/ivanpop/CS-for-Dummies/blob/master/Chapter%204%20Solution%208/Program.cs" target="_blank"><b><u>Link</u></b></a><hr>
-<span class="tab"></span>9. Напишете програма, която чете коефициентите a, b и c от конзолата и решава уравнението: ax2+bx+c=0. Програмата трябва да принтира реалните решения на уравнението на конзолата.<br /><br />
-<span class="tab"></span>Упътване: Използвайте добре познатия метод за решаване на квадратни уравнения. Разгледайте внимателно всички възможни случаи.<br /><br />
-<span class="tab"></span>Решение: <br />
+<span class="tab"></span>9. Write a program that <b>reads</b> a, b and c from the console and calculates: <b>ax2+bx+c=0</b>.<br /><br />
+<span class="tab"></span>Guidelines: Use the method for calculating quadratic equations. <br /><br />
+<span class="tab"></span>Solution: <br />
 <span class="tab"></span><a href="https://github.com/ivanpop/CS-for-Dummies/blob/master/Chapter%204%20Solution%209/Program.cs" target="_blank"><b><u>Link</u></b></a><hr>
-<span class="tab"></span>10. Напишете програма, която прочита едно цяло число n от конзолата. След това прочита още nна брой числа от конзолата и отпечатва тяхната сума.<br /><br />
-<span class="tab"></span>Упътване: Четете числата едно след друго и натрупвайте тяхната сума в променлива, която накрая изведете на конзолата. <br /><br />
-<span class="tab"></span>Решение: <br />
+<span class="tab"></span>10. Write a program that reads an integer number n from the console. After that reads n numbers from the console and prints their <b>sum</b>.<br /><br />
+<span class="tab"></span>Guidelines: You should use a <code>for-</code><b>loop</b>. Read the numbers one after another and accumulate their sum in a variable, which then display on the console at the end.<br /><br />
+<span class="tab"></span>Solution: <br />
 <div class="code">
     <span class="Modifier">static</span>&nbsp;<span class="ValueType">void</span>&nbsp;Main(<span class="ReferenceType">string</span>[]&nbsp;args)<br />
     {&nbsp;&nbsp;&nbsp;&nbsp;<br />
@@ -129,9 +129,9 @@
     }
 </div>
 <hr>
-<span class="tab"></span>11. Напишете програма, която прочита цяло число n от конзолата и отпечатва на конзолата всички числа в интервала [1…n], всяко на отделен ред.<br /><br />
-<span class="tab"></span>Упътване: Използвайте комбинация от цикли и методите Console.ReadLine(),Console.WriteLine() и Int32.Parse().<br /><br />
-<span class="tab"></span>Решение: <br />
+<span class="tab"></span>11. Write a program that reads an integer number n from the console and <b>prints all numbers in the range [1…n]</b>, each on a separate line.<br /><br />
+<span class="tab"></span>Guidelines: Use a combination of <b>loops</b>  and the methods <code>Console.ReadLine()</code>, <code>Console.WriteLine()</code> and <code>Int32.Parse()</code>.<br /><br />
+<span class="tab"></span>Solution: <br />
 <div class="code">
     <span class="Modifier">static</span>&nbsp;<span class="ValueType">void</span>&nbsp;Main(<span class="ReferenceType">string</span>[]&nbsp;args)<br />
     {&nbsp;&nbsp;&nbsp;&nbsp;<br />
@@ -147,9 +147,9 @@
     }
 </div>
 <hr>
-<span class="tab"></span>12. Напишете програма, която отпечатва на конзолата първите 100 числа от редицата на Фибоначи: 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, ...<br /><br />
-<span class="tab"></span>Упътване: За решение на задачата използвайте 2 временни променливи, в които да пазите последните 2 пресметнати стойности и с цикъл пресмятайте останалите (всяко следващо число в редицата е сума от последните две).<br /><br />
-<span class="tab"></span>Решение: <br />
+<span class="tab"></span>12. Write a program that prints on the console the first 100 numbers in the <b>Fibonacci sequence</b>: 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, …<br /><br />
+<span class="tab"></span>Guidelines: For the solution of the problem use 2 temporary variables in which store the last 2 calculated values and with a loop calculate the rest (each subsequent number in the sequence is a sum of the last two). Use a <code>for-</code><b>loop</b> to implement the repeating logic.<br /><br />
+<span class="tab"></span>Solution: <br />
 <div class="code">
     <span class="Modifier">static</span>&nbsp;<span class="ValueType">void</span>&nbsp;Main(<span class="ReferenceType">string</span>[]&nbsp;args)<br />
     {&nbsp;&nbsp;&nbsp;&nbsp;<br />
@@ -171,9 +171,9 @@
     }
 </div>
 <hr>
-<span class="tab"></span>13. Напишете програма, която пресмята сумата (с точност до 0.001):1 + 1/2 - 1/3 + 1/4 - 1/5 + ...<br /><br />
-<span class="tab"></span>Упътване: Натрупвайте сумата в променлива с цикъл и пазете старата сума, докато разликата между двете суми стане по-малка от точността (0.001).<br /><br />
-<span class="tab"></span>Решение: <br />
+<span class="tab"></span>13. Write a program that calculates the <b>sum</b> (with <b>precision of 0.001</b>) of the following sequence: 1 + 1/2 - 1/3 + 1/4 - 1/5 + …<br /><br />
+<span class="tab"></span>Guidelines: Accumulate the <b>sum of the sequence</b> in a variable inside a <code>while-</code><b>loop</b>. At each step compare the old sum with the new sum. If the difference between the two sums <code>Math.Abs(current_sum – old_sum)</code> is less than the required precision (0.001), the calculation should finish because the difference is constantly decreasing and the precision is constantly increasing at each step of the loop. The expected result is <b>1.307</b>.<br /><br />
+<span class="tab"></span>Solution: <br />
 <div class="code">
     <span class="Modifier">static</span>&nbsp;<span class="ValueType">void</span>&nbsp;Main(<span class="ReferenceType">string</span>[]&nbsp;args)<br />
     {&nbsp;&nbsp;&nbsp;&nbsp;<br />
@@ -190,4 +190,4 @@
     }
 </div>
 <hr>
-<span class="tab"></span><a href="javascript:history.back()">&#8592; Обратно</a>
+<span class="tab"></span><a href="javascript:history.back()">&#8592; Back</a>

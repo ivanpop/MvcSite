@@ -1,20 +1,20 @@
 ﻿@{
     ViewBag.Title = "C# For Dummies";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+    Layout = "~/Views/Shared/_LayoutEN.cshtml";
 }
 
 @section ExtraHeadContent {
-    <meta name="description" content="C# for Dummies представлява условията на задачите от книгата за C# на Академия Телерик и техните упътванията, като аз съм ги решавал или поне съм се опитал :)">
-    <meta name="author" content="Иван Попов">
+    <meta name="description" content="C# for Dummies are the poblems from The C# Book of The Telerik Academy, their guidelines and the solutions, which I wrote or tried to :)">
+    <meta name="author" content="Ivan Popov">
     <meta name="thumbnail" content="http://localhost:49690/Resources/ivanpopov.jpg" />
     <link rel="image_src" href="http://localhost:49690/Resources/ivanpopov.jpg" />
 }
 
 <h1>C# For Dummies</h1>
-<h2> Глава 5. Условни конструкции</h2>
-<span class="tab"></span>1. Да се напише <code>if</code>-конструкция, която проверява стойността на две целочислени променливи и разменя техните стойности, ако стойността на първата променлива е по-голяма от втората.<br /><br />
-<span class="tab"></span>Упътване: Прочетете за if конструкции.<br /><br />
-<span class="tab"></span>Решение: <br />
+<h2>Chapter 5. Conditional Statements</h2>
+<span class="tab"></span>Write an <code>if</code>- statement that takes two integer variables and <b>exchanges</b> their values if the first one is greater than the second one.<br /><br />
+<span class="tab"></span>Guidelines: Read about if-statements.<br /><br />
+<span class="tab"></span>Solution <br />
 <div class="code">
     <span class="Modifier">static</span>&nbsp;<span class="ValueType">void</span>&nbsp;Main(<span class="ReferenceType">string</span>[]&nbsp;args)<br />
     {&nbsp;&nbsp;&nbsp;&nbsp;<br />
@@ -34,20 +34,20 @@
     }
 </div>
 <hr>
-<span class="tab"></span>2. Напишете програма, която показва знака (+ или -) от произведението на три реални числа, без да го пресмята. Използвайте последователност от <code>if</code> оператори.<br /><br />
-<span class="tab"></span>Упътване: Множество от ненулеви числа имат положително произведение, ако отрицателните сред тях са четен брой. Ако отрицателните числа в множеството са нечетен брой, произведението е отрицателно. Ако някое от числата е нула, произведението е нула.<br /><br />
-<span class="tab"></span>Решение: <br /><span class="tab"></span><a href="https://github.com/ivanpop/CS-for-Dummies/blob/master/Chapter%205%20Solution%202/Program.cs" target="_blank"><b><u>Link</u></b></a><hr>
-<span class="tab"></span>3. Напишете програма, която намира най-голямото по стойност число, измежду три дадени числа.<br /><br />
-<span class="tab"></span>Упътване: Можете да използвате вложени <code>if</code> конструкции. <br /><br />
-<span class="tab"></span>Решение: <br />
+<span class="tab"></span>2. Write a program that shows the sign (+ or -) of the product of three real numbers, without calculating it. Use a sequence of <code>if</code> operators.<br /><br />
+<span class="tab"></span>Guidelines: A multiple of non-zero numbers has a positive product, if the <b>negative multiples are even number</b>. If the count of the negative numbers is odd, the product is negative. If at least one of the numbers is zero, the product is also zero. Use a counter <code>negativeNumbersCount</code> to keep the <b>number of negative numbers</b>. Check each number whether it is negative and change the counter accordingly. If some of the numbers is 0, print “0” as result (the zero has no sign). Otherwise print “+” or “-” depending on the condition <code> (negativeNumbersCount % 2 == 0) </code>.<br /><br />
+<span class="tab"></span>Solution <br /><span class="tab"></span><a href="https://github.com/ivanpop/CS-for-Dummies/blob/master/Chapter%205%20Solution%202/Program.cs" target="_blank"><b><u>Link</u></b></a><hr>
+<span class="tab"></span>3. Write a program that finds the <b>biggest of three integers</b>, using nested <code>if</code> statements.<br /><br />
+<span class="tab"></span>Guidelines: Use <b>nested</b> <code>if</code>-<b>statements</b>, first checking the first two numbers then checking the bigger of them with the third.<br /><br />
+<span class="tab"></span>Solution <br />
 <span class="tab"></span><a href="https://github.com/ivanpop/CS-for-Dummies/blob/master/Chapter%205%20Solution%203/Program.cs" target="_blank"><b><u>Link</u></b></a><hr>
-<span class="tab"></span>4. Сортирайте 3 реални числа в намаляващ ред. Използвайте вложени <code>if</code> оператори.<br /><br />
-<span class="tab"></span>Упътване: Първо намерете най-малкото от трите числа, след това го разменете с първото. После проверете дали второто е по-голямо от третото и ако е така, ги разменете.<br /><br />
-<span class="tab"></span>Решение: <br />
+<span class="tab"></span>4. <b>Sort 3 real numbers</b> in descending order. Use nested <code>if</code> statements.<br /><br />
+<span class="tab"></span>Guidelines: First <b>find the smallest</b> of the three numbers, and then <b>swap it with the first one</b>. Then check if the second is greater than the third number and if yes, swap them too.<br />Another approach is to check all possible orders of the numbers with a series of <code>if-else</code> checks: <code>a≤b≤c, a≤c≤b, b≤a≤c, b≤c≤a, c≤a≤b</code> and <code>c≤b≤a</code>.<br />A <b>more complicated</b> and more general solution of this problem is to put the numbers in an array and use the <code>Array.Sort(…)</code> method.<br /><br />
+<span class="tab"></span>Solution <br />
 <span class="tab"></span><a href="https://github.com/ivanpop/CS-for-Dummies/blob/master/Chapter%205%20Solution%204/Program.cs" target="_blank"><b><u>Link</u></b></a><hr>
-<span class="tab"></span>5. Напишете програма, която за дадена цифра (0-9), зададена като вход, извежда името на цифрата на български език.<br /><br />
-<span class="tab"></span>Упътване: Най-подходящо е да използвате <code>switch</code> конструкция.<br /><br />
-<span class="tab"></span>Решение: <br />
+<span class="tab"></span>5. Write a program that asks for a digit (0-9), and depending on the input, <b>shows the digit as a word</b> in a Bulgarian or English. Use a <code>switch</code> statement.<br /><br />
+<span class="tab"></span>Guidelines: Just use a <code>switch</code> statement to check for all possible digits.<br /><br />
+<span class="tab"></span>Solution <br />
 <div class="code">
     <span class="Modifier">static</span>&nbsp;<span class="ValueType">void</span>&nbsp;Main(<span class="ReferenceType">string</span>[]&nbsp;args)<br />
     {&nbsp;&nbsp;&nbsp;&nbsp;<br />
@@ -71,13 +71,13 @@
     }
 </div>
 <hr>
-<span class="tab"></span>6. Напишете програма, която при въвеждане на коефициентите (a, b и c) на квадратно уравнение: ax2+bx+c, изчислява и извежда неговите реални корени (ако има такива). Квадратните уравнения могат да имат 0, 1 или 2 реални корена.<br /><br />
-<span class="tab"></span>Упътване: Вижте начина за решаване на квадратно уравнение.<br /><br />
-<span class="tab"></span>Решение: <br />
+<span class="tab"></span>6. Write a program that gets the coefficients <code>a, b</code> and <code>c</code> of a quadratic equation: <code>ax2 + bx + c</code>, calculates and prints its real roots (if they exist). Quadratic equations may have 0, 1 or 2 real roots.<br /><br />
+<span class="tab"></span>Guidelines: Look for the formulas for solving a quadratic equation.<br /><br />
+<span class="tab"></span>Solution <br />
 <span class="tab"></span><a href="https://github.com/ivanpop/CS-for-Dummies/blob/master/Chapter%205%20Solution%206/Program.cs" target="_blank"><b><u>Link</u></b></a><hr>
-<span class="tab"></span>7. Напишете програма, която намира най-голямото по стойност число измежду дадени 5 числа.<br /><br />
-<span class="tab"></span>Упътване:  Използвайте вложени <code>if</code> конструкции. Можете да използвате конструкцията за цикъл <code>for</code>, за която можете да прочетете в Интернет.<br /><br />
-<span class="tab"></span>Решение: <br />
+<span class="tab"></span>7. Write a program that finds the <b>greatest of given 5 numbers</b>.<br /><br />
+<span class="tab"></span>Guidelines:  Use nested <code>if</code> statements. You could use the loop structure <code>for</code>, which you could read about on the Internet.<br /><br />
+<span class="tab"></span>Solution <br />
 <div class="code">
     <span class="Modifier">static</span>&nbsp;<span class="ValueType">void</span>&nbsp;Main(<span class="ReferenceType">string</span>[]&nbsp;args)<br />
     {&nbsp;&nbsp;&nbsp;&nbsp;<br />
@@ -101,32 +101,32 @@
     }
 </div>
 <hr>
-<span class="tab"></span>8. Напишете програма, която по избор на потребителя прочита от конзолата променлива от тип <code>int</code>, <code>double</code> или <code>string</code>. Ако променливата е <code>int</code> или <code>double</code>, трябва да се увеличи с 1. Ако променливата е <code>string</code>, трябва да се прибави накрая символа "*". Отпечатайте получения резултат на конзолата. Използвайте <code>switch</code> конструкция.<br /><br />
-<span class="tab"></span>Упътване: Използвайте входна променлива, която да показва от какъв тип ще е входа, т.е. при въвеждане на 0 типа е <code>int</code>, при 1 е <code>double</code> и при 2 е <code>string</code>.<br /><br />
-<span class="tab"></span>Решение: <br />
+<span class="tab"></span>8. Write a program that, depending on the user’s choice, inputs <code>int, double</code> or <code>string</code> variable. If the variable is <code>int</code> or <code>double</code>, the program increases it by 1. If the variable is a <code>string</code>, the program appends \"*\" at the end. Print the result at the console. Use <code>switch</code> statement.<br /><br />
+<span class="tab"></span>Guidelines: First input a variable, which indicates what type will be the input, i.e. by entering 0 the type is <code>int</code>, by 1 is <code>double</code> and by 2 is <code>string</code>.<br /><br />
+<span class="tab"></span>Solution <br />
 <span class="tab"></span><a href="https://github.com/ivanpop/CS-for-Dummies/blob/master/Chapter%205%20Solution%208/Program.cs" target="_blank"><b><u>Link</u></b></a><hr>
-<span class="tab"></span>9. Дадени са пет цели числа. Напишете програма, която намира онези подмножества от тях, които имат сума 0. Примери:<br />
-<span class="tab"></span>-  Ако са дадени числата {3, -2, 1, 1, 8}, сумата на -2, 1 и 1 е 0. <br />
-<span class="tab"></span>-Ако са дадени числата {3, 1, -7, 35, 22}, няма подмножества със сума 0.<br /><br />
-<span class="tab"></span>Упътване: Използвайте вложени <code>if</code> конструкции или последователност от сравнения, за да проверите сумите на всичките 15 подмножества на дадените числа (без празното).<br /><br />
-<span class="tab"></span>Решение: <br />
+<span class="tab"></span>9. We are given 5 integer numbers. Write a program that finds those <b>subsets whose sum is 0</b>. Examples:<br />
+<span class="tab"></span>- If we are given the numbers {3, -2, 1, 1, 8}, the sum of -2, 1 and 1 is 0.<br />
+<span class="tab"></span>>- If we are given the numbers {3, 1, -7, 35, 22}, there are no subsets with sum 0.<br /><br />
+<span class="tab"></span>Guidelines: Use nested <code>if</code> statements or series of <b>31 comparisons</b>, in order to check all the sums of the 31 subsets of the given numbers (without the empty one). Note that the problem in general (with <code>N</code> numbers) is complex and using loops will not be enough to solve it.<br /><br />
+<span class="tab"></span>Solution <br />
 <span class="tab"></span><a href="https://github.com/ivanpop/CS-for-Dummies/blob/master/Chapter%205%20Solution%209/Program.cs" target="_blank"><b><u>Link</u></b></a><hr>
-<span class="tab"></span>10. Напишете програма, която прилага бонус точки към дадени точки в интервала [1..9] чрез прилагане на следните правила: <br />
-<span class="tab"></span>-  Ако точките са между 1 и 3, програмата ги умножава по 10. <br />
-<span class="tab"></span>-  Ако точките са между 4 и 6, ги умножава по 100. <br />
-<span class="tab"></span>-  Ако точките са между 7 и 9, ги умножава по 1000. <br />
-<span class="tab"></span>-  Ако точките са 0 или повече от 9, се отпечатва съобщение за грешка.<br /><br />
-<span class="tab"></span>Упътване: Използвайте <code>switch</code> конструкция и накрая изведете като резултат на конзолата пресметнатите точки.<br /><br />
-<span class="tab"></span>Решение: <br />
+<span class="tab"></span>10. Write a program that applies <b>bonus points</b> to given scores in the range [1…9] by the following rules:<br />
+<span class="tab"></span>- If the score is between 1 and 3, the program multiplies it by 10.<br />
+<span class="tab"></span>- If the score is between 7 and 9, the program multiplies it by 1000.<br />
+<span class="tab"></span>- If the score is 0 or more than 9, the program prints an error message.<br />
+<span class="tab"></span>Guidelines: Use <code>switch</code> statement or a sequence of <code>if-else</code> constructs and at the end print at the console the calculated points.<br /><br />
+<span class="tab"></span>Solution <br />
 <span class="tab"></span><a href="https://github.com/ivanpop/CS-for-Dummies/tree/master/Chapter%205%20Solution%2010" target="_blank"><b><u>Link</u></b></a><hr>
-<span class="tab"></span>11. Напишете програма, която преобразува дадено число в интервала [0..999] в текст, съответстващ на българското произношение на числото. Примери:<br />
-<span class="tab"></span>-  0 → "Нула"<br />
-<span class="tab"></span>-  12 → "Дванадесет"<br /><span class="tab"></span>-  98 → "Деветдесет и осем"<br />
-<span class="tab"></span>-  273 → "Двеста седемдесет и три"<br />
-<span class="tab"></span>-  400 → "Четиристотин"<br />
-<span class="tab"></span>-  501 → "Петстотин и едно"<br />
-<span class="tab"></span>-  711 → "Седемстотин и единадесет"<br /><br />
-<span class="tab"></span>Упътване: Използвайте вложени <code>switch</code> конструкции. Да се обърне специално внимание на числата от 0 до 19 и на онези, в които единиците са 0.<br /><br />
-<span class="tab"></span>Решение: <br />
+<span class="tab"></span>Write a program that <b>converts a number in the range [0…999] to words</b>, corresponding to the English pronunciation. Examples:<br />
+<span class="tab"></span>-  0 → "Zero"<br />
+<span class="tab"></span>-  12 → "Twelve"<br />
+<span class="tab"></span>-  98 → "Ninety eight"<br />
+<span class="tab"></span>-  273 → "Two hundered seventy three"<br />
+<span class="tab"></span>-  400 → "Four hundred"<br />
+<span class="tab"></span>-  501 → "Five hundred and one"<br />
+<span class="tab"></span>-  711 → "Seven hundered and eleven"<br /><br />
+<span class="tab"></span>Guidelines: Use nested <code>switch</code> statements. Pay special attention to the numbers from 0 to 19 and those that end with 0. There because printing a single digit is part of printing a 2-digit number which is part of printing 3-digit number.<br /><br />
+<span class="tab"></span>Solution <br />
 <span class="tab"></span><a href="https://github.com/ivanpop/CS-for-Dummies/blob/master/Chapter%205%20Solution%2011/Program.cs" target="_blank"><b><u>Link</u></b></a><br /><hr>
-<span class="tab"></span><a href="javascript:history.back()">&#8592; Обратно</a>
+<span class="tab"></span><a href="javascript:history.back()">&#8592; Back</a>

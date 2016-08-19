@@ -1,19 +1,20 @@
 ﻿@{
     ViewBag.Title = "C# For Dummies";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+    Layout = "~/Views/Shared/_LayoutEN.cshtml";
 }
 
 @section ExtraHeadContent {
-    <meta name="description" content="C# for Dummies представлява условията на задачите от книгата за C# на Академия Телерик и техните упътванията, като аз съм ги решавал или поне съм се опитал :)">
-    <meta name="author" content="Иван Попов">
+    <meta name="description" content="C# for Dummies are the poblems from The C# Book of The Telerik Academy, their guidelines and the solutions, which I wrote or tried to :)">
+    <meta name="author" content="Ivan Popov">
     <meta name="thumbnail" content="http://localhost:49690/Resources/ivanpopov.jpg" />
     <link rel="image_src" href="http://localhost:49690/Resources/ivanpopov.jpg" />
 }
 
 <h1>C# For Dummies</h1>
-<h2> Глава 3. Оператори и изрази</h2>
-<span class="tab"></span>1. Напишете израз, който да проверява дали дадено цяло число е четно или нечетно.<br /><br />
-<span class="tab"></span>Упътване: Вземете остатъкът от деленето на числото на 2 и проверете дали е 0 или 1 (съответно числото е четно или нечетно). Използвайте оператора % за пресмятане на остатък от целочислено деление.<br /><br /><span class="tab"></span>Решение: <br />
+<h2>Chapter 3. Operators and Expressions</h2>
+<span class="tab"></span>1. Write an expression that checks whether an integer is <b>odd or even</b>.<br /><br />
+<span class="tab"></span>Guidelines: Take the <b>remainder of dividing the number by 2</b> and check if it is 0 or 1 (respectively the number is odd or even). <b>Use % operator</b> to calculate the remainder of integer division.<br /><br />
+<span class="tab"></span>Solution: <br />
 <div class="code">
     <span class="Modifier">static</span>&nbsp;<span class="ValueType">void</span>&nbsp;Main(<span class="ReferenceType">string</span>[]&nbsp;args)<br />
     {<br />
@@ -23,9 +24,9 @@
     }
 </div>
 <hr>
-<span class="tab"></span>2. Напишете булев израз, който да проверява дали дадено цяло число се дели на 5 и на 7 без остатък.<br /><br />
-<span class="tab"></span>Упътване: Ползвайте логическо "И" (оператора &&) и операцията % за остатък при деление. Можете да решите задачата и чрез само една проверка – за деление на 35 (помислете защо).<br /><br />
-<span class="tab"></span>Решение: <br />
+<span class="tab"></span>2. Write a Boolean expression that checks whether a given integer is <b>divisible by both 5 and 7</b>, without a remainder.<br /><br />
+<span class="tab"></span>Guidelines: Use a logical \"AND\" (&& operator) and the remainder operation % in division. You can also solve the problem by only one test: the division of 35 (think why).<br /><br />
+<span class="tab"></span>Solution: <br />
 <div class="code">
     <span class="Modifier">static</span>&nbsp;<span class="ValueType">void</span>&nbsp;Main(<span class="ReferenceType">string</span>[]&nbsp;args)<br />
     {<br />
@@ -35,9 +36,9 @@
     }
 </div>
 <hr>
-<span class="tab"></span>3. Напишете израз, който да проверява дали третата цифра (отдясно на ляво) на дадено цяло число е 7.<br /><br />
-<span class="tab"></span>Упътване: Разделете числото на 100 и го запишете в нова променлива. Нея разделете на 10 и вземете остатъкът. Остатъкът от делението на 10 е третата цифра от първоначалното число. Проверете равна ли е на 7.<br /><br />
-<span class="tab"></span>Решение: <br />
+<span class="tab"></span>3. Write an expression that checks for a given integer if its <b>third digit</b> (right to left) is 7.<br /><br />
+<span class="tab"></span>Guidelines: Divide the number by 100 and save it in a new variable, which then divide by 10 and take the remainder. The remainder of the division by 10 is the third digit of the original number. Check if it is equal to 7.<br /><br />
+<span class="tab"></span>Solution: <br />
 <div class="code">
     <span class="Modifier">static</span>&nbsp;<span class="ValueType">void</span>&nbsp;Main(<span class="ReferenceType">string</span>[]&nbsp;args)<br />
     {<br />
@@ -47,9 +48,9 @@
     }
 </div>
 <hr>
-<span class="tab"></span>4. Напишете израз, който да проверява дали третия бит на дадено число е 1 или 0.<br /><br />
-<span class="tab"></span>Упътване: Използвайте побитово "И" върху числото и число, което има 1 само в третия си бит (т.е. числото 8, ако броенето на битовете започне от 0). Ако върнатият резултат е различен от 0, то третия бит е 1.<br /><br />
-<span class="tab"></span>Решение: <br />
+<span class="tab"></span>4. Write an expression that checks whether the <b>third bit</b> in a given integer is 1 or 0.<br /><br />
+<span class="tab"></span>Guidelines: Use <b>bitwise \"AND\"</b> on the current number and the number that has 1 only in the third bit (i.e. number 8, if bits start counting from 0).<br /><br />
+<span class="tab"></span>Solution: <br />
 <div class="code">
     <span class="Modifier">static</span>&nbsp;<span class="ValueType">void</span>&nbsp;Main(<span class="ReferenceType">string</span>[]&nbsp;args)<br />
     {<br />
@@ -58,9 +59,9 @@
     }
 </div>
 <hr>
-<span class="tab"></span>5. Напишете израз, който изчислява площта на трапец по дадени a, b и h.<br /><br />
-<span class="tab"></span>Упътване: Формула за лице на трапец: S = (a + b) / 2 * h.<br /><br />
-<span class="tab"></span>Решение: <br />
+<span class="tab"></span>5. Write an expression that calculates the <b>area of a trapezoid</b> by given sides <b>a</b>, <b>b</b> and height <b>h</b>.<br /><br />
+<span class="tab"></span>Guidelines: The formula for <b>trapezoid surface</b> is: S = (a + b) * h / 2.<br /><br />
+<span class="tab"></span>Solution: <br />
 <div class="code">
     <span class="Modifier">static</span>&nbsp;<span class="ValueType">void</span>&nbsp;Main(<span class="ReferenceType">string</span>[]&nbsp;args)<br />
     {<br />
@@ -71,9 +72,9 @@
     }
 </div>
 <hr>
-<span class="tab"></span>6. Напишете програма, която за подадени от потребителя дължина и височина на право­ъгълник, пресмята и отпечатва на конзолата неговия периметър и лице.<br /><br />
-<span class="tab"></span>Упътване: Потърсете в Интернет как се въвеждат цели числа от конзолата и използвайте формулата за лице на правоъгълник.<br /><br />
-<span class="tab"></span>Решение: <br />
+<span class="tab"></span>6. Write a program that prints on the console the <b>perimeter and the area of a rectangle</b> by given side and height entered by the user.<br /><br />
+<span class="tab"></span>Guidelines: Search the Internet for <b>how to read integers</b> from the console and use the formula for rectangle area calculation. If you have difficulties see instructions on the next problem.<br /><br />
+<span class="tab"></span>Solution: <br />
 <div class="code">
     <span class="Modifier">static</span>&nbsp;<span class="ValueType">void</span>&nbsp;Main(<span class="ReferenceType">string</span>[]&nbsp;args)<br />
     {<br />
@@ -85,9 +86,9 @@
     }
 </div>
 <hr>
-<span class="tab"></span>7. Силата на гравитационното поле на Луната е приблизително 17% от това на Земята. Напишете програма, която да изчислява тежестта на човек на Луната, по дадената тежест на Земята.<br /><br />
-<span class="tab"></span>Упътване: Прочетете число от конзолата, след което го умножете по 0.17 и го отпечатайте.<br /><br />
-<span class="tab"></span>Решение: <br />
+<span class="tab"></span>7. The gravitational field of the Moon is approximately 17% of that on the Earth. Write a program that calculates the <b>weight of a man on the moon</b> by a given weight on the Earth.<br /><br />
+<span class="tab"></span>Guidelines: <b>Read the number from the console</b>, <b>multiply it by 0.17</b> and print it.<br /><br />
+<span class="tab"></span>Solution: <br />
 <div class="code">
     <span class="Modifier">static</span>&nbsp;<span class="ValueType">void</span>&nbsp;Main(<span class="ReferenceType">string</span>[]&nbsp;args)<br />
     {<br />
@@ -97,9 +98,9 @@
     }
 </div>
 <hr>
-<span class="tab"></span>8. Напишете програма, която проверява дали дадена точка О (x, y) е вътре в окръжността К ((0,0), 5). Пояснение: точката (0,0) е център на окръжността, а радиусът й е 5.<br /><br />
-<span class="tab"></span>Упътване: Използвайте питагоровата теорема a2 + b2 = c2. За да е точката вътре в кръга, то x*x + y*y следва да е по-малко или равно на 5.<br /><br />
-<span class="tab"></span>Решение: <br />
+<span class="tab"></span>Write an expression that checks for a given point {x, y} if it is <b>within the circle</b> K[{0, 0}, R=5]. Explanation: the point {0, 0} is the center of the circle and 5 is the radius.<br /><br />
+<span class="tab"></span>Guidelines: Use the <b>Pythagorean Theorem</b> a2 + b2 = c2. The point is inside the circle when (x*x) + (y*y) ≤ 5*5.<br /><br />
+<span class="tab"></span>Solution: <br />
 <div class="code">
     <span class="Modifier">static</span>&nbsp;<span class="ValueType">void</span>&nbsp;Main(<span class="ReferenceType">string</span>[]&nbsp;args)<br />
     {<br />
@@ -112,22 +113,22 @@
     }
 </div>
 <hr>
-<span class="tab"></span>9. Напишете програма, която проверява дали дадена точка О (x, y) е вътре в окръжността К ((0,0), 5) и едновременно с това извън право­ъгълника ((-1, 1), (5, 5). Пояснение: правоъгълникът е зададен чрез координатите на горния си ляв и долния си десен ъгъл.<br /><br />
-<span class="tab"></span>Упътване: Използвайте кода от предходната задача и добавете проверка за правоъгълника. Една точка е вътре в даден правоъгълник със стени успоредни на координатните оси, когато е вдясно от лявата му стена, вляво от дясната му стена, надолу от горната му стена и нагоре от долната му стена.<br /><br />
-<span class="tab"></span>Решение: <a href="https://github.com/ivanpop/CS-for-Dummies/blob/master/Chapter%203%20Solution%209/Program.cs" target="_blank"><b><u>Link</u></b></a><hr>
-<span class="tab"></span>10. Напишете програма, която приема за вход четирицифрено число във формат abcd  (например числото 2011) и след това извършва следните действия върху него:<br />
-<span class="tab"></span>-Пресмята сбора от цифрите на числото (за нашия пример 2+0+1+1 = 4).<br />
-<span class="tab"></span>-Разпечатва на конзолата цифрите в обратен ред: dcba (за нашия пример резултатът е 1102).<br />
-<span class="tab"></span>-Поставя последната цифра, на първо място: dabc (за нашия пример резултатът е 1201).<br />
-<span class="tab"></span>-Разменя мястото на втората и третата цифра: acbd (за нашия пример резултатът е 2101).<br /><br />
-<span class="tab"></span>Упътване: За да вземете отделните цифри на числото, можете да го делите на 10 и да взимате остатъка при деление на 10 последователно 4 пъти.<br /><br />
-<span class="tab"></span>Решение: <a href="https://github.com/ivanpop/CS-for-Dummies/blob/master/Chapter%203%20Solution%2010/Program.cs" target="_blank"><b><u>Link</u></b></a><hr>
-<span class="tab"></span>11. Дадено е число n и позиция p. Напишете поредица от операции, които да отпечатат стойността на бита на позиция p от числото n (0 или 1). Пример: n=35, p=5 -> 1. Още един пример: n=35, p=6 -> 0.<br /><br />
-<span class="tab"></span>Упътване:  Ползвайте побитови операции.<br /><br />
-<span class="tab"></span>Решение: <a href="https://github.com/ivanpop/CS-for-Dummies/blob/master/Chapter%203%20Solution%2011/Program.cs" target="_blank"><b><u>Link</u></b></a><hr>
-<span class="tab"></span>12. Напишете булев израз, който проверява дали битът на позиция p на цялото число v има стойност 1. Пример v=5, p=1 -> false.<br /><br />
-<span class="tab"></span>Упътване: Задачата е аналогична на предната.<br /><br />
-<span class="tab"></span>Решение: <br />
+<span class="tab"></span>9. Write an expression that checks for given point {x, y} if it is <b>within the circle</b> K[{0, 0}, R=5] and <b>out of the rectangle</b> [{-1, 1}, {5, 5}]. Clarification: for the rectangle the lower left and the upper right corners are given.<br /><br />
+<span class="tab"></span>Guidelines: Use the code from the previous task and <b>add a check for the rectangle</b>. A point is inside a rectangle with walls parallel to the axes, when in the same time it is right of the left wall, left of the right wall, down from the top wall and above the bottom wall.<br /><br />
+<span class="tab"></span>Solution: <a href="https://github.com/ivanpop/CS-for-Dummies/blob/master/Chapter%203%20Solution%209/Program.cs" target="_blank"><b><u>Link</u></b></a><hr>
+<span class="tab"></span>10. Write a program that takes as input a <b>four-digit number</b> in format abcd (e.g. 2011) and performs the following actions:<br />
+<span class="tab"></span>-Calculates the sum of the digits (in our example 2+0+1+1 = 4).<br />
+<span class="tab"></span>-Prints on the console the number in reversed order: dcba (in our example 1102).<br />
+<span class="tab"></span>-Puts the last digit in the first position: dabc (in our example 1201).<br />
+<span class="tab"></span>-Exchanges the second and the third digits: acbd (in our example 2101).<br /><br />
+<span class="tab"></span>Guidelines: To get the individual digits of the number you can divide by 10 and take the remainder of the division by 10 four times.<br /><br />
+<span class="tab"></span>Solution: <a href="https://github.com/ivanpop/CS-for-Dummies/blob/master/Chapter%203%20Solution%2010/Program.cs" target="_blank"><b><u>Link</u></b></a><hr>
+<span class="tab"></span>11. We are given number n and position p. Write a sequence of operations that prints the value of <b>the bit on the position</b> p in the number (0 or 1). Example: n=35, p=5 -> 1. Another example: n=35, p=6 -> 0.<br /><br />
+<span class="tab"></span>Guidelines: Use <b>bitwise operations</b><br /><br />
+<span class="tab"></span>Solution: <a href="https://github.com/ivanpop/CS-for-Dummies/blob/master/Chapter%203%20Solution%2011/Program.cs" target="_blank"><b><u>Link</u></b></a><hr>
+<span class="tab"></span>12. Write a Boolean expression that checks if the bit on position p in the integer v has the value 1. Example v=5, p=1 -> false.<br /><br />
+<span class="tab"></span>Guidelines: The task is similar to the previous one.<br /><br />
+<span class="tab"></span>Solution: <br />
 <div class="code">
     <span class="Modifier">static</span>&nbsp;<span class="ValueType">void</span>&nbsp;Main(<span class="ReferenceType">string</span>[]&nbsp;args)<br />
     {<br />
@@ -139,9 +140,9 @@
     }
 </div>
 <hr>
-<span class="tab"></span>13. Дадено е число n, стойност v (v = 0 или 1) и позиция p. Напишете поредица от операции, които да променят стойността на n, така че битът на позиция p да има стойност v. Пример n=35, p=5, v=0 -> n=3. Още един пример: n=35, p=2, v=1 -> n=39.<br /><br />
-<span class="tab"></span>Упътване: Ползвайте побитови операции, по аналогия със задача 11.<br /><br />
-<span class="tab"></span>Решение: <br />
+<span class="tab"></span>13. We are given the number n, the value v (v = 0 or 1) and the position p. write a sequence of operations that changes the value of <b>n</b>, so the bit on the position <b>p</b> has the value of <b>v</b>. Example: n=35, p=5, v=0 -> n=3. Another example: n=35, p=2, v=1 -> n=39.<br /><br />
+<span class="tab"></span>Guidelines: Use bitwise operations by analogy with the previous two problems.<br /><br />
+<span class="tab"></span>Solution: <br />
 <div class="code">
     <span class="Modifier">static</span>&nbsp;<span class="ValueType">void</span>&nbsp;Main(<span class="ReferenceType">string</span>[]&nbsp;args)<br />
     {<br />
@@ -153,9 +154,9 @@
     }
 </div>
 <hr>
-<span class="tab"></span>14. Напишете програма, която проверява дали дадено число n (1 < n < 100) е просто (т.е. се дели без остатък само на себе си и на единица).<br /><br />
-<span class="tab"></span> Упътване: Прочетете за цикли в Интернет. Използвайте цикъл и проверете числото за делимост на всички числа от 1 до корен квадратен от числото. В конкретната задача, тъй като ограничението е само до 100, можете предварително да намерите простите числа от 1 до 100 и да направите проверки дали даденото число n e равно на някое от тях.<br /><br />
-<span class="tab"></span>Решение: <br />
+<span class="tab"></span>14. Write a program that checks if a given number n (1 < n < 100) is a <b>prime number</b> (i.e. it is divisible without remainder only to itself and 1). <br /><br />
+<span class="tab"></span> Guidelines: Read about <b>loops</b> in the Internet. Use a loop and check the number for divisibility by all integers from 1 to the square root of the number. Since <b>n < 100</b>, you can find in advance all prime numbers from 1 to 100 and checks the input over them. The <b>prime numbers</b> in the range [1…100] are: 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89 and 97.<br /><br />
+<span class="tab"></span>Solution: <br />
 <div class="code">
     <span class="Modifier">static</span>&nbsp;<span class="ValueType">void</span>&nbsp;Main(<span class="ReferenceType">string</span>[]&nbsp;args)<br />
     {<br />
@@ -170,12 +171,12 @@
     }
 </div>
 <hr>
-<span class="tab"></span>15. Напишете програма, която разменя стойностите на битовете на позиции 3, 4 и 5 с битовете на позиции 24, 25 и 26 на дадено цяло положително число.<br /><br />
-<span class="tab"></span>Упътване: За решението на тази задача използвайте комбинация от задачите за взимане и установяване на бит на определена позиция.<br /><br />
-<span class="tab"></span>Решение: <br />
+<span class="tab"></span>15. Write a program that <b>exchanges the values of the bits</b> on positions 3, 4 and 5 with bits on positions 24, 25 and 26 of a given 32-bit unsigned integer.<br /><br />
+<span class="tab"></span>Guidelines: Use 3 times a combination of getting and setting a bit at a given position.<br /><br />
+<span class="tab"></span>Solution: <br />
 <span class="tab"></span><a href="https://github.com/ivanpop/CS-for-Dummies/blob/master/Chapter%203%20Solution%2015/Program.cs" target="_blank"><b><u>Link</u></b></a><hr>
-<span class="tab"></span>16. Напишете програма, която разменя битовете на позиции {p, p+1, …, p+k-1) с битовете на позиции {q, q+1, …, q+k-1} на дадено цяло положително число.<br /><br />
-<span class="tab"></span>Упътване: Използвайте предната задача и прочетете в интернет как се работи с цикли и масиви (в които да запишете битовете).<br /><br />
-<span class="tab"></span>Решение: <br />
+<span class="tab"></span>16. Write a program that <b>exchanges bits</b> {p, p+1, …, p+k-1} with bits {q, q+1, …, q+k-1} of a given 32-bit unsigned integer.<br /><br />
+<span class="tab"></span>Guidelines: Extend the solution of the previous problem to perform a <b>sequence of bit exchanges in a loop</b>.<br /><br />
+<span class="tab"></span>Solution: <br />
 <span class="tab"></span><a href="https://github.com/ivanpop/CS-for-Dummies/blob/master/Chapter%203%20Solution%2016/Program.cs" target="_blank"><b><u>Link</u></b></a><br /><br /><hr>
-<span class="tab"></span><a href="javascript:history.back()">&#8592; Обратно</a>
+<span class="tab"></span><a href="javascript:history.back()">&#8592; Back</a>
