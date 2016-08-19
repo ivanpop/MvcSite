@@ -1,19 +1,19 @@
 ﻿@{
     ViewBag.Title = "C# For Dummies";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+    Layout = "~/Views/Shared/_LayoutEN.cshtml";
 }
 
 @section ExtraHeadContent {
-    <meta name="description" content="C# for Dummies представлява условията на задачите от книгата за C# на Академия Телерик и техните упътванията, като аз съм ги решавал или поне съм се опитал :)">
-    <meta name="author" content="Иван Попов">
+    <meta name="description" content="C# for Dummies are the poblems from The C# Book of The Telerik Academy, their guidelines and the solutions, which I wrote or tried to :)">
+    <meta name="author" content="Ivan Popov">
     <meta name="thumbnail" content="http://localhost:49690/Resources/ivanpopov.jpg" />
     <link rel="image_src" href="http://localhost:49690/Resources/ivanpopov.jpg" />
 }
 
 <h1>C# For Dummies</h1>
-<h2>Глава 8. Бройни системи</h2>
-<span class="tab"></span>1. Превърнете числата 151, 35, 43 и 251 в двоична бройна система.<br /><br />
-<span class="tab"></span>Упътване: Използвайте методите за превръщане от една бройна система в друга. Можете да сверите резултатите си с калкулатора на Windows, който поддържа работа с бройни системи след превключване в режим "Scientific".<br /><br /><span class="tab"></span>Решение: <br />
+<h2>Chapter 8. Numeral Systems</h2>
+<span class="tab"></span>1. Convert the numbers 151, 35, 43, 251, 1023 and 1024 to the <b>binary numeral system</b>.<br /><br />
+<span class="tab"></span>Guidelines: You can check your results with the help of the Windows built-in calculator, which supports numeral systems in <b>"Programmer" mode</b>. The results are: 10010111, 100011, 101011, 11111011, 1111111111 and 10000000000<br /><br /><span class="tab"></span>Solution: <br />
 <span class="tab"></span>
 <div class="code">
     <span class="Modifier">static</span>&nbsp;<span class="ValueType">void</span>&nbsp;Main(<span class="ReferenceType">string</span>[]&nbsp;args)<br />
@@ -25,9 +25,9 @@
     }
 </div>
 <hr>
-<span class="tab"></span>2. Превърнете числото 1111010110011110(2) в шестнадесетична и в десетична бройна система.<br /><br />
-<span class="tab"></span>Упътване: Погледнете упътването за предходната задача.<br /><br />
-<span class="tab"></span>Решение:  <br />
+<span class="tab"></span>2. Convert the number 1111010110011110(2) to <b>hexadecimal</b> and <b>decimal</b> numeral systems.<br /><br />
+<span class="tab"></span>Guidelines: Like the previous exercise. Result: F59E(16) and 62878(10).<br /><br />
+<span class="tab"></span>Solution:  <br />
 <div class="code">
     <span class="Modifier">static</span>&nbsp;<span class="ValueType">void</span>&nbsp;Main(<span class="ReferenceType">string</span>[]&nbsp;args)<br />
     {<br />
@@ -39,9 +39,9 @@
     }
 </div>
 <hr>
-<span class="tab"></span>3. Превърнете шестнайсетичните числа 2A3E, FA, FFFF, 5A0E9 в двоична и десетична бройна система.<br /><br />
-<span class="tab"></span>Упътване: Погледнете упътването за предходната задача.<br /><br />
-<span class="tab"></span>Решение: <br />
+<span class="tab"></span>3. Convert the hexadecimal numbers FA, 2A3E, FFFF, 5A0E9 to <b>binary</b> and <b>decimal</b> numeral systems.<br /><br />
+<span class="tab"></span>Guidelines: Like the previous exercise. The results are: FA(16) = 250(10) = 11111010(2), 2A3E(16) = 10814(10) = 10101000111110(2), FFFF(16) = 65535(10) = 1111111111111111(2) and 5A0E9(16) = 368873(10) = 1011010000011101001(2).<br /><br />
+<span class="tab"></span>Solution: <br />
 <div class="code">
     <span class="Modifier">static</span>&nbsp;<span class="ValueType">void</span>&nbsp;conversion(<span class="ReferenceType">string</span>&nbsp;value)<br />
     {<br />
@@ -60,9 +60,9 @@
     }
 </div>
 <hr>
-<span class="tab"></span>4. Да се напише програма, която преобразува десетично число в двоично.<br /><br />
-<span class="tab"></span>Упътване: Правилото е "делим на 2 и долепяме остатъците в обратен ред". За делене с остатък използваме оператора %.<br /><br />
-<span class="tab"></span>Решение: <br />
+<span class="tab"></span>4. Write a program that converts a <b>decimal number to binary one</b>.<br /><br />
+<span class="tab"></span>Guidelines: The rule is <b>"divide by 2 and concatenate the remainders in reversed order"</b>. For division with a remainder we use the % operator. You can cheat by invoking <code>Convert.ToString(numDecimal, 2) </code>.<br /><br />
+<span class="tab"></span>Solution: <br />
 <div class="code">
     <span class="Modifier">static</span>&nbsp;<span class="ValueType">void</span>&nbsp;Main(<span class="ReferenceType">string</span>[]&nbsp;args)<br />
     {<br />
@@ -73,9 +73,9 @@
     }
 </div>
 <hr>
-<span class="tab"></span>5. Да се напише програма, която преобразува двоично число в десе­тично.<br /><br />
-<span class="tab"></span>Упътване: Започнете от сума 0. Умножете най-десния бит с 1 и го прибавете към сумата. Следващия бит вляво умножете по 2 и добавете към сумата. Следващия бит отляво умножете по 4 и добавете към сумата и т.н.<br /><br />
-<span class="tab"></span>Решение: <br />
+<span class="tab"></span>5. Write a program that converts a <b>binary number to decimal one</b><br /><br />
+<span class="tab"></span>Guidelines: Start with a <b>sum of 0</b>. Multiply the <b>right-most bit</b> with <b>1</b> and add it to the sum. Multiply the <b>next bit</b> on the left by <b>2</b> and add it to the sum. Multiply the <b>next bit</b> on the left by <b>4</b>, the <b>next</b> by <b>8</b> and so on. You can cheat by invoking <code>Convert.ToInt32(binaryNumAsString, 2) </code><br /><br />
+<span class="tab"></span>Solution: <br />
 <div class="code">
     <span class="Modifier">static</span>&nbsp;<span class="ValueType">void</span>&nbsp;Main(<span class="ReferenceType">string</span>[]&nbsp;args)<br />
     {<br />
@@ -86,9 +86,9 @@
     }
 </div>
 <hr>
-<span class="tab"></span>6. Да се напише програма, която преобразува десетично число в шестнадесетично.<br /><br />
-<span class="tab"></span>Упътване:  Правилото е "делим на основата на системата (16) и долепяме остатъ­ците в обратен ред". Трябва да си напишем логика за отпечатване на шестнайсетична цифра по дадена стойност между 0 и 15.<br /><br />
-<span class="tab"></span>Решение: <br />
+<span class="tab"></span>6. Write a program that converts a <b>decimal number to hexadecimal one</b>.<br /><br />
+<span class="tab"></span>Guidelines:  The rule is <b>"divide by the base of the system (16) and concatenate the remainders in reversed order"</b>. A logic that gets a hexadecimal digit (0…F) by decimal number (0…15) should also be implemented. You can cheat by invoking <code>num.ToString("X")</code>.<br /><br />
+<span class="tab"></span>Solution: <br />
 <div class="code">
     <span class="Modifier">static</span>&nbsp;<span class="ValueType">void</span>&nbsp;Main(<span class="ReferenceType">string</span>[]&nbsp;args)<br />
     {<br />
@@ -99,9 +99,9 @@
     }
 </div>
 <hr>
-<span class="tab"></span>7. Да се напише програма, която преобразува шестнадесетично число в десетично.<br /><br />
-<span class="tab"></span>Упътване: Започнете от сума 0. Умножете най-дясната цифра с 1 и я прибавете към сумата. Следващата цифра вляво умножете по 16 и я добавете към сумата. Следващата цифра вляво умножете по 16*16 и я добавете към сумата и т.н. до най-лявата шестнайсетична цифра.<br /><br />
-<span class="tab"></span>Решение: <br />
+<span class="tab"></span>7. Write a program that converts a <b>hexadecimal number to decimal one</b>.<br /><br />
+<span class="tab"></span>Guidelines: Start with a <b>sum of 0</b>. Multiply the <b>right-most</b> digit with <b>1</b> and add it to the sum. Multiply the <b>next digit</b> to the left by <b>16</b> and add it to the sum. Multiply the <b>next digit</b> by <b>16*16</b>, the <b>next</b> by <b>16*16*16</b> and so on. You can cheat by invoking <code>Convert.ToInt32(hexNumAsString, 16) </code>.<br /><br />
+<span class="tab"></span>Solution: <br />
 <div class="code">
     <span class="Modifier">static</span>&nbsp;<span class="ValueType">void</span>&nbsp;Main(<span class="ReferenceType">string</span>[]&nbsp;args)<br />
     {<br />
@@ -112,9 +112,9 @@
     }
 </div>
 <hr>
-<span class="tab"></span>8. Да се напише програма, която преобразува шестнадесетично число в двоично.<br /><br />
-<span class="tab"></span>Упътване: Ползвайте бързия начин за преминаване между шестнайсетична и двоична бройна система (всяка шестнайсетична цифра съответства на 4 двоични бита).<br /><br />
-<span class="tab"></span>Решение: <br />
+<span class="tab"></span>8. Write a program that converts a <b>hexadecimal number to binary one. </b><br /><br />
+<span class="tab"></span>Guidelines: Use the fast method for transitioning between hexadecimal and binary numeral system (<b>each hexadecimal digit turns to 4 binary bits</b>).<br /><br />
+<span class="tab"></span>Solution: <br />
 <div class="code">
     <span class="Modifier">static</span>&nbsp;<span class="ValueType">void</span>&nbsp;Main(<span class="ReferenceType">string</span>[]&nbsp;args)<br />
     {<br />
@@ -125,9 +125,9 @@
     }
 </div>
 <hr>
-<span class="tab"></span>9. Да се напише програма, която преобразува двоично число в шестна­десетично.<br /><br />
-<span class="tab"></span>Упътване: Ползвайте бързия начин за преминаване между двоична и шестнайсе­тична бройна система (всяка шестнайсетична цифра съответства на 4 двоични бита).<br /><br />
-<span class="tab"></span>Решение: <br />
+<span class="tab"></span>9. Write a program that converts a <b>binary number to hexadecimal one</b>.<br /><br />
+<span class="tab"></span>Guidelines: Use the fast method for transitioning from binary to hexadecimal numeral system (<b>each 4 binary bits correspond to a hexadecimal digit</b>).<br /><br />
+<span class="tab"></span>Solution: <br />
 <div class="code">
     <span class="Modifier">static</span>&nbsp;<span class="ValueType">void</span>&nbsp;Main(<span class="ReferenceType">string</span>[]&nbsp;args)<br />
     {<br />
@@ -138,21 +138,20 @@
     }
 </div>
 <hr>
-<span class="tab"></span>10. Да се напише програма, която преобразува двоично число в десетично по схемата на Хорнер.<br /><br />
-<span class="tab"></span>Упътване: Приложете директно схемата на Хорнер.<br /><br />
-<span class="tab"></span>Решение: <br />
+<span class="tab"></span>10. Write a program that converts a <b>binary number to decimal</b> using the Horner scheme.<br /><br />
+<span class="tab"></span>Guidelines: Directly apply the Horner scheme.<br /><br />
+<span class="tab"></span>Solution: <br />
 <span class="tab"></span><a href="https://github.com/ivanpop/CS-for-Dummies/blob/master/Chapter%208%20Solution%2010/Program.cs" target="_blank"><b><u>Link</u></b></a><hr>
-<span class="tab"></span>11.  Да се напише програма, която преобразува римските числа в арабски.<br /><br />
-<span class="tab"></span>Упътване: Сканирайте цифрите на римското число отляво надясно и ги добавяйте към сума, която първоначално е инициализирана с 0. При обработката на всяка римска цифра я взимайте с положителен или отрицателен знак в зависимост от следващата цифра (дали има по-малка или по-голяма десетична стойност).<br /><br />
-<span class="tab"></span>Решение: <br />
+<span class="tab"></span>11.  Write a program that converts <b>Roman digits to Arabic</b> ones.<br /><br />
+<span class="tab"></span>Guidelines: <b>Scan the digits of the Roman number</b> from left to right and add them up to a sum, which is initialized with a 0. When processing each Roman digit, take it with a positive or negative sign, <b>depending on the digit after it</b> (whether it has a bigger or smaller decimal value).<br /><br />
+<span class="tab"></span>Solution: <br />
 <span class="tab"></span><a href="https://github.com/ivanpop/CS-for-Dummies/blob/master/Chapter%208%20Solution%2011/Program.cs" target="_blank"><b><u>Link</u></b></a><hr>
-<span class="tab"></span>12.  Да се напише програма, която преобразува арабските числа в римски.<br /><br />
-<span class="tab"></span>Упътване: Имаме абсолютно аналогични съответствия на числата 10, 20, ..., 90 с тяхното представяне с римските цифри "X", "L" и "C", нали? Имаме аналогични съответствия между числата 100, 200, ..., 900 и тяхното представяне с римските цифри "C", "D" и "M" и т.н. <br />
-<span class="tab"></span>Сега сме готови да преобразуваме числото N в римска бройна система. То трябва да е в интервала [1...3999], иначе съобщаваме за грешка. Първо отделяме хилядите (N / 1000) и ги заместваме с римския им еквивалент. След това отделяме стотиците ((N / 100) % 10) и ги заместваме с римския им еквивалент и т.н.<br /><br />
-<span class="tab"></span>Решение: <br />
+<span class="tab"></span>12.  Write a program that converts <b>Arabic digits to Roman ones</b>.<br /><br />
+<span class="tab"></span>Guidelines: We have exactly the same correspondence for the numbers <b>10, 20, …, 90</b> with their Roman representation <b>"X", "L" and "C"</b>. The same is valid for the numbers <b>100, 200, …, 900</b> and their Roman representation with <b>"C", "D" and "M"</b> and so on. <br /><span class="tab"></span>We are now ready to <b>convert the number N into the Roman numeral system</b>. It must be in the range [1…3999], otherwise we should report an error. First we separate the thousands (N / 1000) and replace them with their Roman counterpart. After that we separate the hundreds (N / 100) % 10) and separate them with their Roman counterpart and so on.<br /><br />
+<span class="tab"></span>Solution: <br />
 <span class="tab"></span><a href="https://github.com/ivanpop/CS-for-Dummies/blob/master/Chapter%208%20Solution%2012/Program.cs" target="_blank"><b><u>Link</u></b></a><hr>
-<span class="tab"></span>13. Да се напише програма, която по зададени N, S, D преобразува числото N от бройна система с основа S към бройна система с основа D.<br /><br />
-<span class="tab"></span>Упътване: Можете да прехвърлите числото от бройна система с онова S към бройна система с онова 10, а после от бройна система с основа 10 към бройна система с онова D.<br /><br />
-<span class="tab"></span>Решение: <br />
+<span class="tab"></span>13. Write a program that by given N, S, D converts the number N from an S-based numeral system to a D based numeral system.<br /><br />
+<span class="tab"></span>Guidelines: You can convert first from <b>S-based system to decimal number</b> and then from decimal number to <b>D-based system</b>.<br /><br />
+<span class="tab"></span>Solution: <br />
 <span class="tab"></span><a href="https://github.com/ivanpop/CS-for-Dummies/blob/master/Chapter%208%20Solution%2013/Program.cs" target="_blank"><b><u>Link</u></b></a><br /><hr>
-<span class="tab"></span><a href="javascript:history.back()">&#8592; Обратно</a>
+<span class="tab"></span><a href="javascript:history.back()">&#8592; Back</a>
