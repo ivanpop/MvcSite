@@ -1,21 +1,21 @@
 ﻿@{
     ViewBag.Title = "C# For Dummies";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+    Layout = "~/Views/Shared/_LayoutEN.cshtml";
 }
 
 @section ExtraHeadContent {
-    <meta name="description" content="C# for Dummies представлява условията на задачите от книгата за C# на Академия Телерик и техните упътванията, като аз съм ги решавал или поне съм се опитал :)">
-    <meta name="author" content="Иван Попов">
+    <meta name="description" content="C# for Dummies are the poblems from The C# Book of The Telerik Academy, their guidelines and the solutions, which I wrote or tried to :)">
+    <meta name="author" content="Ivan Popov">
     <meta name="thumbnail" content="http://localhost:49690/Resources/ivanpopov.jpg" />
     <link rel="image_src" href="http://localhost:49690/Resources/ivanpopov.jpg" />
 }
 
 <h1>C# For Dummies</h1>
 
-<h2> Глава 9. Методи</h2>
-<span class="tab"></span>1. Напишете метод, който при подадено име отпечатва в конзолата <code>"Hello, <name>!"</code> (например <code>"Hello, Peter!" </code>). <br /><br />
-<span class="tab"></span>Упътване: Използвайте метод с параметър <code>string</code>. Ако ви е интересно, вместо да правите програма, която да тества дали даден метод работи коректно, можете да потърсите в Интернет информация за "unit testing" и да си напишете собствени unit тестове върху методите, които създавате. За всички добри софтуерни продукти се пишат unit тестове.<br /><br />
-<span class="tab"></span>Решение: <br />
+<h2>Chapter 9. Methods</h2>
+<span class="tab"></span>1. Write a method that by given name prints on the console <code>"Hello, <name>!"</code> (for example:  <code>"Hello, Peter!" </code>).<br /><br />
+<span class="tab"></span>Guidelines: Use a method that takes the name as parameter of type <code>string</code>.<br /><br />
+<span class="tab"></span>Solution: <br />
 <div class="code">
     <span class="ReferenceType">class</span>&nbsp;Program<br />
     {<br />
@@ -32,56 +32,57 @@
     }
 </div>
 <hr>
-<span class="tab"></span>2. Създайте метод <code>GetMax()</code> с два целочислени (<code>int</code>) параметъра, който връща по-голямото от двете числа. Напишете програма, която прочита три цели числа от конзолата и отпечатва най-голямото от тях, изпол­звайки метода <code>GetMax()</code>.<br /><br />
-<span class="tab"></span>Упътване: Използвайте свойството <code>Max(a, b, c) = Max(Max(a, b), c)</code>.<br /><br />
-<span class="tab"></span>Решение:  <br />
+<span class="tab"></span>2. Create a method <code>GetMax()</code> with two integer (<code>int</code>) parameters, that returns maximal of the two numbers. Write a program that reads three numbers from the console and prints the biggest of them. Use the <code>GetMax()</code> method you just created.<br /><br />
+<span class="tab"></span>Guidelines: Use the expression <code>Max(a, b, c) = Max(Max(a, b), c)</code>.<br /><br />
+<span class="tab"></span>Solution:  <br />
 <span class="tab"></span><a href="https://github.com/ivanpop/CS-for-Dummies/blob/master/Chapter%209%20Solution%202/Program.cs" target="_blank"><b><u>Link</u></b></a><hr>
-<span class="tab"></span>3. Напишете метод, който връща английското наименование на послед­ната цифра от дадено число. Примери: за числото 512 отпечатва "<code>two</code>"; за числото 1024 – "<code>four</code>".<br /><br />
-<span class="tab"></span>Упътване: Използвайте остатъка при деление на 10 и <code>switch</code> конструкцията.<br /><br />
-<span class="tab"></span>Решение: <br />
+<span class="tab"></span>3. Write a method that returns <b>the English name of the last digit</b> of a given number. Example: for 512 prints "two"; for 1024 prints "four"<br /><br />
+<span class="tab"></span>Guidelines: Use the reminder of <b>division by 10</b> and then a <code>switch</code> statement.<br /><br />
+<span class="tab"></span>Solution: <br />
 <span class="tab"></span><a href="https://github.com/ivanpop/CS-for-Dummies/blob/master/Chapter%209%20Solution%203/Program.cs" target="_blank"><b><u>Link</u></b></a><hr>
-<span class="tab"></span>4. Напишете метод, който намира колко пъти дадено число се среща в даден масив. Напишете програма, която проверява дали този метод работи правилно.<br /><br />
-<span class="tab"></span>Упътване: Методът трябва да приема като параметър масив от числа (<code>int[]</code>) и търсеното число (<code>int</code>).<br /><br />
-<span class="tab"></span>Решение: <br />
+<span class="tab"></span>4. Write a method that finds <b>how many times certain number can be found in a given array</b>.<br /><br />
+<span class="tab"></span>Guidelines: The method must take as parameter an array of integer numbers (<code>int[]</code>) and the number that has to be counted (<code>int</code>).<br /><br />
+<span class="tab"></span>Solution: <br />
 <span class="tab"></span><a href="https://github.com/ivanpop/CS-for-Dummies/blob/master/Chapter%209%20Solution%204/Program.cs" target="_blank"><b><u>Link</u></b></a><hr>
-<span class="tab"></span>5. Напишете метод, който проверява дали елемент, намиращ се на дадена позиция от масив, е по-голям, или съответно по-малък от двата му съседа. Тествайте метода дали работи коректно.<br /><br />
-<span class="tab"></span>Упътване: Елементите на първа и последна позиция в масива, ще бъдат сравнявани съответно само с десния и левия си съсед.<br /><br />
-<span class="tab"></span>Решение: <br />
+<span class="tab"></span>5. Write a method that checks whether an element, from a certain position in an array is <b>greater than its two neighbours</b>.<br /><br />
+<span class="tab"></span>Guidelines:  Just <b>perform a check</b>. The elements of the first and the last position in the array will be compared only with their left and right neighbor.<br /><br />
+<span class="tab"></span>Solution: <br />
 <span class="tab"></span><a href="https://github.com/ivanpop/CS-for-Dummies/blob/master/Chapter%209%20Solution%205/Program.cs" target="_blank"><b><u>Link</u></b></a><hr>
-<span class="tab"></span>6. Напишете метод, който връща позицията на първия елемент на масив, който е по-голям от двата свои съседи едновременно, или -1, ако няма такъв елемент.<br /><br />
-<span class="tab"></span>Упътване:  Модифицирайте метода, имплементиран в предходната задача.<br /><br />
-<span class="tab"></span>Решение: <br />
+<span class="tab"></span>6. Write a method that returns the position of <b>the first occurrence</b> of an element from an array, such that it is greater than its two neighbors simultaneously. Otherwise the result must be -1.<br /><br />
+<span class="tab"></span>Guidelines:  Invoke the method from the <b>previous problem</b> in a <code>for</code>-loop.<br /><br />
+<span class="tab"></span>Solution: <br />
 <span class="tab"></span><a href="https://github.com/ivanpop/CS-for-Dummies/blob/master/Chapter%209%20Solution%206/Program.cs" target="_blank"><b><u>Link</u></b></a><hr>
-<span class="tab"></span>7. Напишете метод, който отпечатва цифрите на дадено десетично число в обратен ред. Например 256, трябва да бъде отпечатано като 652.<br /><br />
-<span class="tab"></span>Упътване: Има два начина: <br />
-<span class="tab"></span>Първи начин: Нека числото е <code>num</code>. Докато <code>num ≠ 0</code> отпечатваме последната му цифра (<code>num % 10</code>) и след това разделяме <code>num</code> на 10. <br />
-<span class="tab"></span>Втори начин: преобразуваме числото в <code>string</code> и го отпечатваме отзад напред чрез <code>for</code> цикъл.<br /><br />
-<span class="tab"></span>Решение: <br />
+<span class="tab"></span>7. Write a method that prints the digits of a given decimal number in a reversed order. For example 256, must be printed as 652.<br /><br />
+<span class="tab"></span>Guidelines: There are two solutions: <br />
+<span class="tab"></span><b>First solution</b>: Let the number is num. So while <code>num ≠ 0</code> we print its last digit (<code>num % 10</code>) and then divide <code>num</code> by 10. <br />
+<span class="tab"></span><b>Second solution</b>: Convert the number into a string <code>string</code> and print it in a reverse order with a <code>for</code>-loop. This is a bit cheater’s approach.<br /><br />
+<span class="tab"></span>Solution: <br />
 <span class="tab"></span><a href="https://github.com/ivanpop/CS-for-Dummies/blob/master/Chapter%209%20Solution%207/Program.cs" target="_blank"><b><u>Link</u></b></a><hr>
-<span class="tab"></span>8. Напишете метод, който пресмята сумата на две цели положителни цели числа. Числата са представени като масив от цифрите си, като последната цифра (единиците) са записани в масива под индекс 0. Направете така, че метода да работи за числа с дължина до 10 000 цифри.<br /><br />
-<span class="tab"></span>Упътване: Трябва да имплементирате собствен метод за умножение на големи числа. На нулева позиция в масива пазете единиците, на първа позиция – десетиците и т.н. Когато събирате 2 големи числа, единиците на сумата ще е (<code>firstNumber[0] + secondNumber[0]) % 10</code>, десетиците ще са равни на (<code>firstNumber[1] + secondNumber[1]) % 10 + (firstNumber[0] + secondNumber[0])/10</code> и т.н.<br /><br />
-<span class="tab"></span>Решение: <br />
+<span class="tab"></span>8. Write a method that calculates the <b>sum of two very long positive integer numbers</b>. The numbers are represented as <b>array digits</b> and the last digit (the ones) is stored in the array at index 0. Make the method work for all numbers with length up to 10,000 digits.<br /><br />
+<span class="tab"></span>Guidelines: The reader must implement own method that <b>calculates the sum of very big numbers</b>. The digits on position zero will keep the ones; the digit on the first position will keep the tenths and so on. When two very big numbers are about to be calculated, the ones of their sum will be equal to (<code>firstNumber[0] + secondNumber[0]) % 10</code>, the tenths on other side will be equal to (<code>firstNumber[1] + secondNumber[1]) % 10 + (firstNumber[0] + secondNumber[0])/10</code> and so on.<br /><br />
+<span class="tab"></span>Solution: <br />
 <span class="tab"></span><a href="https://github.com/ivanpop/CS-for-Dummies/blob/master/Chapter%209%20Solution%208/Program.cs" target="_blank"><b><u>Link</u></b></a><hr>
-<span class="tab"></span>9. Напишете метод, който намира най-големия елемент в част от масив. Използвайте метода за да сортирате възходящо/низходящо даден масив.<br /><br />
-<span class="tab"></span>Упътване: Първо напишете метод, който намира максималния елемент в целия масив, и след това го модифицирайте да намира такъв елемент от даден интервал.<br /><br />
-<span class="tab"></span>Решение: <br />
+<span class="tab"></span>9. Write a method that finds the biggest element of an array. Use that method to implement sorting in descending order.<br /><br />
+<span class="tab"></span>Guidelines: First write a method that finds the <b>biggest element in array</b> and then modify it to find the biggest element in <b>given range of the array</b>, e.g. in the elements at indexes [3…10]. Finally find the <b>biggest number in the range [1…n-1] </b> and <b>swap it with the first element</b>, then find the biggest element in the range [2…n-1] and swap it with the second element of the array and so on. Think when the algorithm should finish.<br /><br />
+<span class="tab"></span>Solution: <br />
 <span class="tab"></span><a href="https://github.com/ivanpop/CS-for-Dummies/blob/master/Chapter%209%20Solution%209/Program.cs" target="_blank"><b><u>Link</u></b></a><hr>
-<span class="tab"></span>10. Напишете програма, която пресмята и отпечатва <code>n! </code> за всяко n в интервала [1…100].<br /><br />
-<span class="tab"></span>Упътване: Трябва да имплементирате собствен метод за умножение на големи цели числа, тъй като 100! не може да се събере в <code>long</code>. Можете да представите числата в масив в обратен ред, с по една цифра във всеки елемент. Например числото 512 може да се представи като {2, 1, 5}. След това умножението можете да реализирате, както сте учили в училище (умножавате цифра по цифра и събирате резултатите с отместване на разрядите). <br />
-<span class="tab"></span>Друг, по-лесен вариант да работите с големи числа като 100!, е чрез библиотеката <code>System.Numerics.dll</code>, която можете да използвате в проектите си като преди това добавите референция към нея. Потърсете информация в Интернет как да използвате библиотеката и класът <code>System.Numerics.BigInteger</code>.<br /><br />
-<span class="tab"></span>Решение: <br />
+<span class="tab"></span>10. Write a program that calculates and prints the <code>n! </code> for any n in the range <code> [1…100] </code>.<br /><br />
+<span class="tab"></span>Guidelines: The reader must implement own method that calculates the <b>product of very big numbers</b>, because the value of <code>100! </code> does not fit in variable of type <code>ulong</code> or <code>decimal</code>. The numbers can be represented in an array of reversed digits (one digit in each element). For example, the number <code>512</code> can be represented as <code>{2, 1, 5}</code>. Then the multiplication can be implemented in the way done in the elementary school (multiply digit by digit and then calculate the sum).
+Another easier way to work with extremely large numbers such as <code>100! </code> is by using the library <code>System.Numerics.dll</code> (you have to add a reference to it in your project). Look for Information in internet about how to use the class <code>System.Numerics.BigInteger</code>.
+Finally calculate in a loop <code>k! </code> for <code>k = 1, 2, …, n</code>.<br /><br />
+<span class="tab"></span>Solution: <br />
 <span class="tab"></span><a href="https://github.com/ivanpop/CS-for-Dummies/blob/master/Chapter%209%20Solution%2010/Program.cs" target="_blank"><b><u>Link</u></b></a><hr>
-<span class="tab"></span>11.  Напишете програма, която решава следните задачи: <br />
-<span class="tab2"></span>- Обръща последователността на цифрите на едно число. <br />
-<span class="tab2"></span>- Пресмята средното аритметично на дадена поредица от числа. <br />
-<span class="tab2"></span>- Решава линейното уравнение <code>a * x + b = 0</code>.<br />
-<span class="tab"></span>Създайте подходящи методи за всяка една от задачите. <br />
-<span class="tab"></span>Напишете програмата така, че на потребителя да му бъде изведено текстово меню, от което да избира коя от задачите да решава. <br />
-<span class="tab"></span>Направете проверка на входните данни: <br />
-<span class="tab2"></span>- Десетичното число трябва да е неотрицателно. <br />
-<span class="tab2"></span>- Редицата не трябва да е празна. <br />
-<span class="tab2"></span>- Коефициентът a не трябва да е 0.<br /><br />
-<span class="tab"></span>Упътване: Създайте първо необходимите ви методи. Менюто реализирайте чрез извеждане на списък от номерирани действия (1 - обръщане, 2 - средно аритметично, 3 - уравнение) и избор на число между 1 и 3.<br /><br />
-<span class="tab"></span>Решение: <br />
-<span class="tab"></span><a href="https://github.com/ivanpop/CS-for-Dummies/blob/master/Chapter%209%20Solution%2011/Program.cs" target="_blank"><b><u>Link</u></b></a><br /><hr>
-<span class="tab"></span><a href="javascript:history.back()">&#8592; Обратно</a>
+<span class="tab"></span>11. Write a program that solves the following tasks: <br />
+<span class="tab2"></span>- Put the digits from an integer number into a reversed order.<br />
+<span class="tab2"></span>- Calculate the average of given sequence of numbers.<br />
+<span class="tab2"></span>- Solve the linear equation <code>a * x + b = 0</code>.<br />
+    <span class="tab"></span>Create appropriate <b>methods</b> for each of the above tasks.<br />
+    <span class="tab"></span>Make the program show a <b>text menu</b> to the user. By choosing an option of that menu, the user will be able to choose which task to be invoked.<br />
+    <span class="tab"></span>Perform validation of the input data:<br />
+    <span class="tab2"></span>- The integer number must be a positive in the range [1…50,000,000].<br />
+    <span class="tab2"></span>-  The sequence of numbers cannot be empty.<br />
+    <span class="tab2"></span>- The coefficient a must be non-zero.<br /><br />
+    <span class="tab"></span>Guidelines: Firstly, create the necessary <b>methods</b>. To <b>create the menu</b> display a list in which the actions are represented as numbers (1 – reverse, 2 – average, 3 – equation). Ask the user to choose from 1 to 3.<br /><br />
+    <span class="tab"></span>Solution: <br />
+    <span class="tab"></span><a href="https://github.com/ivanpop/CS-for-Dummies/blob/master/Chapter%209%20Solution%2011/Program.cs" target="_blank"><b><u>Link</u></b></a><br /><hr>
+    <span class="tab"></span><a href="javascript:history.back()">&#8592; Back</a>
