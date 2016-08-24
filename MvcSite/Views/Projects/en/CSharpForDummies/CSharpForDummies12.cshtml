@@ -1,47 +1,47 @@
 ﻿@{
     ViewBag.Title = "C# For Dummies";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+    Layout = "~/Views/Shared/_LayoutEN.cshtml";
 }
 
 @section ExtraHeadContent {
-    <meta name="description" content="C# for Dummies представлява условията на задачите от книгата за C# на Академия Телерик и техните упътванията, като аз съм ги решавал или поне съм се опитал :)">
-    <meta name="author" content="Иван Попов">
+    <meta name="description" content="C# for Dummies are the poblems from The C# Book of The Telerik Academy, their guidelines and the solutions, which I wrote or tried to :)">
+    <meta name="author" content="Ivan Popov">
     <meta name="thumbnail" content="http://localhost:49690/Resources/ivanpopov.jpg" />
     <link rel="image_src" href="http://localhost:49690/Resources/ivanpopov.jpg" />
 }
 
 <h1>C# For Dummies</h1>
-<h2>Глава 12. Обработка на изключения</h2>
-<span class="tab"></span>1. Да се намерят всички стандартни изключения от йерархията на <code>System.IO.IOException</code>.<br /><br />
-<span class="tab"></span>Упътване: Потърсете в MSDN. Най-лесният начин да направите това е да напишете в Google \"IOException MSDN\".<br /><br />
-<span class="tab"></span>Решение:<br />
+<h2>Chapter 12. Exception Handling</h2>
+<span class="tab"></span>1. Find out all exceptions in the <code>System.IO.IOException</code> <b>hierarchy</b>.<br /><br />
+<span class="tab"></span>Guidelines: Search in MSDN. The easiest way to do this is to search in Google for <b>"IOException MSDN"</b> (without the quotes).<br /><br />
+<span class="tab"></span>Solution:<br />
 <span class="tab"></span><a href="https://msdn.microsoft.com/en-us/library/system.io.ioexception%28v=vs.110%29.aspx" target="_blank"><b><u>Link</u></b></a><hr>
-<span class="tab"></span>2. Да се намерят всички стандартни изключения от йерархията на <code>System.IO.FileNotFoundException</code>.<br /><br />
-<span class="tab"></span>Упътване: Разгледайте упътването за предходната задача.<br /><br />
-<span class="tab"></span>Решение:<br />
+<span class="tab"></span>2. Find out all standard exceptions that are part of the <b>hierarchy</b> holding the class  <code>System.IO.FileNotFoundException</code>.<br /><br />
+<span class="tab"></span>Guidelines: Look at the instructions for the <b>previous task</b>.<br /><br />
+<span class="tab"></span>Solution:<br />
 <span class="tab"></span><a href="https://msdn.microsoft.com/en-us/library/system.io.filenotfoundexception%28v=vs.110%29.aspx" target="_blank"><b><u>Link</u></b></a><hr>
-<span class="tab"></span>3. Да се намерят всички стандартни изключения от йерархията на <code>System.ApplicationException</code>.<br /><br />
-<span class="tab"></span>Упътване: Разгледайте упътването за предходната задача.<br /><br />
-<span class="tab"></span>Решение:<br />
+<span class="tab"></span>3. Find out all standard exceptions from   <code>System.ApplicationException</code> <b>hierarchy</b>.<br /><br />
+<span class="tab"></span>Guidelines: Look at the instructions for the <b>previous task</b>.<br /><br />
+<span class="tab"></span>Solution:<br />
 <span class="tab"></span><a href="https://msdn.microsoft.com/en-us/library/system.applicationexception%28v=vs.110%29.aspx" target="_blank"><b><u>Link</u></b></a><hr>
-<span class="tab"></span>4. Напишете програма, която прочита от конзолата цяло положително число и отпечатва на конзолата корен квадратен от това число. Ако числото е отрицателно или невалидно, да се изпише \"Invalid Number\" на конзолата. Във всички случаи да се принтира на конзолата \"Good Bye\".<br /><br />
-<span class="tab"></span>Упътване: Направете <code>try{} - catch(){} - finally{}</code> конструкция.<br /><br />
-<span class="tab"></span>Решение: <br />
+<span class="tab"></span>4. Write a program that takes a positive integer from the console and prints the <b>square root</b> of this integer. If the input is <b>negative or invalid</b> print \"Invalid Number\" in the console. In all cases print \"Good Bye\".<br /><br />
+<span class="tab"></span>Guidelines: Create a  <code>try{} - catch(){} - finally{}</code> statement.<br /><br />
+<span class="tab"></span>Solution: <br />
 <span class="tab"></span><a href="https://github.com/ivanpop/CS-for-Dummies/tree/master/Chapter%2012%20Solution%204" target="_blank"><b><u>Link</u></b></a><hr>
-<span class="tab"></span>5. Напишете метод <code>ReadNumber(int start, int end)</code>, който въвежда от конзолата число в диапазона <code>[start…end]</code>. В случай на въведено невалидно число или число, което не е в подадения диапазон хвърлете подходящо изключение. Използвайки този метод напишете програма, която въвежда 10 числа <code>a1, a2, …, a10</code>, такива, че <code>1 < a1 < … < a10 < 100</code>.<br /><br />
-<span class="tab"></span>Упътване: При въведено невалидно число може да хвърляте изключението Exception поради липсва на друг клас изключения, който по-точно да описва проблема. Алтернативно можете да дефинирате собствен клас изключение <code>InvalidNumberException</code>.<br /><br />
-<span class="tab"></span>Решение: <br />
+<span class="tab"></span>5. Write a method <code>ReadNumber(int start, int end)</code> that reads an integer from the console in the range [start…end]. In case the input integer is not valid or it is not in the required range throw appropriate exception. Using this method, write a program that takes 10 integers <code>a1, a2, …, a10</code> such that <code>1 < a1 < … < a10 < 100</code>.<br /><br />
+<span class="tab"></span>Guidelines: When invalid number is used we can throw <code>Exception</code> because there is no other exception that can better describe the problem. As an alternative we can define our own exception class called in a way that better describes the problem, e.g <code>InvalidNumberException</code>.<br /><br />
+<span class="tab"></span>Solution: <br />
 <span class="tab"></span><a href="https://github.com/ivanpop/CS-for-Dummies/tree/master/Chapter%2012%20Solution%205" target="_blank"><b><u>Link</u></b></a><hr>
-<span class="tab"></span>6. Напишете метод, който приема като параметър име на текстов файл, прочита съдържанието му и го връща като <code>string</code>. Какво е правилно да направи методът с евентуално възникващите изключения?<br /><br />
-<span class="tab"></span>Упътване:  Прочетете файла ред по ред с класа <code>System.IO.StreamReader</code> и добавяйте редовете в <code>System.Text.StringBuilder</code>. Изхвърляйте всички изключе­ния от метода без да ги прихващате. <br /><br />
-<span class="tab"></span>Решение: <br />
+<span class="tab"></span>6. Write a method that takes as a parameter the name of a <b>text file, reads the file and returns its content as</b> <code>string</code>. What should the method do if and <b>exception is thrown</b>?<br /><br />
+<span class="tab"></span>Guidelines: Read the file line by line with <code>System.IO.StreamReader</code> class and add the rows in <code>System.Text.StringBuilder</code>. Throw all exceptions from the method without catching them. You may cheat and solve the problem in one line of code by using the static method <code>System.IO.File.ReadAllText()</code>.<br /><br />
+<span class="tab"></span>Solution: <br />
 <span class="tab"></span><a href="https://github.com/ivanpop/CS-for-Dummies/tree/master/Chapter%2012%20Solution%206" target="_blank"><b><u>Link</u></b></a><hr>
-<span class="tab"></span>7. Напишете програма, която прочита от потребителя пълен път до даден файл (например C:\Windows\win.ini), прочита съдържанието на файла и го извежда на конзолата. Намерете вMSDN как да използвате метода <code>System.IO.File.ReadAllText(…)</code>. Уверете се, че прихващате всички възможни изключения, които могат да възникнат по време на работа на метода и извеждайте на конзолата съобщения за грешка, разбираеми за обикновения потребител.<br /><br />
-<span class="tab"></span>Упътване: Потърсете всички възможни изключения, които възникват в следствие на работата на метода и за всяко от тях дефинирайте <code>catch</code> блок.<br /><br />
-<span class="tab"></span>Решение:<br />
+<span class="tab"></span>7. Write a program that gets from the user the full path to a file (for example C:\\Windows\\win.ini), reads the content of the file and prints it to the console. Find in MSDN how to us the <code>System.IO.File.ReadAllText(…)</code> method. Make sure all possible exceptions will be caught and a user-friendly message will be printed on the console.<br /><br />
+<span class="tab"></span>Guidelines: Search for all possible exceptions that the method could throw and for all of them define a <code>catch</code> block and print user-friendly message.<br /><br />
+<span class="tab"></span>Solution:<br />
 <span class="tab"></span><a href="https://github.com/ivanpop/CS-for-Dummies/tree/master/Chapter%2012%20Solution%207" target="_blank"><b><u>Link</u></b></a><hr>
-<span class="tab"></span>8. Напишете програма, която изтегля файл от Интернет по даден URL адрес, примерно (http://www.devbg.org/img/Logo-BASD.jpg).<br /><br />
-<span class="tab"></span>Упътване: Потърсете в Интернет статии на тема изтегляне на файл от C#. Ако се затруднявате, потърсете информация и примери за използване конкретно на класа <code>WebClient</code>. Уверете се, че прихващате и обра­ботвате правилно всички изключения, които могат да възникнат. <br /><br />
-<span class="tab"></span>Решение: <br />
+<span class="tab"></span>8. Write a program that <b>downloads a file from Internet</b> by given URL, e.g.  (http://www.devbg.org/img/Logo-BASD.jpg).<br /><br />
+<span class="tab"></span>Guidelines: Search for articles in Internet for "<b>downloading a file with C#</b>" or search for information and examples about using the WebClient class. Make sure you catch and process all <b>exceptions</b> that can be thrown.<br /><br />
+<span class="tab"></span>Solution: <br />
 <span class="tab"></span><a href="https://github.com/ivanpop/CS-for-Dummies/tree/master/Chapter%2012%20Solution%208" target="_blank"><b><u>Link</u></b></a><br /><hr>
-<span class="tab"></span><a href="javascript:history.back()">&#8592; Обратно</a>
+<span class="tab"></span><a href="javascript:history.back()">&#8592; Back</a>

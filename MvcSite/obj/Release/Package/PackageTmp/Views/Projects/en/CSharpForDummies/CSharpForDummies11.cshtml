@@ -1,20 +1,20 @@
 ﻿@{
     ViewBag.Title = "C# For Dummies";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+    Layout = "~/Views/Shared/_LayoutEN.cshtml";
 }
 
 @section ExtraHeadContent {
-    <meta name="description" content="C# for Dummies представлява условията на задачите от книгата за C# на Академия Телерик и техните упътванията, като аз съм ги решавал или поне съм се опитал :)">
-    <meta name="author" content="Иван Попов">
+    <meta name="description" content="C# for Dummies are the poblems from The C# Book of The Telerik Academy, their guidelines and the solutions, which I wrote or tried to :)">
+    <meta name="author" content="Ivan Popov">
     <meta name="thumbnail" content="http://localhost:49690/Resources/ivanpopov.jpg" />
     <link rel="image_src" href="http://localhost:49690/Resources/ivanpopov.jpg" />
 }
 
 <h1>C# For Dummies</h1>
-<h2> Глава 11. Създаване и използване на обекти</h2>
-<span class="tab"></span>1. Напишете програма, която прочита от конзолата година и проверява дали е високосна.<br /><br />
-<span class="tab"></span>Упътване: Използвайте структурата <code>DateTime</code>.<br /><br />
-<span class="tab"></span>Решение: <br />
+<h2>Chapter 11. Creating and Using Objects</h2>
+<span class="tab"></span>Write a program, which reads from the console a year and <b>checks if it is a leap year</b>.<br /><br />
+<span class="tab"></span>Guidelines: Use <b>DateTime.IsLeapYear(year)</b>.<br /><br />
+<span class="tab"></span>Solution:<br />
 <div class="code">
     <span class="Modifier">static</span>&nbsp;<span class="ValueType">void</span>&nbsp;Main(<span class="ReferenceType">string</span>[]&nbsp;args)<br />
     {<br />
@@ -27,9 +27,9 @@
     }
 </div>
 <hr>
-<span class="tab"></span>2. Напишете програма, която генерира и принтира на конзолата 10 случайни числа в интервала [100, 200].<br /><br />
-<span class="tab"></span>Упътване: Използвайте класа <code>Random</code>. Можете да генерирате произволни числа в интервала [0, 100] и към всички да прибавите 100.<br />
-<span class="tab"></span>Решение:<br />
+<span class="tab"></span>2. Write a program, which generates and prints on the console <b>10 random numbers</b> in the range [100, 200].<br /><br />
+<span class="tab"></span>Guidelines: Use the class <b>Random</b>. You may generate random numbers in the range [100, 200] by calling <b>Random.Next(100, 201)</b>. <br />
+<span class="tab"></span>Solution:<br />
 <div class="code">
     <span class="Modifier">static</span>&nbsp;<span class="ValueType">void</span>&nbsp;Main(<span class="ReferenceType">string</span>[]&nbsp;args)<br />
     {<br />
@@ -39,9 +39,9 @@
     }
 </div>
 <hr>
-<span class="tab"></span>3. Напишете програма, която извежда на конзолата кой ден от седмицата е днес.<br /><br />
-<span class="tab"></span>Упътване: Използвайте структурата <code>DateTime</code>.<br /><br />
-<span class="tab"></span>Решение:<br />
+<span class="tab"></span>3. Write a program, which prints, on the console <b>which day of the week is today</b>.<br /><br />
+<span class="tab"></span>Guidelines: Use <b>DateTime.Today.DayOfWeek</b>.<br /><br />
+<span class="tab"></span>Solution:<br />
 <div class="code">
     <span class="Modifier">static</span>&nbsp;<span class="ValueType">void</span>&nbsp;Main(<span class="ReferenceType">string</span>[]&nbsp;args)<br />
     {<br />
@@ -57,14 +57,14 @@
     }
 </div>
 <hr>
-<span class="tab"></span>4. Напишете програма, която извежда на стандартния изход броя на дните, часовете и минутите, които са изтекли от включването на ком­пютъра до момента на изпълнението на програмата. За реализацията изпол­звайте класа <code>Environment</code>.<br /><br />
-<span class="tab"></span>Упътване: Използвайте свойството <code>Environment.TickCount</code>, за да получите броя на изтеклите милисекунди. Използвайте факта, че в една секунда има 1000 милисекунди и пресметнете минутите, часовете и дните.<br /><br />
-<span class="tab"></span>Решение:<br />
+<span class="tab"></span>4. Write a program, which prints on the standard output the <b>count of days, hours, and minutes, which have passes since the computer is started</b> until the moment of the program execution. For the implementation use the class <code>Environment</code>.<br /><br />
+<span class="tab"></span>Guidelines: Use the property <code>Environment.TickCount</code>, in order to get the count of passed milliseconds. Use the fact that one second has 1,000 milliseconds; one minute has 60 seconds; one hour has 60 minutes and one day has 24 hours.<br /><br />
+<span class="tab"></span>Solution:<br />
 <span class="tab"></span><img src="/Resources/CSResources/ch11-4.jpg">
 <hr>
-<span class="tab"></span>5. Напишете програма, която по дадени два катета намира хипотенузата на правоъгълен триъгълник. Реализирайте въвеждане на дължините на катетите от стандартния вход, а за пресмятането на хипотенузата използвайте методи на класа <code>Math</code>.<br /><br />
-<span class="tab"></span>Упътване: Хипотенузата на правоъгълен триъгълник се намира с помощта на известната теорема на Питагор: <code>a<sup>2</sup> + b<sup>2</sup> = c<sup>2</sup></code>, където <code>a</code> и <code>b</code> са двата катета, а <code>c</code> е хипотенузата. Коренувайте двете страни, за да получите формула за дължината на хипотенузата. За реализацията на корену­ването използвайте метода <code>Sqrt(…)</code> на класа <code>Math</code>.<br /><br />
-<span class="tab"></span>Решение: <br />
+<span class="tab"></span>5. Write a program which by given two sides <b>finds the hypotenuse of a right triangle</b>. Implement entering of the lengths of the sides from the standard input, and for the calculation of the hypotenuse use methods of the class <code>Math</code>. <br /><br />
+<span class="tab"></span>Guidelines: The hypotenuse of a rectangular triangle could be found with the <b>Pythagorean Theorem</b>: <code>a<sup>2</sup> + b<sup>2</sup> = c<sup>2</sup></code>, where <code>a</code> and <code>b</code> are the two sides, and <code>c</code> is the hypotenuse. Take square root of the two sides of the equation in order to get the length of the hypotenuse. Use the <code>Sqrt(…)</code> methods of the <code>Math</code> class.<br /><br />
+<span class="tab"></span>Solution:<br />
 <div class="code">
     <span class="Modifier">static</span>&nbsp;<span class="ValueType">void</span>&nbsp;Main(<span class="ReferenceType">string</span>[]&nbsp;args)<br />
     {<br />
@@ -77,49 +77,48 @@
     }
 </div>
 <hr>
-<span class="tab"></span>6. Напишете програма, която пресмята лице на триъгълник по:<br />
-<span class="tab2"></span>a. дължините на трите му страни; <br />
-<span class="tab2"></span>b. дължината на една от страните и височината към нея; <br />
-<span class="tab2"></span>c. дължините на две от страните му и ъгъла между тях в градуси.<br /><br />
-<span class="tab"></span>Упътване:  За първата подточка на задачата използвайте Хероновата формула:<br />
-<span class="tab"></span><img src="/Resources/CSResources/ch11-6-1.gif">, където <img src="/Resources/CSResources/ch11-6-2.gif">.<br /><br />
-<span class="tab"></span>За втората подточка използвайте формулата: <img src="/Resources/CSResources/ch11-6-3.gif">.<br /><br />
-<span class="tab"></span>За третата използвайте формулата: <img src="/Resources/CSResources/ch11-6-4.gif"><br /><br />
-<span class="tab"></span>Решение: <br />
-<span class="tab"></span><a href="https://github.com/ivanpop/CS-for-Dummies/blob/master/Chapter%2011%20Solution%206/Program.cs" target="_blank\"><b><u>Link</u></b></a><hr>
-<span class="tab"></span>7. Дефинирайте свое собствено пространство <code>Chapter11</code> и поставете в него двата класа <code>Cat</code> и <code>Sequence</code>, които използвахме в примерите на текущата тема. Направете още едно собствено пространство с име <code>Chapter11.Examples</code> и в него направете клас, който извиква класовете <code>Cat</code> и <code>Sequence</code>.<br /><br />
-<span class="tab"></span>Упътване: Създайте нов проект във Visual Studio, щракнете с десния бутон върху папката му и изберете от контекстното меню Add -> New Folder. След като въве­дете име на папката и натиснете [Enter], щракнете с десния бутон върху новосъздадената папка и изберете Add -> New Item… От списъка изберете Class, за име на новия клас въведете Cat и натиснете [Add]. Подменете дефиницията на новосъздадения клас с дефиницията, която дадохме в тази тема. Направете същото за класа <code>Sequence</code>.<br /><br />
-<span class="tab"></span>Решение: <br />
-<span class="tab"></span><a href="https://github.com/ivanpop/CS-for-Dummies/tree/master/Chapter%2011%20Solution%207" target="_blank\"><b><u>Link</u></b></a><hr>
-<span class="tab"></span>8. Напишете програма, която създава 10 обекта от тип <code>Cat</code>, дава им имена от вида <code>CatN</code>, където <code>N</code> e уникален пореден номер на обекта, и накрая извиква метода <code>SayMiau()</code> на всеки от тях. За реализацията използвайте вече дефинираното пространство Chapter11.<br /><br />
-<span class="tab"></span>Упътване: Създайте масив с 10 елемента от тип <code>Cat</code>. Създайте в цикъл 10 обекта от тип <code>Cat</code> (използвайте конструктор с параметри), като ги присвоя­вате на съответните елементи от масива. За поредния номер на обек­тите използвайте метода <code>NextValue()</code> на класа <code>Sequence</code>. Накрая отново в цикъл изпълнете метода <code>SayMiau()</code> на всеки от елементите на масива. <br /><br />
-<span class="tab"></span>Решение: <br />
-<span class="tab"></span><a href="https://github.com/ivanpop/CS-for-Dummies/tree/master/Chapter%2011%20Solution%207" target="_blank\"><b><u>Link</u></b></a><hr>
-<span class="tab"></span>9. Напишете програма, която пресмята броя работни дни между днешната дата и дадена друга дата след днешната (включително). Работните дни са всички дни без събота и неделя, които не са официални празници, като по изключение събота може да е работен ден, когато се отра­ботват почивни дни около празниците. Програмата трябва да пази списък от предварително зададени официални празници, както и списък от предварително зададени работни съботи. <br /><br />
-<span class="tab"></span>Упътване: Използвайте класа <code>System.DateTime</code> и методите в него. Можете да завъртите цикъл от днешната дата (<code>DateTime.Now.Date</code>) до крайната дата, увеличавайки последователно деня чрез метода <code>AddDays(1)</code>. <br /><br />
-<span class="tab"></span>Решение: <br />
-<span class="tab"></span><a href="https://github.com/ivanpop/CS-for-Dummies/blob/master/Chapter%2011%20Solution%209/Program.cs" target="_blank\"><b><u>Link</u></b></a><br /><hr>
-<span class="tab"></span>10. Дадена е последователност от цели положителни числа, записани едно след друго като символен низ, разделени с интервал. Да се напише програма, която пресмята сумата им. Пример: "43 68 9 23 318" = 461. <br /><br />
-<span class="tab"></span>Упътване: Използвайте <code>String.Split(' ')</code>, за да разцепите символния низ по интервалите, след което с <code>Int32.Parse(…)</code> можете да извлечете отделните числа от получения масив от символни низове.  <br /><br />
-<span class="tab"></span>Решение: <br />
-<span class="tab"></span><a href="https://github.com/ivanpop/CS-for-Dummies/blob/master/Chapter%2011%20Solution%2010/Program.cs" target="_blank\"><b><u>Link</u></b></a><br /><hr>
-<span class="tab"></span>11. Напишете програма, която генерира случайно рекламно съобщение за някакъв продукт. Съобщенията трябва да се състоят от хвалебст­вена фраза, следвани от хвалебствена случка, следвани от автор (първо и второ име) и град, които се избират от предварително подготвени списъци. Например, нека имаме следните списъци:<br />
-<span class="tab"></span>- Хвалебствени фрази: {"Продуктът е отличен.", "Това е страхотен продукт.", "Постоянно ползвам този продукт.", "Това е най-добрият продукт от тази категория."}.<br />
-<span class="tab"></span>- Хвалебствени случки: {"Вече се чувствам добре.", "Успях да се променя.", "Той направи чудо.", "Не мога да повярвам, но вече се чувствам страхотно.", "Опитайте и вие. Аз съм много доволна."}.<br />
-<span class="tab"></span>- Първо име на автор: {"Диана", "Петя", "Стела", "Елена", "Катя"}.<br />
-<span class="tab"></span>- Второ име на автор: {"Иванова", "Петрова", "Кирова"}.<br />
-<span class="tab"></span>- Градове: {"София", "Пловдив", "Варна", "Русе", "Бургас"}.<br />
-<span class="tab"></span>Тогава програма би могла да изведе следното случайно-генерирано рекламно съобщение:<br />
-<span class="tab"></span><table border="1"><tr><td>Постоянно ползвам този продукт. Опитайте и вие. Аз съм доволна. -– Елена Петрова, Варна</td></tr></table><br />
-<span class="tab"></span>Упътване: Използвайте класа <code>System.Random</code> и неговия метод <code>Next(…)</code>.<br /><br />
-<span class="tab"></span>Решение: <br />
-<span class="tab"></span><a href="https://github.com/ivanpop/CS-for-Dummies/blob/master/Chapter%2011%20Solution%2011/Program.cs" target="_blank\"><b><u>Link</u></b></a><hr>
-<span class="tab"></span>12. Напишете програма, която изчислява стойността на даден числен израз, зададен като стринг. Численият израз се състои от:<br />
-<span class="tab"></span>- реални числа, например 5, 18.33, 3.14159, 12.6;<br />
-<span class="tab"></span>- аритметични оператори: <code>+, -, *, /</code> (със стандартните им приоритети);<br />
-<span class="tab"></span>- математически функции: <code>ln(x), sqrt(x), pow(x,y);</code><br />
-<span class="tab"></span>- скоби за промяна на приоритета на операциите: ( и ).<br />Обърнете внимание, че числовите изрази имат приоритет, например изразът <code>-1 + 2 + 3 * 4 - 0.5 = (-1) + 2 + (3 * 4) - 0.5 = 12.5.</code><br /><br />
-<span class="tab"></span>Упътване: Задачата за пресмятане на числов израз е доста трудна и е малко вероятно да я решите коректно без да прочетете от някъде как се решава. За начало разгледайте статиите в Wikipedia за \"Shunting-yard algorithm\", която описва как се пре­образува израз от нормален в обратен полски запис (postfix notation), и статията за пресмятане на постфиксен израз .<br /><br />
-<span class="tab"></span>Решение: <br />
-<span class="tab"></span><a href="https://github.com/ivanpop/CS-for-Dummies/blob/master/Chapter%2011%20Solution%2012/Program.cs" target="_blank\"><b><u>Link</u></b></a><hr>
-<span class="tab"></span><a href="javascript:history.back()">&#8592; Обратно</a>
+<span class="tab"></span>Write a program which <b>calculates the area of a triangle</b> with the following given:<br />
+<span class="tab"></span><span class="tab"></span>a. Three sides; <br />
+<span class="tab"></span><span class="tab"></span>b. side and the altitude to it;  <br />
+<span class="tab"></span><span class="tab"></span>c. two sides and the angle between them in degrees.<br /><br />
+<span class="tab"></span>Guidelines: For the first sub-problem of the task use the <b>Heron’s Formula</b>:<br />
+<span class="tab"></span><img src="/Resources/CSResources/ch11-6-1.gif">, where <img src="/Resources/CSResources/ch11-6-2.gif">.<br />
+<span class="tab"></span>For the second sub-problem use the <b>formula</b>: <img src="/Resources/CSResources/ch11-6-3.gif">.<br />
+<span class="tab"></span>For the third sub-problem use the <b>formula</b>: <img src="/Resources/CSResources/ch11-6-4.gif">
+<span class="tab"></span>Solution:<br />
+<span class="tab"></span><a href="https://github.com/ivanpop/CS-for-Dummies/blob/master/Chapter%2011%20Solution%206/Program.cs" target="_blank"><b><u>Link</u></b></a><hr>
+<span class="tab"></span>7. Define your own namespace <code>CreatingAndUsingObjects</code> and place in it two classes <code>Cat</code> and <code>Sequence</code>, which we used in the examples of the current chapter. Define one more namespace and make a class, which calls the classes <code>Cat</code> and <code>Sequence</code>, in it. <br /><br />
+<span class="tab"></span>Guidelines: Make a <b>new project in Visual Studio</b>, right click on the folder and choose the menu <b>Add → New Folder</b>. Then enter the name of the folder and press [Enter], right click on the newly made folder and choose <b>Add → New Item…</b> from the list choose <b>Class</b>, for the name of the new class enter Cat and press [Add]. Change the definition of the newly created class with the definition, which we gave to this chapter, to put the classes in a <b>namespace</b>. Make the same to the class <code>Sequence</code>.<br /><br />
+<span class="tab"></span>Solution:<br />
+<span class="tab"></span><a href="https://github.com/ivanpop/CS-for-Dummies/tree/master/Chapter%2011%20Solution%207" target="_blank"><b><u>Link</u></b></a><hr>
+<span class="tab"></span>8. Write a program which creates 10 objects of type Cat, gives them names <code>CatN</code>, where <code>N</code> is a unique serial number of the object, and in the end call the method <code>SayMiau()</code> for each of them. For the implementation use the namespace <code>CreatingAndUsingObjects</code>. <br /><br />
+<span class="tab"></span>Guidelines: Create an array with 10 elements of type <code>Cat</code>. Create 10 objects of type Cat in a loop (use a constructor with parameters) and assign them to the corresponding element of the array. For the serial number of the objects use the method <code>NextValue()</code> of the <code>Sequence</code> class. In the end again in an array use the method <code>SayMiau()</code> for each of the array elements. <br /><br />
+<span class="tab"></span>Solution:<br />
+<span class="tab"></span><a href="https://github.com/ivanpop/CS-for-Dummies/tree/master/Chapter%2011%20Solution%207" target="_blank"><b><u>Link</u></b></a><hr>
+<span class="tab"></span>9. Write a program, which <b>calculates the count of workdays between the current date and another given date</b> after the current (inclusive). Consider that workdays are all days from Monday to Friday, which are not public holidays, except when Saturday is a working day. The program should keep a list of predefined public holidays, as well as a list of predefined working Saturdays.<br /><br />
+<span class="tab"></span>Guidelines: Use the class <code>System.DateTime</code> and the methods in it. You can execute a loop from the current date (<code>DateTime.Now.Date</code>) to the end date, consecutively incrementing the day by the method <code>AddDays(1)</code> and count the working days according to your country (e.g. all days except Saturday and Sunday and a few fixed non-working official holidays).<br /><br />
+<span class="tab"></span>Solution:<br />
+<span class="tab"></span><a href="https://github.com/ivanpop/CS-for-Dummies/blob/master/Chapter%2011%20Solution%209/Program.cs" target="_blank"><b><u>Link</u></b></a><br /><hr>
+<span class="tab"></span>10. You are given a <b>sequence of positive integer numbers</b> given as string of numbers separated by a space. Write a program, which <b>calculates their sum</b>. Example:  "43 68 9 23 318" = 461. <br /><br />
+<span class="tab"></span>Guidelines: Use <code>String.Split(' ')</code> to split the string by spaces. Then use <code>Int32.Parse(…)</code> to extract the separate numbers from the obtained string array as int values and sum them.<br /><br />
+<span class="tab"></span>Solution:<br />
+<span class="tab"></span><a href="https://github.com/ivanpop/CS-for-Dummies/blob/master/Chapter%2011%20Solution%2010/Program.cs" target="_blank"><b><u>Link</u></b></a><br /><hr>
+<span class="tab"></span>11. Write a program, which <b>generates a random advertising message</b> for some product. The message has to consist of laudatory phrase, followed by a laudatory story, followed by author (first and last name) and city, which are selected from predefined lists. For example, let’s have the following lists: <br />
+<span class="tab"></span>- <b>Laudatory phrases</b>: {"The product is excellent.", "This is a great product.", "I use this product constantly.", "This is the best product from this category."}.<br />
+<span class="tab"></span>- <b>Laudatory stories</b>: {"Now I feel better.", "I managed to change.", "It made some miracle.", "I can’t believe it, but now I am feeling great.", "You should try it, too. I am very satisfied."}. <br />
+<span class="tab"></span>- <b>First name</b> of the author: {"Dayan", "Stella", "Hellen", "Kate"}. <br />
+<span class="tab"></span>- <b>Last name</b> of the author: {"Johnson", "Peterson", "Charls"}. <br />
+<span class="tab"></span>- <b>Cities</b>: {"London", "Paris", "Berlin", "New York", "Madrid"}. <br />Then the program would print randomly generated advertising message like the following: <br />
+<table border="1"><tr><td>I use this product constantly. You should try it, too. I am very satisfied. -- Hellen Peterson, Berlin </td></tr></table><br/>
+<span class="tab"></span>Guidelines: Използвайте класа <code>System.Random</code> и неговия метод <code>Next(…)</code>.<br /><br />
+<span class="tab"></span>Solution:<br />
+<span class="tab"></span><a href="https://github.com/ivanpop/CS-for-Dummies/blob/master/Chapter%2011%20Solution%2011/Program.cs" target="_blank"><b><u>Link</u></b></a><hr>
+<span class="tab"></span>12. Write a program, which calculates the value of a given numeral expression given as a string. The numeral expression consists of: <br />
+<span class="tab"></span>- real numbers, for example <code>5, 18.33, 3.14159, 12.6;</code><br />
+<span class="tab"></span>- arithmetic operations: <code>+, -, *, /</code> (with their standard priorities); <br />
+<span class="tab"></span>- mathematical functions: <code>ln(x), sqrt(x), pow(x, y);</code><br />
+<span class="tab"></span>- brackets for changing the priorities of the operations: ( and ). <br />Note that the numeral expressions have priorities, for example the expression  <code>-1 + 2 + 3 * 4 - 0.5 = (-1) + 2 + (3 * 4) - 0.5 = 12.5.</code>
+<span class="tab"></span>Guidelines: <b>Calculating a numeral expression</b> is <b>quite hard</b> and is unlikely a beginner programmer to solve it correctly without external help. As a start check out the article in Wikipedia about the <b>"Shunting-yard algorithm"</b> describing how to convert an expression from to <b>postfix notation</b> (reversed Polish notation), and the article about <b>calculating a postfix expression</b>. There are really much special cases, so be sure to test your solution carefully.<br /><br />
+<span class="tab"></span>Solution:<br />
+<span class="tab"></span><a href="https://github.com/ivanpop/CS-for-Dummies/blob/master/Chapter%2011%20Solution%2012/Program.cs" target="_blank"><b><u>Link</u></b></a><hr>
+<span class="tab"></span><a href="javascript:history.back()">&#8592; Back</a>

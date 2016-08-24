@@ -86,39 +86,39 @@
 <span class="tab"></span>For the second sub-problem use the <b>formula</b>: <img src="/Resources/CSResources/ch11-6-3.gif">.<br />
 <span class="tab"></span>For the third sub-problem use the <b>formula</b>: <img src="/Resources/CSResources/ch11-6-4.gif">
 <span class="tab"></span>Solution:<br />
-<span class="tab"></span><a href="https://github.com/ivanpop/CS-for-Dummies/blob/master/Chapter%2011%20Solution%206/Program.cs" target="_blank\"><b><u>Link</u></b></a><hr>
+<span class="tab"></span><a href="https://github.com/ivanpop/CS-for-Dummies/blob/master/Chapter%2011%20Solution%206/Program.cs" target="_blank"><b><u>Link</u></b></a><hr>
 <span class="tab"></span>7. Define your own namespace <code>CreatingAndUsingObjects</code> and place in it two classes <code>Cat</code> and <code>Sequence</code>, which we used in the examples of the current chapter. Define one more namespace and make a class, which calls the classes <code>Cat</code> and <code>Sequence</code>, in it. <br /><br />
 <span class="tab"></span>Guidelines: Make a <b>new project in Visual Studio</b>, right click on the folder and choose the menu <b>Add → New Folder</b>. Then enter the name of the folder and press [Enter], right click on the newly made folder and choose <b>Add → New Item…</b> from the list choose <b>Class</b>, for the name of the new class enter Cat and press [Add]. Change the definition of the newly created class with the definition, which we gave to this chapter, to put the classes in a <b>namespace</b>. Make the same to the class <code>Sequence</code>.<br /><br />
 <span class="tab"></span>Solution:<br />
-<span class="tab"></span><a href="https://github.com/ivanpop/CS-for-Dummies/tree/master/Chapter%2011%20Solution%207" target="_blank\"><b><u>Link</u></b></a><hr>
+<span class="tab"></span><a href="https://github.com/ivanpop/CS-for-Dummies/tree/master/Chapter%2011%20Solution%207" target="_blank"><b><u>Link</u></b></a><hr>
 <span class="tab"></span>8. Write a program which creates 10 objects of type Cat, gives them names <code>CatN</code>, where <code>N</code> is a unique serial number of the object, and in the end call the method <code>SayMiau()</code> for each of them. For the implementation use the namespace <code>CreatingAndUsingObjects</code>. <br /><br />
 <span class="tab"></span>Guidelines: Create an array with 10 elements of type <code>Cat</code>. Create 10 objects of type Cat in a loop (use a constructor with parameters) and assign them to the corresponding element of the array. For the serial number of the objects use the method <code>NextValue()</code> of the <code>Sequence</code> class. In the end again in an array use the method <code>SayMiau()</code> for each of the array elements. <br /><br />
 <span class="tab"></span>Solution:<br />
-<span class="tab"></span><a href="https://github.com/ivanpop/CS-for-Dummies/tree/master/Chapter%2011%20Solution%207" target="_blank\"><b><u>Link</u></b></a><hr>
+<span class="tab"></span><a href="https://github.com/ivanpop/CS-for-Dummies/tree/master/Chapter%2011%20Solution%207" target="_blank"><b><u>Link</u></b></a><hr>
 <span class="tab"></span>9. Write a program, which <b>calculates the count of workdays between the current date and another given date</b> after the current (inclusive). Consider that workdays are all days from Monday to Friday, which are not public holidays, except when Saturday is a working day. The program should keep a list of predefined public holidays, as well as a list of predefined working Saturdays.<br /><br />
 <span class="tab"></span>Guidelines: Use the class <code>System.DateTime</code> and the methods in it. You can execute a loop from the current date (<code>DateTime.Now.Date</code>) to the end date, consecutively incrementing the day by the method <code>AddDays(1)</code> and count the working days according to your country (e.g. all days except Saturday and Sunday and a few fixed non-working official holidays).<br /><br />
 <span class="tab"></span>Solution:<br />
-<span class="tab"></span><a href="https://github.com/ivanpop/CS-for-Dummies/blob/master/Chapter%2011%20Solution%209/Program.cs" target="_blank\"><b><u>Link</u></b></a><br /><hr>
-<span class="tab"></span>10. You are given a <b>sequence of positive integer numbers</b> given as string of numbers separated by a space. Write a program, which <b>calculates their sum</b>. Example:  \"43 68 9 23 318\" = 461. <br /><br />
+<span class="tab"></span><a href="https://github.com/ivanpop/CS-for-Dummies/blob/master/Chapter%2011%20Solution%209/Program.cs" target="_blank"><b><u>Link</u></b></a><br /><hr>
+<span class="tab"></span>10. You are given a <b>sequence of positive integer numbers</b> given as string of numbers separated by a space. Write a program, which <b>calculates their sum</b>. Example:  "43 68 9 23 318" = 461. <br /><br />
 <span class="tab"></span>Guidelines: Use <code>String.Split(' ')</code> to split the string by spaces. Then use <code>Int32.Parse(…)</code> to extract the separate numbers from the obtained string array as int values and sum them.<br /><br />
 <span class="tab"></span>Solution:<br />
-<span class="tab"></span><a href="https://github.com/ivanpop/CS-for-Dummies/blob/master/Chapter%2011%20Solution%2010/Program.cs" target="_blank\"><b><u>Link</u></b></a><br /><hr>
-<span class="tab"></span>Write a program, which <b>generates a random advertising message</b> for some product. The message has to consist of laudatory phrase, followed by a laudatory story, followed by author (first and last name) and city, which are selected from predefined lists. For example, let’s have the following lists: <br />
-<span class="tab"></span>- <b>Laudatory phrases</b>: {\"The product is excellent.\", \"This is a great product.\", \"I use this product constantly.\", \"This is the best product from this category.\"}.<br />
-<span class="tab"></span>- <b>Laudatory stories</b>: {\"Now I feel better.\", \"I managed to change.\", \"It made some miracle.\", \"I can’t believe it, but now I am feeling great.\", \"You should try it, too. I am very satisfied.\"}. <br />
-<span class="tab"></span>- <b>First name</b> of the author: {\"Dayan\", \"Stella\", \"Hellen\", \"Kate\"}. <br />
-<span class="tab"></span>- <b>Last name</b> of the author: {\"Johnson\", \"Peterson\", \"Charls\"}. <br />
-<span class="tab"></span>- <b>Cities</b>: {\"London\", \"Paris\", \"Berlin\", \"New York\", \"Madrid\"}. <br />Then the program would print randomly generated advertising message like the following: <br />
+<span class="tab"></span><a href="https://github.com/ivanpop/CS-for-Dummies/blob/master/Chapter%2011%20Solution%2010/Program.cs" target="_blank"><b><u>Link</u></b></a><br /><hr>
+<span class="tab"></span>11. Write a program, which <b>generates a random advertising message</b> for some product. The message has to consist of laudatory phrase, followed by a laudatory story, followed by author (first and last name) and city, which are selected from predefined lists. For example, let’s have the following lists: <br />
+<span class="tab"></span>- <b>Laudatory phrases</b>: {"The product is excellent.", "This is a great product.", "I use this product constantly.", "This is the best product from this category."}.<br />
+<span class="tab"></span>- <b>Laudatory stories</b>: {"Now I feel better.", "I managed to change.", "It made some miracle.", "I can’t believe it, but now I am feeling great.", "You should try it, too. I am very satisfied."}. <br />
+<span class="tab"></span>- <b>First name</b> of the author: {"Dayan", "Stella", "Hellen", "Kate"}. <br />
+<span class="tab"></span>- <b>Last name</b> of the author: {"Johnson", "Peterson", "Charls"}. <br />
+<span class="tab"></span>- <b>Cities</b>: {"London", "Paris", "Berlin", "New York", "Madrid"}. <br />Then the program would print randomly generated advertising message like the following: <br />
 <table border="1"><tr><td>I use this product constantly. You should try it, too. I am very satisfied. -- Hellen Peterson, Berlin </td></tr></table><br/>
 <span class="tab"></span>Guidelines: Използвайте класа <code>System.Random</code> и неговия метод <code>Next(…)</code>.<br /><br />
 <span class="tab"></span>Solution:<br />
-<span class="tab"></span><a href="https://github.com/ivanpop/CS-for-Dummies/blob/master/Chapter%2011%20Solution%2011/Program.cs" target="_blank\"><b><u>Link</u></b></a><hr>
-<span class="tab"></span>Write a program, which calculates the value of a given numeral expression given as a string. The numeral expression consists of: <br />
+<span class="tab"></span><a href="https://github.com/ivanpop/CS-for-Dummies/blob/master/Chapter%2011%20Solution%2011/Program.cs" target="_blank"><b><u>Link</u></b></a><hr>
+<span class="tab"></span>12. Write a program, which calculates the value of a given numeral expression given as a string. The numeral expression consists of: <br />
 <span class="tab"></span>- real numbers, for example <code>5, 18.33, 3.14159, 12.6;</code><br />
 <span class="tab"></span>- arithmetic operations: <code>+, -, *, /</code> (with their standard priorities); <br />
 <span class="tab"></span>- mathematical functions: <code>ln(x), sqrt(x), pow(x, y);</code><br />
 <span class="tab"></span>- brackets for changing the priorities of the operations: ( and ). <br />Note that the numeral expressions have priorities, for example the expression  <code>-1 + 2 + 3 * 4 - 0.5 = (-1) + 2 + (3 * 4) - 0.5 = 12.5.</code>
-<span class="tab"></span>Guidelines: <b>Calculating a numeral expression</b> is <b>quite hard</b> and is unlikely a beginner programmer to solve it correctly without external help. As a start check out the article in Wikipedia about the <b>\"Shunting-yard algorithm\"</b> describing how to convert an expression from to <b>postfix notation</b> (reversed Polish notation), and the article about <b>calculating a postfix expression</b>. There are really much special cases, so be sure to test your solution carefully.<br /><br />
+<span class="tab"></span>Guidelines: <b>Calculating a numeral expression</b> is <b>quite hard</b> and is unlikely a beginner programmer to solve it correctly without external help. As a start check out the article in Wikipedia about the <b>"Shunting-yard algorithm"</b> describing how to convert an expression from to <b>postfix notation</b> (reversed Polish notation), and the article about <b>calculating a postfix expression</b>. There are really much special cases, so be sure to test your solution carefully.<br /><br />
 <span class="tab"></span>Solution:<br />
-<span class="tab"></span><a href="https://github.com/ivanpop/CS-for-Dummies/blob/master/Chapter%2011%20Solution%2012/Program.cs" target="_blank\"><b><u>Link</u></b></a><hr>
+<span class="tab"></span><a href="https://github.com/ivanpop/CS-for-Dummies/blob/master/Chapter%2011%20Solution%2012/Program.cs" target="_blank"><b><u>Link</u></b></a><hr>
 <span class="tab"></span><a href="javascript:history.back()">&#8592; Back</a>
