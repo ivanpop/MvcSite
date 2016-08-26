@@ -222,6 +222,8 @@
     <Content Include="Resources\converter.rar" />
     <Content Include="Resources\Mario.rar" />
     <Content Include="Resources\countdown timer.rar" />
+    <Content Include="Resources\CSResources\Fundamentals-of-Computer-Programming-with-CSharp-BG.pdf" />
+    <Content Include="Resources\CSResources\Fundamentals-of-Computer-Programming-with-CSharp-EN.pdf" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
