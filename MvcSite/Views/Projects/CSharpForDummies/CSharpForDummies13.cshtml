@@ -1,0 +1,89 @@
+﻿@{
+    ViewBag.Title = "C# For Dummies";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section ExtraHeadContent {
+    <meta name="description" content="C# for Dummies представлява условията на задачите от книгата за C# на Академия Телерик и техните упътванията, като аз съм ги решавал или поне съм се опитал :)">
+    <meta name="author" content="Иван Попов">
+    <meta name="thumbnail" content="http://localhost:49690/Resources/ivanpopov.jpg" />
+    <link rel="image_src" href="http://localhost:49690/Resources/ivanpopov.jpg" />
+}
+
+<h1>C# For Dummies</h1>
+<h2>Глава 13. Символни низове</h2>
+<span class="tab"></span>1. Разкажете за низовете в C#. Какво е типично за типа string? Обяснете кои са най-важните методи на класа <code>string</code>.<br /><br />
+<span class="tab"></span>Упътване: Прочетете в MSDN или вижте първия абзац в тази глава.<br /><br />
+<span class="tab"></span>2. Напишете програма, която прочита символен низ, обръща го отзад напред и го принтира на конзолата. Например: "introduction" в "noitcudortni".<br /><br />
+<span class="tab"></span>Използвайте StringBuilder и for (или foreach) цикъл.<br /><br />
+<span class="tab"></span>Решение:<br />
+<div class="code">
+    <span class="Modifier">static</span>&nbsp;<span class="ValueType">void</span>&nbsp;Main(<span class="ReferenceType">string</span>[]&nbsp;args)<br />
+    {<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;Console.Write(<span class="String">"Enter&nbsp;text&nbsp;to&nbsp;reverse:&nbsp;"</span>);<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;<span class="ReferenceType">string</span>&nbsp;input&nbsp;=&nbsp;Console.ReadLine();<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;<span class="ReferenceType">string</span>&nbsp;output&nbsp;=&nbsp;<span class="Keyword">new</span>&nbsp;<span class="ReferenceType">string</span>(input.ToCharArray().Reverse().ToArray());<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;Console.WriteLine(<span class="String">"\"{0}\"&nbsp;reversed&nbsp;\"{1}\""</span>,&nbsp;input,&nbsp;output);<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;Console.ReadLine();<br />
+    }
+</div>
+<hr>
+<span class="tab"></span>3. Напишете програма, която проверява дали в даден аритметичен израз скобите са поставени коректно. Пример за израз с коректно поставени скоби: <code>((a+b)/5-d)</code>. Пример за некоректен израз: <code>)(a+b))</code>.<br /><br />
+<span class="tab"></span>Упътване: Използвайте броене на скобите: при отваряща на скоба увеличавайте брояча с 1, а при затваряща го намалявайте с 1. Следете броячът да не става отрицателно число и да завършва винаги на 0.<br /><br />
+<span class="tab"></span>Решение:<br />
+<div class="code">
+    <span class="Modifier">static</span>&nbsp;<span class="ValueType">void</span>&nbsp;Main(<span class="ReferenceType">string</span>[]&nbsp;args)<br />
+    {<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;Console.Write(<span class="String">"Enter&nbsp;equation:&nbsp;"</span>);<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;<span class="ReferenceType">string</span>&nbsp;input&nbsp;=&nbsp;Console.ReadLine();<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;<span class="ValueType">char</span>[]&nbsp;inputArr&nbsp;=&nbsp;input.ToCharArray();<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;<span class="ValueType">int</span>&nbsp;counter&nbsp;=&nbsp;0;<br />
+    <br />
+    &nbsp;&nbsp;&nbsp;&nbsp;<span class="Statement">for</span>&nbsp;(<span class="ValueType">int</span>&nbsp;i&nbsp;=&nbsp;0;&nbsp;i&nbsp;&lt;&nbsp;inputArr.Length;&nbsp;i++)<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;{<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="Statement">if</span>&nbsp;(inputArr[i]&nbsp;==&nbsp;'(')&nbsp;counter++;<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="Statement">if</span>&nbsp;(inputArr[i]&nbsp;==&nbsp;')')&nbsp;counter--;<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="Statement">if</span>&nbsp;(counter&nbsp;&lt;&nbsp;0)&nbsp;<span class="Statement">break</span>;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;}<br />
+    <br />
+    &nbsp;&nbsp;&nbsp;&nbsp;<span class="Statement">if</span>&nbsp;(counter&nbsp;==&nbsp;0)&nbsp;Console.WriteLine(<span class="String">"Correct&nbsp;equation."</span>);<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;<span class="Statement">else</span>&nbsp;Console.WriteLine(<span class="String">"Wrong&nbsp;equation!"</span>);<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;Console.ReadLine();<br />
+    }
+</div>
+<hr>
+<span class="tab"></span>4. Колко обратни наклонени черти трябва да посочите като аргумент на метода Split(…), за да разделите текста по обратна наклонена черта?<br/>
+<span class="tab"></span>Пример: <code>one\two\three</code><br /><br />
+<span class="tab"></span>Упътване: Ако не знаете колко наклонени черти трябва да използвате, изпроб­вайте <code>Split(…)</code> с нарастващ брой черти, докато достигнете до желания резултат.<br /><br />
+<span class="tab"></span>Решение: <br />
+<div class="code">
+    <span class="Modifier">static</span>&nbsp;<span class="ValueType">void</span>&nbsp;Main(<span class="ReferenceType">string</span>[]&nbsp;args)<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="ReferenceType">string</span>&nbsp;s&nbsp;=&nbsp;<span class="String">"one\two\three"</span>;<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="ReferenceType">string</span>[]&nbsp;sArr&nbsp;=&nbsp;s.Split('\\');<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="Statement">foreach</span>&nbsp;(<span class="ReferenceType">string</span>&nbsp;word&nbsp;<span class="Statement">in</span>&nbsp;sArr)&nbsp;Console.WriteLine(word);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Console.ReadLine();<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+</div>
+<hr>
+<span class="tab"></span>5. Напишете програма, която открива колко пъти даден подниз се съдържа в текст. Например нека търсим подниза "in" в текста:<br />
+<div class="code">We are liv<b>in</b>g <b>in</b> a yellow submar<b>in</b>e. We don't have anyth<b>in</b>g else. <b>In</b>side the submar<b>in</b>e is very tight. So we are dr<b>in</b>k<b>in</b>g all the day. We will move out of it <b>in</b> 5 days.<br />
+<span class="tab"></span>Резултатът е 9 срещания.
+</div><br /><br />
+<span class="tab"></span>Упътване: Обърнете регистъра на буквите в текста до малки и търсете в цикъл дадения подниз. Не забравяйте да използвате <code>IndexOf(…)</code> с начален индекс, за да избегнете безкраен цикъл.<br /><br />
+<span class="tab"></span>Решение: <br />
+<span class="tab"></span><a href="https://github.com/ivanpop/CS-for-Dummies/tree/master/Chapter%2013%20Solution%205" target="_blank"><b><u>Link</u></b></a><hr>
+
+<span class="tab"></span>6. Напишете метод, който приема като параметър име на текстов файл, прочита съдържанието му и го връща като <code>string</code>. Какво е правилно да направи методът с евентуално възникващите изключения?<br /><br />
+<span class="tab"></span>Упътване:  Прочетете файла ред по ред с класа <code>System.IO.StreamReader</code> и добавяйте редовете в <code>System.Text.StringBuilder</code>. Изхвърляйте всички изключе­ния от метода без да ги прихващате. <br /><br />
+<span class="tab"></span>Решение: <br />
+<span class="tab"></span><a href="https://github.com/ivanpop/CS-for-Dummies/tree/master/Chapter%2012%20Solution%206" target="_blank"><b><u>Link</u></b></a><hr>
+<span class="tab"></span>7. Напишете програма, която прочита от потребителя пълен път до даден файл (например C:\Windows\win.ini), прочита съдържанието на файла и го извежда на конзолата. Намерете вMSDN как да използвате метода <code>System.IO.File.ReadAllText(…)</code>. Уверете се, че прихващате всички възможни изключения, които могат да възникнат по време на работа на метода и извеждайте на конзолата съобщения за грешка, разбираеми за обикновения потребител.<br /><br />
+<span class="tab"></span>Упътване: Потърсете всички възможни изключения, които възникват в следствие на работата на метода и за всяко от тях дефинирайте <code>catch</code> блок.<br /><br />
+<span class="tab"></span>Решение:<br />
+<span class="tab"></span><a href="https://github.com/ivanpop/CS-for-Dummies/tree/master/Chapter%2012%20Solution%207" target="_blank"><b><u>Link</u></b></a><hr>
+<span class="tab"></span>8. Напишете програма, която изтегля файл от Интернет по даден URL адрес, примерно (http://www.devbg.org/img/Logo-BASD.jpg).<br /><br />
+<span class="tab"></span>Упътване: Потърсете в Интернет статии на тема изтегляне на файл от C#. Ако се затруднявате, потърсете информация и примери за използване конкретно на класа <code>WebClient</code>. Уверете се, че прихващате и обра­ботвате правилно всички изключения, които могат да възникнат. <br /><br />
+<span class="tab"></span>Решение: <br />
+<span class="tab"></span><a href="https://github.com/ivanpop/CS-for-Dummies/tree/master/Chapter%2012%20Solution%208" target="_blank"><b><u>Link</u></b></a><br /><hr>
+<span class="tab"></span><a href="javascript:history.back()">&#8592; Обратно</a>
