@@ -10,7 +10,7 @@
     <link rel="image_src" href="http://localhost:49690/Resources/ivanpopov.jpg" />
 }
 
-<h1>Контакти</h1>
+<h1>Contacts</h1>
 
 <p>E-mail: <a href="mailto:ivanpop@abv.bg">ivanpop@abv.bg</a></p>
 <div id="skypename"><p>Skype: ivan9019</p></div>
@@ -29,23 +29,25 @@
 
 <p>Also you can send me a message using the contacts form below.</p><br />
 
-<table>
-    <tbody>
-        <tr>
-            <td rowspan="4" width="40"></td>
-            <td width="250">
-                @using (Html.BeginForm("Sendmail", "Home"))
-                {
+@using (Html.BeginForm("Sendmail", "Home"))
+{
+    <table>
+        <tbody>
+            <tr>
+                <td rowspan="4" width="40"></td>
+                <td width="250">
+
                     <p>Your Email:</p>
                     @Html.TextBox("email")
                     <br /><br /><p>Subject:</p>
                     @Html.TextBox("descr")
                     <br /><br />
 
-                    <br /><br /><input type="submit" value="Изпрати" />
-                }
-            </td>
-            <td width="280"><p>Message:</p>@Html.TextArea("text", "", 9, 280, "")</td>
-        </tr>
-    </tbody>
-</table>
+                    <br /><br /><input type="submit" value="Send" />
+
+                </td>
+                <td width="280"><p>Съобщение:</p>@Html.TextArea("text", "", 9, 280, "")</td>
+            </tr>
+        </tbody>
+    </table>
+}

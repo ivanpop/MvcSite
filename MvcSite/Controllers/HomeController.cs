@@ -1,11 +1,10 @@
 ﻿using System.Net;
 using System.Net.Mail;
 using System.Text;
-using System.Web;
 using System.Web.Mvc;
 
-namespace MvcMovie.Controllers 
-{ 
+namespace MvcMovie.Controllers
+{
     public class HomeController : Controller 
     {
         [Route("robots.txt", Name = "GetRobotsText"), OutputCache(Duration = 86400)]
@@ -40,6 +39,7 @@ namespace MvcMovie.Controllers
                 return View();
         }
 
+        // GET: /Home/Contact/
         public ActionResult Contact(string language = "bg")
         {
             if (language == "en")
@@ -48,13 +48,13 @@ namespace MvcMovie.Controllers
                 return View();
         }
 
-        public void SendMail(string email, string descr, string text)
+        public ActionResult SendMail(string email, string descr, string text, string language = "bg")
         {
             using (MailMessage message = new MailMessage())
             {
                 message.From = new MailAddress(email);
                 message.To.Add(new MailAddress("unfragablegaming@gmail.com"));
-                message.Subject = "Message from My Site: " + descr;
+                message.Subject = descr;
                 message.Body = text;
                 SmtpClient smtp = new SmtpClient();
                 smtp.Host = "smtpcorp.com";
@@ -71,6 +71,12 @@ namespace MvcMovie.Controllers
                 {
 
                 }
+
+                // GET: /Home/Sent/
+                if (language == "en")
+                    return View("en/Sent");
+                else
+                    return View("Sent");
             }
         }
     } 
