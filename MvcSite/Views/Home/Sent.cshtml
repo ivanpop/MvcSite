@@ -1,4 +1,5 @@
-﻿@{
+﻿
+@{
     ViewBag.Title = "Sent";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
@@ -10,5 +11,7 @@
     <link rel="image_src" href="http://localhost:49690/Resources/ivanpopov.jpg" />
 }
 
-<h1>Писмото беше изпратено успешно.</h1>
+<h1>Писмото беше изпратено успешно</h1>
+<br />
+<b>@Html.ActionLink("Обратно към началната страница", "Index", "Home")</b>
 
