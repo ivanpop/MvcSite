@@ -12,10 +12,10 @@
 
 <h1>Ryu: The Big Adventure!</h1>
 <h2>Description</h2>
-<p><span class="tab"></span><strong>Ryu: The Big Adventure</strong> is simmilar to arcade games like <strong>Cadillacs and Dinosaurs, Contra, Metal Slug, Streets of Rage, Golden Axe</strong> and many others.</p>
+<p><span class="tab"></span><strong>Ryu: The Big Adventure</strong> is similar to arcade games like <strong>Cadillacs and Dinosaurs, Contra, Metal Slug, Streets of Rage, Golden Axe</strong> and many others.</p>
 <h2>Functions</h2>
 <p>
-    <span class="tab"></span>„Ryu: The Big Adventure” gives the user the chance to play a tipical horizontal Beat 'em up simulator. Beat 'em up is a computer game genre, which involves hand-to-hand combat between the main hero and numerous enemies. These type of games are mostly in 2D, where the player moves horizontaly to the right. These games are famous for they're easy to learn gameplay, with the first of this type of games dating from 1984.<br />
+    <span class="tab"></span>„Ryu: The Big Adventure” gives the user the chance to play a typical horizontal Beat 'em up simulator. Beat 'em up is a computer game genre, which involves hand-to-hand combat between the main hero and numerous enemies. These type of games are mostly in 2D, where the player moves horizontally to the right. These games are famous for they're easy to learn gameplay, with the first of this type of games dating from 1984.<br />
     <span class="tab"></span>When starting the game, the user goes in the role of Ryu, which have to beat all the enemies in the level.<br />
     <span class="tab"></span>Ryu is a superhero from video games, created by Capcom in 1987, which plays the main role in the Street Fighter series. He knows mixed martial arts and assassin skills. Also Ryu possesses some unique abilities in his arsenal.
 </p>
@@ -35,13 +35,13 @@
 </div>
 <ul>
     <li><p><strong>Hadouken</strong> - Translated „Fist of energy“. This is a projectile of energy, which Ryu shoots from his hands, to hit enemies from distance. To do this ability Ryu must have enough energy or MP (Magic Points).</p></li>
-    <li><p><strong>Shoryuken</strong> - Translated „Rising dragon fist“, is another special ability, designet for close combat. Ryu uses his fist to shoots himself up and in that way to deliver a deadly upercut to his oponent, which is directly in front of him. Just like Hadouken Shoryuken also requires spirit energy.</p></li>
-    <li><p><strong>Tatsumaki</strong> - Translated „Tornado“. Ryu haves the ability to jump and to perform a tornato from kicks while in midair. This is the most powerful attack that Ryu possesses and it requires most spirit energy.</p></li>
+    <li><p><strong>Shoryuken</strong> - Translated „Rising dragon fist“, is another special ability, designed for close combat. Ryu uses his fist to shoots himself up and in that way to deliver a deadly uppercut to his opponent, which is directly in front of him. Just like Hadouken Shoryuken also requires spirit energy.</p></li>
+    <li><p><strong>Tatsumaki</strong> - Translated „Tornado“. Ryu haves the ability to jump and to perform a tornado from kicks while in midair. This is the most powerful attack that Ryu possesses and it requires most spirit energy.</p></li>
 </ul>
 <p>
     <span class="tab"></span>Spirit energy is displayed in the lower left corner of the screen, in the form of 8 blue rectangles. It's used when performing special moves. After being used, energy regenerates slowly over time. When the player doesn't have enough energy, he can't use special abilities.<br />
-    <span class="tab"></span>Over the energy indicator there is another one, for the health of Ryu, described as HP. It's displayed in the same way, but with red rectangles. Unlike energy, health doesn't regenerate over time. To restore health Ryu must find food which is dropped randomly on the map. Health is taken when the player gets hit or when he goes through some obsticle like fire. When all of our health is depleted Ryu dies and the game ends.<br />
-    <span class="tab"></span>Other than those two indicators there is alos time. Time is displayer at the bottom of the screen in the middle. It shows how much time we have to complete the level. When the time ends the game ends. We get more time by reaching certain part of the level.<br />
+    <span class="tab"></span>Over the energy indicator there is another one, for the health of Ryu, described as HP. It's displayed in the same way, but with red rectangles. Unlike energy, health doesn't regenerate over time. To restore health Ryu must find food which is dropped randomly on the map. Health is taken when the player gets hit or when he goes through some obstacle like fire. When all of our health is depleted Ryu dies and the game ends.<br />
+    <span class="tab"></span>Other than those two indicators there is also time. Time is displayed at the bottom of the screen in the middle. It shows how much time we have to complete the level. When the time ends the game ends. We get more time by reaching certain part of the level.<br />
     <span class="tab"></span>There are also in-game options. The user can stop and start the sound of the game, to change the volume, to change the game difficulty and to quit at any time. The game can also be minimized.
 </p>
 <h2>Software limitations</h2>
@@ -66,7 +66,7 @@
 <p><span class="tab"></span>The menu provides options to start a new game, to go to the settings screen, go ot the credits screen and exit the game. In the menu we can see the main character.</p>
 <h3>Settings</h3>
 <p>
-    <span class="tab"></span>The options menu contains to tickable squares, for turning music and sounds on and off, two sliders for controling sound volume and an option to control game difficulty, also there is a back button.<br />
+    <span class="tab"></span>The options menu contains to tickable squares, for turning music and sounds on and off, two sliders for controlling sound volume and an option to control game difficulty, also there is a back button.<br />
     <span class="tab"></span>In the settings menu I've used global variables, which are available in every class. They are declared in the main menu, can be changed in the settings menu and can be red from all states. This way sound and music can work in the same way in every part of the game.
 </p>
 <img id="centerImg" src="~/Resources/ryu6.jpg" /><br />
@@ -75,7 +75,7 @@
     <span class="tab"></span>The music slider uses the method music.setVolume(float volume); for changing music volume and music.getVolume(float volume); to read the current volume and to change it's state accordingly.<br />
     <span class="tab"></span>The sound slider uses it's own global variable unlike setVolume and getVolumе because sound volume is declared, at the moment they are played and can be different for every each sound. The global variable is declared in the main manu and it's named soundVolume. It's used every time a sound is played in the following way: punchedSnd.play(1, Menu.soundVolume);<br />
     <span class="tab"></span>In this command punchedSnd is been played using the method play. 1 is the pitch and the variable soundVolume is called from the menu class and sets the volume of the sound.<br />
-    <span class="tab"></span>For the thicking squares I've used the variables soundOn and musicOn.
+    <span class="tab"></span>For the ticking squares I've used the variables soundOn and musicOn.
 </p>
 <h3>Credits</h3>
 <p><span class="tab"></span>Credits is the most simple made state. It shows information about the creator of the game by sliding text through the screen. The text is actually an image which is moved up the screen</p><br />
