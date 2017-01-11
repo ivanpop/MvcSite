@@ -11,7 +11,24 @@
 }
 
 <h1>MVC Personal Website</h1>
-<p>The page is under construction.</p>
-
+<p>
+    <span class="tab"></span>MVC (Model-View-Controller) is a design pattern which divides applications into three main parts - The application logic (Model), Handling commands from the user (Controller) and the graphical interface (View).<br />
+    <span class="tab"></span>The Controller accepts requests from the user and translates them into commands that The Model should handle. The Controller can send commands to The View also. The Model is the main component of MVC. It stores data and rules of the application. Data requested by The Controller is first processed by The Model and then displayed in The View.<br />
+    <span class="tab"></span>The advantage of this type of pattern is that the three parts can be changed individually. One model can use different views. The Controller and The View can be changed without changing The Model. The Model can be created independently of the other two parts.<br />
+    <span class="tab"></span>Another advantage is that almost the entire application is processed by the server. The user sees only the look and sends requests in the form of links and completed web forms. Requests are accepted from The Controller on the server, processed by The Model, The View gets updated and is sent back to the user. <br />
+</p>
+<h2>Realization</h2>
+<p>
+    <span class="tab"></span>When creating a new MVC project, Visual Studio generates a website template, which contains a Main, Home, About and Contact pages and an ability to control user accounts.<br />
+    <span class="tab"></span>I removed the user accounts, because they are not needed for my purposes.<br />
+    <span class="tab"></span>In the navigation menu I've added the option to choose between Bulgarian and English, as well as changing the size of the text in the articles.<br />
+    <span class="tab"></span>The index page is clean and it doesn't contain slides, larges images, lots of scripts or animations. This is done so that the website can load as fast as possible and for better SEO optimization.<br />
+    <span class="tab"></span>
+</p>
+<h3><a href="https://developers.google.com/speed/pagespeed/insights/" target="_blank"><b>PageSpeed Insights - Google Developers</b></a></h3>
+<img alt="MVCSite1" id="centerImg" src="~/Resources/MVCSite1.JPG" />
+<br /><br /><br />
+<h3><a href="https://validator.w3.org/" target="_blank"><b>The W3C Markup Validation Service</b></a></h3>
+<img alt="MVCSite2" id="centerImg" src="~/Resources/MVCSite2.JPG" />
 <br />
 <span class="tab"></span><a href="javascript:history.back()">&#8592; Back</a>
