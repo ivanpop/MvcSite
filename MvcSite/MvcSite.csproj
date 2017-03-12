@@ -203,6 +203,7 @@
     <Content Include="Resources\ivanpopov.jpg" />
     <Content Include="Resources\MVCSite1.JPG" />
     <Content Include="Resources\MVCSite2.JPG" />
+    <Content Include="Resources\PPWCalculator.PNG" />
     <Content Include="Resources\ryu1.png" />
     <Content Include="Resources\ryu10.png" />
     <Content Include="Resources\ryu11.jpg" />
@@ -224,6 +225,7 @@
     <Content Include="Resources\countdown timer.rar" />
     <Content Include="Resources\CSResources\Fundamentals-of-Computer-Programming-with-CSharp-BG.pdf" />
     <Content Include="Resources\CSResources\Fundamentals-of-Computer-Programming-with-CSharp-EN.pdf" />
+    <Content Include="Resources\PPWCalculator.rar" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -320,6 +322,8 @@
     <Content Include="Views\Projects\CSharpForDummies\CSharpForDummies13.cshtml" />
     <Content Include="Views\Home\Sent.cshtml" />
     <Content Include="Views\Home\en\Sent.cshtml" />
+    <Content Include="Views\Projects\PPWCalculator.cshtml" />
+    <Content Include="Views\Projects\en\PPWCalculator.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -1,0 +1,25 @@
+﻿@{
+    ViewBag.Title = "PPWCalculator";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section ExtraHeadContent {
+    <meta name="description" content="Програмата е написана на C# и представлява калкулатор, който изчислява цената на консумираната енергия от трите доставчика на енергия в България.">
+    <meta name="author" content="Иван Попов">
+    <meta name="thumbnail" content="http://localhost:49690/Resources/ivanpopov.jpg" />
+    <link rel="image_src" href="http://localhost:49690/Resources/ivanpopov.jpg" />
+}
+
+<h1>PPWCalculator</h1>
+<p><span class="tab"></span>Програмата е написана на C# и представлява калкулатор, който изчислява цената на консумираната енергия от трите доставчика на енергия в България.</p>
+<p><span class="tab"></span>Програмата автоматично изчислява цената, при въвеждане на мощност по-голяма от 0. Въведени са тарифите на трите доставчика на енергия в България, както и броят на нощните часове, като може да се въведе и ръчна тарифа и часове.</p>
+<p><span class="tab"></span>Има опция за само една скала. Когато опцията е избрана програмата изчислява мощността единствено по дневната тарифа.</p>
+<p><span class="tab"></span>При промяна на каквато и да е стойност програмата автоматично преизчислява цената.</p>
+<p><span class="tab"></span>В полетата не могат да се въвеждат букви, символи и негативни стойности. Дневните и нощните тарифи не могат да са по-високи от 99 и по-малки от 0.00000001. Нощните часове не могат да са по-малко от 1 и повече от 23. Мощността не може да е повече от 99999.</p>
+<p><span class="tab"></span>При въвеждане на грешна стойност полетата се нулират.</p>
+<p><span class="tab"></span>При промяна на каквато и да е стойност програмата автоматично преизчислява цената.</p>
+<p><span class="tab"></span><font color="red">ЗАБЕЛЕЖКА: В тарифата на ЧЕЗ не е начислен акциз.</font></p>
+<span class="tab"></span><img src="~/Resources/PPWCalculator.PNG" alt="PPWCalculator" /><br /><br />
+<span class="tab"></span><b>Source: <a href="https://github.com/ivanpop/PPWCalculator">Github</a></b>
+<span class="tab"></span><b>Download: <a href="~/Resources/PPWCalculator.rar" target="_blank">Link</a></b><br /><br />
+<span class="tab"></span><a href="javascript:history.back()">&#8592; Обратно</a>

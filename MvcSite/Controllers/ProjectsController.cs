@@ -115,5 +115,14 @@ namespace MvcSite.Controllers
             else
                 return View();
         }
+
+        // GET: PPWCalculator
+        public ActionResult PPWCalculator(string language = "bg")
+        {
+            if (language == "en")
+                return View("en/PPWCalculator");
+            else
+                return View();
+        }
     }
 }
