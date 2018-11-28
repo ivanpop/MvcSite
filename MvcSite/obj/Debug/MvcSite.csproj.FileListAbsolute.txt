@@ -325,6 +325,8 @@ C:\Users\user\Documents\GitHub\MvcSite\MvcSite\bin\Microsoft.Owin.Security.OAuth
 C:\Users\user\Documents\GitHub\MvcSite\MvcSite\bin\Microsoft.Owin.Security.Google.xml
 C:\Users\user\Documents\GitHub\MvcSite\MvcSite\bin\Microsoft.Owin.Security.Twitter.xml
 C:\Users\user\Documents\GitHub\MvcSite\MvcSite\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
-C:\Users\user\Documents\GitHub\MvcSite\MvcSite\obj\Debug\MvcSite.csprojResolveAssemblyReference.cache
 C:\Users\user\Documents\GitHub\MvcSite\MvcSite\obj\Debug\MvcSite.dll
 C:\Users\user\Documents\GitHub\MvcSite\MvcSite\obj\Debug\MvcSite.pdb
+C:\Users\user\Documents\GitHub\MvcSite\MvcSite\obj\Debug\MvcSite.csprojAssemblyReference.cache
+C:\Users\user\Documents\GitHub\MvcSite\MvcSite\obj\Debug\MvcSite.csproj.CoreCompileInputs.cache
+C:\Users\user\Documents\GitHub\MvcSite\MvcSite\obj\Debug\MvcSite.csproj.CopyComplete
